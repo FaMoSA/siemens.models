@@ -1,0 +1,238 @@
+<!-- This model was created online using SPLOT_Presentation's Feature Model Editor (http://www.splot-research.org) on Fri, Nov 20, 2015 - 10:03 AM  -->
+<feature_model name="eta_NTC819_4.fm">
+<meta>
+<data name="uuid">201</data>
+<data name="description">eta_NTC819_4.fm</data>
+<data name="creator">Carlos Rangel</data>
+<data name="address"></data>
+<data name="email">carlos.rangel@siemens.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Siemens</data>
+<data name="department"></data>
+<data name="date">2015_02_23</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Electrical_Thermal_Acoustic_819(Electrical_Thermal_Acoustic_819)
+	:m Electrical(Electrical);1
+		:m Power(Power);2
+			:m Power_group(Power_group)
+				:g (Electrical_Thermal_Acoustic_81_82_71_72) [1,1];4 
+					: PG15_45(PG15_45);1
+						:g (Electrical_Thermal_Acoustic_81_82_71_72_73_70) [1,1] 
+							: P15(P15);3
+							: P30(P30);3
+							: P45(P45);3
+					: PG225(PG225)
+						:g (Electrical_Thermal_Acoustic_81_82_71_72_74_83) [1,1] 
+							: P225(P225)
+					: PG4000_10000(PG4000_10000)
+						:g (Electrical_Thermal_Acoustic_81_82_71_72_75_101) [1,1] 
+							: P4000(P4000)
+							: P5000(P5000)
+							: P6000(P6000)
+							: P7500(P7500)
+							: P10000(P10000)
+					: PG75_112_5(PG75_112_5)
+						:g (Electrical_Thermal_Acoustic_81_82_71_72_66_74) [1,1] 
+							: P75(P75)
+							: P112_5(P112_5)
+					: PG1600_2000(PG1600_2000)
+						:g (Electrical_Thermal_Acoustic_81_82_71_72_68_94) [1,1] 
+							: P1600(P1600)
+							: P2000(P2000)
+					: PG3750(PG3750)
+						:g (Electrical_Thermal_Acoustic_81_82_71_72_70_99) [1,1] 
+							: P3750(P3750)
+					: PG150(PG150)
+						:g (Electrical_Thermal_Acoustic_81_82_71_72_80_81) [1,1] 
+							: P150(P150)
+					: PG300_1250(PG300_1250)
+						:g (Electrical_Thermal_Acoustic_81_82_71_72_85_86) [1,1] 
+							: P300(P300)
+							: P400(P400)
+							: P500(P500)
+							: P630(P630)
+							: P750(P750)
+							: P800(P800)
+							: P1000(P1000)
+							: P1250(P1250)
+					: PG2500_3000(PG2500_3000)
+						:g (Electrical_Thermal_Acoustic_81_82_71_72_71_72) [1,1] 
+							: P2500(P2500)
+							: P3000(P3000)
+		:m High_voltage(High_voltage)
+			:m High_Voltage_Group(High_Voltage_Group)
+				:g (Electrical_Thermal_Acoustic_81_83_76_75) [1,1] 
+					: HVG15(HVG15)
+						:g (Electrical_Thermal_Acoustic_81_83_76_75_77_109) [1,1] 
+							: HV11400(HV11400)
+							: HV13200(HV13200)
+							: HV13800(HV13800)
+					: HVG34_5(HVG34_5)
+						:g (Electrical_Thermal_Acoustic_81_83_76_75_78_113) [1,1] 
+							: HV33000(HV33000)
+							: HV34500(HV34500)
+		:m Low_Voltage(Low_Voltage)
+			:m Low_Voltage_Group(Low_Voltage_Group)
+				:g (Electrical_Thermal_Acoustic_81_84_77_78) [1,1] 
+					: LVG214_228(LVG214_228)
+						:g (Electrical_Thermal_Acoustic_81_84_77_78_79_116) [1,1] 
+							: LV214(LV214)
+							: LV228(LV228)
+					: LVG460_480(LVG460_480)
+						:g (Electrical_Thermal_Acoustic_81_84_77_78_80_119) [1,1] 
+							: LV460(LV460)
+							: LV480(LV480)
+					: LVG15(LVG15)
+						:g (Electrical_Thermal_Acoustic_81_84_77_78_65_122) [1,1] 
+							: LV11400(LV11400)
+							: LV13200(LV13200)
+							: LV13800(LV13800)
+		:m Transformer_Phases(Transformer_Phases)
+			:g (Electrical_Thermal_Acoustic_81_89_90) [1,1] 
+				: PH3(PH3)
+		:m Operation(Operation)
+			:g (Electrical_Thermal_Acoustic_81_133_134) [1,1] 
+				: StepDown(StepDown)
+		:m Transformer_Losses(Transformer_Losses)
+			:g (Electrical_Thermal_Acoustic_81_137_138) [1,1] 
+				: NTC(NTC);7
+	:o Siemens_Standard(Siemens_Standard);6
+		:g (Electrical_Thermal_Acoustic_58_59) [1,1] 
+			: Siemens_Std_Pole_Mounted(Siemens_Std_Pole_Mounted)
+			: Siemens_Std_Convencional(Siemens_Std_Convencional)
+				:g (Electrical_Thermal_Acoustic_58_59_61_71) [1,1] 
+					: Yes_4000A_rule(Yes_4000A_rule)
+					: No_4000A_rule(No_4000A_rule)
+				:m Transformer_Family(Transformer_Family)
+					:g (Siemens_Std_Convencional_73_74) [1,1] 
+						: C01(C01)
+						: C02(C02)
+						: C03(C03)
+						: C04(C04)
+						: C05(C05)
+						: C06(C06)
+						: C07(C07)
+						: C08(C08)
+						: C09(C09)
+						: C10(C10)
+						: C11(C11)
+						: C12(C12)
+</feature_tree>
+<constraints>
+constraint_87:~HVG34_5 or ~Siemens_Std_Pole_Mounted
+constraint_109:~Siemens_Std_Pole_Mounted or ~HV13800
+constraint_108:~PG4000_10000 or ~HVG34_5 or ~LVG460_480 or ~Yes_4000A_rule
+constraint_123:~Siemens_Std_Convencional or ~PG150
+constraint_121:~PG1600_2000 or ~Siemens_Std_Pole_Mounted
+constraint_122:~PG75_112_5 or ~Siemens_Std_Convencional
+constraint_120:~Siemens_Std_Pole_Mounted or ~PG300_1250
+constraint_96:~Siemens_Std_Pole_Mounted or ~LVG15
+constraint_97:~HVG15 or ~LVG15
+constraint_117:~PG4000_10000 or ~HVG15 or ~LVG214_228 or ~Yes_4000A_rule
+constraint_116:~PG4000_10000 or ~HVG15 or ~LVG460_480 or ~Yes_4000A_rule
+constraint_119:~LVG15 or ~Siemens_Std_Pole_Mounted
+constraint_118:~PG4000_10000 or ~HVG34_5 or ~LVG214_228 or ~Yes_4000A_rule
+constraint_113:~PG3750 or ~Siemens_Std_Convencional
+constraint_37:~PG4000_10000 or ~Siemens_Std_Pole_Mounted
+constraint_115:~HVG34_5 or ~LVG214_228 or ~PG1600_2000 or ~Yes_4000A_rule
+constraint_35:~PG3750 or ~Siemens_Std_Pole_Mounted
+constraint_114:~HVG15 or ~LVG214_228 or ~PG1600_2000 or ~Yes_4000A_rule
+constraint_110:~Siemens_Std_Pole_Mounted or ~LV480
+constraint_111:~Siemens_Std_Convencional or ~P750
+constraint_22:~PG1600_2000 or ~HVG34_5 or ~LVG214_228 or ~Yes_4000A_rule
+constraint_23:~PG2500_3000 or ~HVG34_5 or ~LVG214_228 or ~Yes_4000A_rule
+constraint_26:~PG1600_2000 or ~Siemens_Std_Pole_Mounted
+constraint_27:~PG2500_3000 or ~Siemens_Std_Pole_Mounted
+constraint_24:~PG1600_2000 or ~HVG15 or ~LVG214_228 or ~Yes_4000A_rule
+constraint_82:~PG15_45 or ~Siemens_Std_Convencional
+constraint_25:~PG2500_3000 or ~HVG15 or ~LVG214_228 or ~Yes_4000A_rule
+fam_10:C01 or ~Siemens_Std_Convencional or ~PG225 or ~HVG15 or ~LVG214_228
+fam_11:C01 or ~Siemens_Std_Convencional or ~PG225 or ~HVG15 or ~LVG460_480
+fam_12:C01 or ~Siemens_Std_Convencional or ~P300 or ~HVG15 or ~LVG214_228
+fam_13:C01 or ~Siemens_Std_Convencional or ~P300 or ~HVG15 or ~LVG460_480
+fam_14:C01 or ~Siemens_Std_Convencional or ~P400 or ~HVG15 or ~LVG214_228
+fam_15:C01 or ~Siemens_Std_Convencional or ~P400 or ~HVG15 or ~LVG460_480
+fam_16:C01 or ~Siemens_Std_Convencional or ~P500 or ~HVG15 or ~LVG214_228
+fam_17:C01 or ~Siemens_Std_Convencional or ~P500 or ~HVG15 or ~LVG460_480
+fam_18:C02 or ~Siemens_Std_Convencional or ~PG225 or ~HVG34_5 or ~LVG214_228
+fam_19:C02 or ~Siemens_Std_Convencional or ~PG225 or ~HVG34_5 or ~LVG460_480
+fam_20:C02 or ~Siemens_Std_Convencional or ~P300 or ~HVG34_5 or ~LVG214_228
+fam_21:C02 or ~Siemens_Std_Convencional or ~P300 or ~HVG34_5 or ~LVG460_480
+fam_22:C02 or ~Siemens_Std_Convencional or ~P400 or ~HVG34_5 or ~LVG214_228
+fam_23:C02 or ~Siemens_Std_Convencional or ~P400 or ~HVG34_5 or ~LVG460_480
+fam_24:C02 or ~Siemens_Std_Convencional or ~P500 or ~HVG34_5 or ~LVG214_228
+fam_25:C02 or ~Siemens_Std_Convencional or ~P500 or ~HVG34_5 or ~LVG460_480
+fam_26:C03 or ~Siemens_Std_Convencional or ~PG225 or ~HVG34_5 or ~LVG15
+fam_27:C03 or ~Siemens_Std_Convencional or ~P300 or ~HVG34_5 or ~LVG15
+fam_28:C03 or ~Siemens_Std_Convencional or ~P400 or ~HVG34_5 or ~LVG15
+fam_29:C03 or ~Siemens_Std_Convencional or ~P500 or ~HVG34_5 or ~LVG15
+fam_30:C04 or ~Siemens_Std_Convencional or ~P630 or ~HVG15 or ~LVG214_228
+fam_31:C04 or ~Siemens_Std_Convencional or ~P630 or ~HVG15 or ~LVG460_480
+fam_32:C04 or ~Siemens_Std_Convencional or ~P800 or ~HVG15 or ~LVG214_228
+fam_33:C04 or ~Siemens_Std_Convencional or ~P800 or ~HVG15 or ~LVG460_480
+fam_34:C04 or ~Siemens_Std_Convencional or ~P1000 or ~HVG15 or ~LVG214_228
+fam_35:C04 or ~Siemens_Std_Convencional or ~P1000 or ~HVG15 or ~LVG460_480
+fam_36:C05 or ~Siemens_Std_Convencional or ~P630 or ~HVG34_5 or ~LVG214_228
+fam_37:C05 or ~Siemens_Std_Convencional or ~P630 or ~HVG34_5 or ~LVG460_480
+fam_38:C05 or ~Siemens_Std_Convencional or ~P800 or ~HVG34_5 or ~LVG214_228
+fam_39:C05 or ~Siemens_Std_Convencional or ~P800 or ~HVG34_5 or ~LVG460_480
+fam_40:C05 or ~Siemens_Std_Convencional or ~P1000 or ~HVG34_5 or ~LVG214_228
+fam_41:C05 or ~Siemens_Std_Convencional or ~P1000 or ~HVG34_5 or ~LVG460_480
+fam_42:C06 or ~Siemens_Std_Convencional or ~P630 or ~HVG34_5 or ~LVG15
+fam_43:C06 or ~Siemens_Std_Convencional or ~P800 or ~HVG34_5 or ~LVG15
+fam_44:C06 or ~Siemens_Std_Convencional or ~P1000 or ~HVG34_5 or ~LVG15
+fam_45:C04 or ~Siemens_Std_Convencional or ~P1250 or ~HVG15 or ~LVG214_228
+fam_46:C04 or ~Siemens_Std_Convencional or ~P1250 or ~HVG15 or ~LVG460_480
+fam_47:C04 or ~Siemens_Std_Convencional or ~P1600 or ~HVG15 or ~LVG214_228
+fam_48:C04 or ~Siemens_Std_Convencional or ~P1600 or ~HVG15 or ~LVG460_480
+fam_49:C04 or ~Siemens_Std_Convencional or ~P2000 or ~HVG15 or ~LVG214_228
+fam_50:C04 or ~Siemens_Std_Convencional or ~P2000 or ~HVG15 or ~LVG460_480
+fam_51:C05 or ~Siemens_Std_Convencional or ~P1250 or ~HVG34_5 or ~LVG214_228
+fam_52:C05 or ~Siemens_Std_Convencional or ~P1250 or ~HVG34_5 or ~LVG460_480
+fam_53:C05 or ~Siemens_Std_Convencional or ~P1600 or ~HVG34_5 or ~LVG214_228
+fam_54:C05 or ~Siemens_Std_Convencional or ~P1600 or ~HVG34_5 or ~LVG460_480
+fam_55:C05 or ~Siemens_Std_Convencional or ~P2000 or ~HVG34_5 or ~LVG214_228
+fam_56:C05 or ~Siemens_Std_Convencional or ~P2000 or ~HVG34_5 or ~LVG460_480
+fam_57:C06 or ~Siemens_Std_Convencional or ~P1250 or ~HVG34_5 or ~LVG15
+fam_58:C06 or ~Siemens_Std_Convencional or ~P1600 or ~HVG34_5 or ~LVG15
+fam_59:C06 or ~Siemens_Std_Convencional or ~P2000 or ~HVG34_5 or ~LVG15
+fam_60:C07 or ~Siemens_Std_Convencional or ~P2500 or ~HVG15 or ~LVG214_228
+fam_61:C07 or ~Siemens_Std_Convencional or ~P2500 or ~HVG15 or ~LVG460_480
+fam_62:C07 or ~Siemens_Std_Convencional or ~P3000 or ~HVG15 or ~LVG214_228
+fam_63:C07 or ~Siemens_Std_Convencional or ~P3000 or ~HVG15 or ~LVG460_480
+fam_64:C08 or ~Siemens_Std_Convencional or ~P2500 or ~HVG34_5 or ~LVG214_228
+fam_65:C08 or ~Siemens_Std_Convencional or ~P2500 or ~HVG34_5 or ~LVG460_480
+fam_66:C08 or ~Siemens_Std_Convencional or ~P3000 or ~HVG34_5 or ~LVG214_228
+fam_67:C08 or ~Siemens_Std_Convencional or ~P3000 or ~HVG34_5 or ~LVG460_480
+fam_68:C09 or ~Siemens_Std_Convencional or ~P2500 or ~HVG34_5 or ~LVG15
+fam_69:C09 or ~Siemens_Std_Convencional or ~P3000 or ~HVG34_5 or ~LVG15
+fam_70:C10 or ~Siemens_Std_Convencional or ~P4000 or ~HVG15 or ~LVG214_228
+fam_71:C10 or ~Siemens_Std_Convencional or ~P4000 or ~HVG15 or ~LVG460_480
+fam_72:C10 or ~Siemens_Std_Convencional or ~P5000 or ~HVG15 or ~LVG214_228
+fam_73:C10 or ~Siemens_Std_Convencional or ~P5000 or ~HVG15 or ~LVG460_480
+fam_74:C10 or ~Siemens_Std_Convencional or ~P6000 or ~HVG15 or ~LVG214_228
+fam_75:C10 or ~Siemens_Std_Convencional or ~P6000 or ~HVG15 or ~LVG460_480
+fam_76:C11 or ~Siemens_Std_Convencional or ~P4000 or ~HVG34_5 or ~LVG214_228
+fam_77:C11 or ~Siemens_Std_Convencional or ~P4000 or ~HVG34_5 or ~LVG460_480
+fam_78:C11 or ~Siemens_Std_Convencional or ~P5000 or ~HVG34_5 or ~LVG214_228
+fam_79:C11 or ~Siemens_Std_Convencional or ~P5000 or ~HVG34_5 or ~LVG460_480
+fam_80:C11 or ~Siemens_Std_Convencional or ~P6000 or ~HVG34_5 or ~LVG214_228
+fam_81:C11 or ~Siemens_Std_Convencional or ~P6000 or ~HVG34_5 or ~LVG460_480
+fam_82:C12 or ~Siemens_Std_Convencional or ~P4000 or ~HVG34_5 or ~LVG15
+fam_83:C12 or ~Siemens_Std_Convencional or ~P5000 or ~HVG34_5 or ~LVG15
+fam_84:C12 or ~Siemens_Std_Convencional or ~P6000 or ~HVG34_5 or ~LVG15
+fam_85:C10 or ~Siemens_Std_Convencional or ~P7500 or ~HVG15 or ~LVG214_228
+fam_86:C10 or ~Siemens_Std_Convencional or ~P7500 or ~HVG15 or ~LVG460_480
+fam_87:C10 or ~Siemens_Std_Convencional or ~P10000 or ~HVG15 or ~LVG214_228
+fam_88:C10 or ~Siemens_Std_Convencional or ~P10000 or ~HVG15 or ~LVG460_480
+fam_89:C11 or ~Siemens_Std_Convencional or ~P7500 or ~HVG34_5 or ~LVG214_228
+fam_90:C11 or ~Siemens_Std_Convencional or ~P7500 or ~HVG34_5 or ~LVG460_480
+fam_91:C11 or ~Siemens_Std_Convencional or ~P10000 or ~HVG34_5 or ~LVG214_228
+fam_92:C11 or ~Siemens_Std_Convencional or ~P10000 or ~HVG34_5 or ~LVG460_480
+fam_93:C12 or ~Siemens_Std_Convencional or ~P7500 or ~HVG34_5 or ~LVG15
+fam_94:C12 or ~Siemens_Std_Convencional or ~P10000 or ~HVG34_5 or ~LVG15
+</constraints>
+</feature_model>

@@ -1,0 +1,99 @@
+<feature_model name="Seco_Clase_F.derivator.fm">
+<meta>
+<data name="uuid">109</data>
+<data name="description">Seco_Clase_F.derivator.fm</data>
+<data name="creator">Carlos Rangel</data>
+<data name="address"></data>
+<data name="email">carlos.rangel@siemens.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Siemens</data>
+<data name="department"></data>
+<data name="date">20160610</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Seco_Clase_F_Derivator(PMR_Derivator)
+	:m Heading(Heading)
+		:g (_r_1_13) [1,1] 
+			: Transformador_Trifásico_Seco_en_Resina(Transformador_Trifásico_Seco_en_Resina)
+	:m DataSheet(DataSheet)
+		:m DS_Title(DS_Title)
+			:g (_r_2_3_15) [1,1] 
+				: Transformador_Trifásico_Seco_en_Resina_Clase_F(Transformador_Trifásico_Seco_en_Resina_Clase_F)
+		:m DS_Picture(DS_Picture)
+			:g (_r_2_4_17) [1,1] 
+				: CRT_1(Picture_PMR_S15)
+		:m DS_Txt_Standard(DS_Txt_Standard)
+			:g _r_2_5_25_34_36(_r_2_5_25_34_36) [1,1]
+				: ICONTEC(ICONTEC)
+		:m StandardFeatures(StandardFeatures)
+			:m DS_Tr_Type(DS_Tr_Type)
+				:g (_r_2_5_19_20) [1,1] 
+					: Seco_en_Resina_Clase_F(Seco_en_Resina_Clase_F)
+			:m DS_Insulation_Class(DS_Insulation_Class)
+				:g (_r_2_5_22_23) [1,1] 
+					: F(F)
+			:m DS_TemperatureRises(DS_TemperatureRises)
+				:m DS_TR_windings(DS_TR_windings)
+					:g (_r_2_5_25_29_32) [1,1] 
+						: T120(T120)
+				:m DS_TR_Standard(DS_TR_Standard)
+					:g (_r_2_5_25_34_35) [1,1] 
+						: NTC3445(NTC3445)
+			:m DS_GuaranteedValues(DS_GuaranteedValues)
+				:g (_r_2_5_37_63) [1,*] 
+					: Io(Io)
+					: Po(Po)
+					: Pr(Pr)
+					: Uz(Uz)
+			:m DS_Test_Values(DS_Test_Values)
+				:g (_r_2_5_41_73) [1,*] 
+					: BIL(BIL)
+					: AC(AC)
+			:m DS_GV_Std(DS_GV_Std)
+				:g _r_2_5_57_58(_r_2_5_57_58) [1,1] 
+					: NTC3445(NTC3445)
+						:g _r_2_5_57_58_59_60(_r_2_5_57_58_59_60) [1,1] 
+							: NTC3445_1(NTC3445_1)
+			:m DS_TV_Std(DS_TV_Std)
+				:g _r_2_5_68_71(_r_2_5_68_71) [1,1] 
+					: NTC3654(NTC3654)
+						:g _r_2_5_68_71_72(_r_2_5_68_71_72) [1,1] 
+							: NTC3654_1(NTC3654_1)
+			:m DS_TR_RefTemp(DS_TR_RefTemp)
+				:g (_r_2_5_66_68) [1,1] 
+					: T100(T100)
+		:m ConstructiveFeatures(ConstructiveFeatures)
+		:m DS_Accesories(DS_Accesories)
+			:m DS_StdAcc(DS_StdAcc)
+			:o DS_SpeAcc(DS_SpeAcc)
+		:m DS_ExternalCoating(DS_ExternalCoating)
+			:m DS_EC_CoatingColor(DS_EC_CoatingColor)
+				:g (_r_2_10_53_54) [1,1] 
+					: Acc_to_ISO12944_2_Case_C1_Very_Low(Acc_to_ISO12944_2_Case_C1_Very_Low)
+		:m DS_ElectricalTests(DS_ElectricalTests)
+			:m Routine(Routine)
+				:m Medición_de_resistencia_de_los_devanados(Medicion_de_resistencia_de_los_devanados)
+				:m Medición_de_la_relacion_de_transformación(Medicion_de_la_relacion_de_transformacion)
+				:m Medición_de_las_perdidas_con_carga_e_impedancia(Medicion_de_las_perdidas_con_carga_e_impedancia)
+				:m Medición_de_las_perdidas_sin_carga_y_corriente_de_excitación(Medicion_de_las_perdidas_sin_carga_y_corriente_de_excitacion)
+				:m Prueba_de_tensión_inducida(Prueba_de_tension_inducida)
+				:m Prueba_de_tensión_aplicada(Prueba_de_tension_aplicada)
+				:m Medición_de_resistencia_de_aislamiento_de_los_devanados(Medicion_de_resistencia_de_aislamiento_de_los_devanados)
+			:o Type(Type)
+				:g (_r_2_11_48_67) [1,*] 
+					: Calentamiento(Calentamiento)
+					: Impulso(Impulso)
+		:m DS_Dispatch(DS_Dispatch)
+			:m Main_tank_dispatch_condition(Main_tank_dispatch_condition)
+				:m MT_Crate_Base_and_plastic(MT_Crate_Base_and_plastic)
+			:m Instructions_Manual(Instructions_Manual)
+				:g (_r_2_12_54_55) [1,1] 
+					: Number_of_printed_copies(Number_of_printed_copies)
+						:g (_r_2_12_54_55_56_57) [1,1] 
+							: C1(C1)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

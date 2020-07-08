@@ -1,0 +1,1679 @@
+<feature_model name="CT.configurator.fm">
+<meta>
+<data name="uuid">201</data>
+<data name="description">system.fm</data>
+<data name="creator">Carlos Rangel</data>
+<data name="address"></data>
+<data name="email">carlos.rangel@siemens.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Siemens</data>
+<data name="department"></data>
+<data name="date">2016-01-06</data>
+<data name="reference">Rev. DE C.Rozo el 20151021</data>
+</meta>
+<feature_tree>
+:r sat(sat)
+	:m System(System)
+		:m Frequency(Frequency)
+			:o Minimum(Minimum)
+				:g _id_0_sys(_id_0_sys) [1,1] 
+					: FMin10(FMin10)
+					: FMin30(FMin30)
+			:o Maximum(Maximum)
+				:g _id_1_sys(_id_1_sys) [1,1] 
+					: FMax80(FMax80)
+					: FMax90(FMax90)
+			:m Frequency_Type(Frequency_Type)
+				:g Frecuency_19(Frecuency_19) [1,1] 
+					: Fixed_Frequency(Fixed_Frequency)
+					: Variable_Frequency(Variable_Frequency)
+			:m Rated_Frequency(Rated_Frequency);2
+				:g Frecuency_22_23(Frecuency_22_23) [1,1] 
+					: F60(F60)
+					: F50(F50)
+		:m Standard(Standard);2
+			:g _id_2(_id_2) [1,1] 
+				: ANSI_Std(ANSI_Std)
+					:g _id_2_25_26(_id_2_25_26) [1,1] 
+						: C57_12(C57_12)
+				: ECOPETROL_Std(ECOPETROL_Std)
+					:g _id_2_28_29(_id_2_28_29) [1,1] 
+						: ECOPETROLVEP_SIP_P_ELE_ET_032R020130708(ECOPETROLVEP_SIP_P_ELE_ET_032R020130708)
+							:g _id_2_28_29_30_31(_id_2_28_29_30_31) [1,1] 
+								: ECOP_Power_Transformer(ECOP_Power_Transformer)
+								: ECOP_Distribution_Transformer(ECOP_Distribution_Transformer)
+				: NTC_Std(NTC_Std)
+					:g _id_2_34_35(_id_2_34_35) [1,1] 
+						: NTC819_4arev(NTC819_4arev)
+						: NTC3997(NTC3997)
+				: IEC_Std(IEC_Std)
+				: Standard_Other(Standard_Other);5
+	:m Installation(Installation)
+		:m Altitude(Altitude);2
+			:g _id_0_install(_id_0_install) [1,1] 
+				: IA1000(IA1000)
+				: IA2600(IA2600)
+				: Altitude_Other(Altitude_Other);5
+		:m Temperature(Temperature)
+			:m MaxTemp(MaxTemp)
+				:g Maximum_17(Maximum_17) [1,1] 
+					: TMax40(TMax40)
+					: TMax_site(TMax_site)
+			:m AvgTemp(AvgTemp)
+				:g Average_19(Average_19) [1,1] 
+					: TAve30(TAve30)
+					: TAve_site(TAve_site)
+			:m MinTemp(MinTemp)
+				:g Minimum_21(Minimum_21) [1,1] 
+					: TMin20(TMin20)
+					: Tmin_site(Tmin_site)
+		:m Location(Location)
+			:g _id_1_install(_id_1_install) [1,1] 
+				: Loc_Outdoor(Loc_Outdoor)
+				: Loc_Indoor(Loc_Indoor)
+		:m Installation_Country(Installation_Country);2
+			:g _id_2_install(_id_2_install) [1,1] 
+				: COLOMBIA(COLOMBIA)
+				: ARGENTINA(ARGENTINA)
+				: BOLIVIA(BOLIVIA)
+				: BRASIL(BRASIL)
+				: CANADA(CANADA)
+				: COSTA_RICA(COSTA_RICA)
+				: CHILE(CHILE)
+				: ECUADOR(ECUADOR)
+				: EL_SALVADOR(EL_SALVADOR)
+				: ESTADOS_UNIDOS(ESTADOS_UNIDOS)
+				: GUATEMALA(GUATEMALA)
+				: HONDURAS(HONDURAS)
+				: MEXICO(MEXICO)
+				: NICARAGUA(NICARAGUA)
+				: PANAMA(PANAMA)
+				: PARAGUAY(PARAGUAY)
+				: PERU(PERU)
+				: PUERTO_RICO(PUERTO_RICO)
+				: REP_DOMINICANA(REP_DOMINICANA)
+				: URUGUAY(URUGUAY)
+				: VENEZUELA(VENEZUELA)
+	:m Type(Type)
+		:m Transformer_Type(Transformer_Type);2
+			:g _id_0(_id_0) [1,1] 
+				: FrecuenciaVariableSUT(FrecuenciaVariableSUT)
+				: PedestalRadial(PedestalRadial)
+				: Convencional(Convencional)
+				: Poste(Poste)
+				: Petrolero(Petrolero)
+				: Seco_Clase_F(Seco_Clase_F)
+				: Autoprotegido(Autoprotegido)
+				: ZigZag(ZigZag)
+				: PedestalAnillo(PedestalAnillo)
+		:m Variant(Variant)
+			:g Type_19_20(Type_19_20) [1,1] 
+				: Standardtransformer(Standardtransformer)
+				: Customizedtransformer(Customizedtransformer)
+	:m Electrical_Thermal_Acoustic(Electrical_Thermal_Acoustic)
+		:m Electrical(Electrical)
+			:m Power(Power)
+				:o Power_group(Power_group);3
+					:g Electrical_Thermal_Acoustic_81_82_71_72(Electrical_Thermal_Acoustic_81_82_71_72) [1,1] 
+						: PG_0_14(PG_0_14)
+						: PG_15_45(PG_15_45)
+						: PG_46_74(PG_46_74)
+						: PG_75_149(PG_75_149)
+						: PG_150(PG_150)
+						: PG_151_600(PG_151_600)
+						: PG_601_800(PG_601_800)
+						: PG_801_1000(PG_801_1000)
+						: PG_1001_2000(PG_1001_2000)
+						: PG_2001_4999(PG_2001_4999)
+						: PG_5000(PG_5000)
+						: PG_5001_7499(PG_5001_7499)
+						: PG_7500_10000(PG_7500_10000)
+						: PG_10001_15000(PG_10001_15000)
+						: PG_15001_50000(PG_15001_50000)
+						: PG_50001_80000(PG_50001_80000)
+			:m High_voltage(High_voltage)
+				:o High_Voltage_Group(High_Voltage_Group);3
+					:g High_Voltage_Group_66(High_Voltage_Group_66) [1,1] 
+						: HVG_0_119(HVG_0_119)
+						: HVG_120_230(HVG_120_230)
+						: HVG_231_439(HVG_231_439)
+						: HVG_440_499(HVG_440_499)
+						: HVG_500_700(HVG_500_700)
+						: HVG_701_2299(HVG_701_2299)
+						: HVG_2300_4159(HVG_2300_4159)
+						: HVG_4160_5000(HVG_4160_5000)
+						: HVG_5001_7099(HVG_5001_7099)
+						: HVG_7100_9999(HVG_7100_9999)
+						: HVG_10000_13199(HVG_10000_13199)
+						: HVG_13200_16749(HVG_13200_16749)
+						: HVG_16750_25000(HVG_16750_25000)
+						: HVG_25001_37999(HVG_25001_37999)
+						: HVG_37800_57999(HVG_37800_57999)
+						: HVG_58000_84999(HVG_58000_84999)
+						: HVG_85000_138000(HVG_85000_138000)
+						: HVG_138001_219999(HVG_138001_219999)
+						: HVG_220000_230000(HVG_220000_230000)
+				:o HV_Value_Loaded(HV_Value_Loaded);2
+					:g High_voltage_232_233(High_voltage_232_233) [1,1] 
+						: HVV_no_load(HVV_no_load)
+						: HVV_full_load(HVV_full_load)
+				:o HV_Voltage_Tapped_Winding(HV_Voltage_Tapped_Winding)
+					:m HV_VTW(HV_VTW);2
+						:g High_voltage_239_242_243(High_voltage_239_242_243) [1,1] 
+							: HV_VTW_2point5percent_per_tap_2_up_2_down_5_taps(HV_VTW_2point5percent_per_tap_2_up_2_down_5_taps)
+							: HV_VTW_2point5percent_per_tap_1_up_3_down_5_taps(HV_VTW_2point5percent_per_tap_1_up_3_down_5_taps)
+							: HV_VTW_other(HV_VTW_other);5
+					:m HV_VTW_Regulation(HV_VTW_Regulation)
+						:g High_voltage_239_247_248(High_voltage_239_247_248) [1,1] 
+							: HVVTWR_2point5percent(HVVTWR_2point5percent)
+							: HVVTWR_other(HVVTWR_other)
+					:m HV_VTW_TapsAbove(HV_VTW_TapsAbove)
+						:g High_voltage_239_250_251(High_voltage_239_250_251) [1,1] 
+							: HVVTWTA_2(HVVTWTA_2)
+							: HVVTWTA_1(HVVTWTA_1)
+							: HVVTWTA_other(HVVTWTA_other)
+					:m HV_VTW_TapsBelow(HV_VTW_TapsBelow)
+						:g High_voltage_239_253_254(High_voltage_239_253_254) [1,1] 
+							: HVVTWTB_2(HVVTWTB_2)
+							: HVVTWTB_3(HVVTWTB_3)
+							: HVVTWTB_other(HVVTWTB_other)
+					:m HV_VTW_Taps(HV_VTW_Taps)
+						:g High_voltage_239_258_259(High_voltage_239_258_259) [1,1] 
+							: HVVTWT_5(HVVTWT_5)
+							: HVVTWT_other(HVVTWT_other)
+				:o HV_BIL(HV_BIL);2
+					:g High_voltage_268_269(High_voltage_268_269) [1,1] 
+						: HV_BIL_Acc_Standard(HV_BIL_Acc_Standard)
+						: HV_BIL_Acc_Specification(HV_BIL_Acc_Specification);5
+				:o HV_AC(HV_AC);2
+					:g High_voltage_284_285(High_voltage_284_285) [1,1] 
+						: HV_AC_Acc_Standard(HV_AC_Acc_Standard)
+						: HV_AC_Acc_Specification(HV_AC_Acc_Specification);5
+			:m Low_Voltage(Low_Voltage)
+				:o Low_Voltage_Group(Low_Voltage_Group);3
+					:g Low_Voltage_Group_86(Low_Voltage_Group_86) [1,1] 
+						: LVG_0_119(LVG_0_119)
+						: LVG_120_230(LVG_120_230)
+						: LVG_231_439(LVG_231_439)
+						: LVG_440_499(LVG_440_499)
+						: LVG_500_700(LVG_500_700)
+						: LVG_701_2299(LVG_701_2299)
+						: LVG_2300_4159(LVG_2300_4159)
+						: LVG_4160_5000(LVG_4160_5000)
+						: LVG_5001_7099(LVG_5001_7099)
+						: LVG_7100_9999(LVG_7100_9999)
+						: LVG_10000_13199(LVG_10000_13199)
+						: LVG_13200_16749(LVG_13200_16749)
+						: LVG_16750_25000(LVG_16750_25000)
+						: LVG_25001_37999(LVG_25001_37999)
+						: LVG_37800_57999(LVG_37800_57999)
+						: LVG_58000_84999(LVG_58000_84999)
+						: LVG_85000_138000(LVG_85000_138000)
+						: LVG_138001_219999(LVG_138001_219999)
+						: LVG_220000_230000(LVG_220000_230000)
+				:o LV_Value_Loaded(LV_Value_Loaded);2
+					:g Low_Voltage_236_237(Low_Voltage_236_237) [1,1] 
+						: LVV_no_load(LVV_no_load)
+						: LVV_full_load(LVV_full_load)
+				:o LV_Voltage_Tapped_Winding(LV_Voltage_Tapped_Winding)
+				:o LV_BIL(LV_BIL);2
+					:g Low_Voltage_273_274(Low_Voltage_273_274) [1,1] 
+						: LV_BIL_Acc_Standard(LV_BIL_Acc_Standard)
+						: LV_BIL_Acc_Specification(LV_BIL_Acc_Specification);5
+				:o LV_AC(LV_AC);2
+					:g Low_Voltage_288_289(Low_Voltage_288_289) [1,1] 
+						: LV_AC_Acc_Standard(LV_AC_Acc_Standard)
+						: LV_AC_Acc_Specification(LV_AC_Acc_Specification);5
+			:m Voltage_Tapped_Winding(Voltage_Tapped_Winding)
+				:g Electrical_Thermal_Acoustic_81_85_86(Electrical_Thermal_Acoustic_81_85_86) [1,1] 
+					: VTW_HV_variable_per_tap_20_taps(VTW_HV_variable_per_tap_20_taps)
+					: VTW_HV_2point5percent_per_tap_2_up_2_down_5_taps(VTW_HV_2point5percent_per_tap_2_up_2_down_5_taps)
+					: VTW_HV_2point5percent_per_tap_1_up_3_down_5_taps(VTW_HV_2point5percent_per_tap_1_up_3_down_5_taps)
+			:m Transformer_Phases(Transformer_Phases);2
+				:g Electrical_Thermal_Acoustic_81_89_90(Electrical_Thermal_Acoustic_81_89_90) [1,1] 
+					: PH3(PH3)
+					: PH1(PH1)
+			:m Angular_Displacement(Angular_Displacement)
+				:m Vector_Group(Vector_Group)
+					:g Electrical_Thermal_Acoustic_81_92_95_96(Electrical_Thermal_Acoustic_81_92_95_96) [1,1] 
+						: VG_2W(VG_2W);2
+							:g Electrical_Thermal_Acoustic_81_92_95_96_55_56(Electrical_Thermal_Acoustic_81_92_95_96_55_56) [1,1] 
+								: Dyn5(Dyn5)
+								: ZNd0(ZNd0)
+								: ZNyn11(ZNyn11)
+								: ZNyn1(ZNyn1)
+								: Dyn1(Dyn1)
+								: Dyn11(Dyn11)
+								: Dd0(Dd0)
+								: YNd7(YNd7)
+								: YNyn0(YNyn0)
+								: Yy0(Yy0)
+								: Yyn0(Yyn0)
+								: YNd1(YNd1)
+								: YNd11(YNd11)
+								: YNd5(YNd5)
+								: YNa0(YNa0)
+								: Ii0(Ii0)
+								: Ii6(Ii6)
+								: VG_2W_other(VG_2W_other);5
+						: VG_3W(VG_3W);2
+							:g Electrical_Thermal_Acoustic_81_92_95_96_58_59(Electrical_Thermal_Acoustic_81_92_95_96_58_59) [1,1] 
+								: Dd0_Yd1(Dd0_Yd1)
+								: ZN_plus_Dyn1(ZN_plus_Dyn1)
+								: ZNyn11yn11(ZNyn11yn11)
+								: Dzn0_Yzn11(Dzn0_Yzn11)
+								: Dzn10_Yzn11(Dzn10_Yzn11)
+								: YNa0_d_(YNa0_d_)
+								: YNa0_d1_(YNa0_d1_)
+								: YNa0d1(YNa0d1)
+								: YNyn0d1(YNyn0d1)
+								: Yyn0_d1_(Yyn0_d1_)
+								: YNyn0d11(YNyn0d11)
+								: YNyn1d1(YNyn1d1)
+								: YNyn0d5(YNyn0d5)
+								: YNynyn0(YNynyn0)
+								: Dd0_Dyn1(Dd0_Dyn1)
+								: Dd0yn5(Dd0yn5)
+								: Dyn1yn1(Dyn1yn1)
+								: Dyn5d0(Dyn5d0)
+								: Dyn5yn5(Dyn5yn5)
+								: Dyn5_Dd6(Dyn5_Dd6)
+								: Dyn11yn11(Dyn11yn11)
+								: VG_3W_other(VG_3W_other);5
+						: VG_1W(VG_1W);2
+							:g Electrical_Thermal_Acoustic_81_92_95_96_421_422(Electrical_Thermal_Acoustic_81_92_95_96_421_422) [1,1] 
+								: ZN0(ZN0)
+								: VG_1W_other(VG_1W_other);5
+						: VG_4W(VG_4W);2
+							:g Electrical_Thermal_Acoustic_81_92_95_96_470_471(Electrical_Thermal_Acoustic_81_92_95_96_470_471) [1,1] 
+								: VG_4W_other(VG_4W_other);5
+						: VG_5W(VG_5W);2
+							:g Electrical_Thermal_Acoustic_81_92_95_96_473_474(Electrical_Thermal_Acoustic_81_92_95_96_473_474) [1,1] 
+								: YNd1d1d1d1(YNd1d1d1d1)
+								: VG_5W_other(VG_5W_other);5
+			:m Neutral_Grounding_System(Neutral_Grounding_System)
+				:g Electrical_Thermal_Acoustic_81_128_129(Electrical_Thermal_Acoustic_81_128_129) [1,1] 
+					: Solid_Grounded(Solid_Grounded)
+			:m Operation(Operation);2
+				:g Electrical_Thermal_Acoustic_81_133_134(Electrical_Thermal_Acoustic_81_133_134) [1,1] 
+					: StepDown(StepDown)
+					: StepUp(StepUp)
+			:m Transformer_Losses(Transformer_Losses)
+				:m Transformer_Losses_Standard(Transformer_Losses_Standard);2
+					:g Transformer_Losses_42_43(Transformer_Losses_42_43) [1,1] 
+						: TL_NTC(TL_NTC)
+						: TL_DOE(TL_DOE)
+						: TL_Special(TL_Special)
+						: TL_Other(TL_Other);5
+				:o Transformer_Losses_Guaranteed_Values(Transformer_Losses_Guaranteed_Values);2
+					:g Transformer_Losses_48_49(Transformer_Losses_48_49) [1,1] 
+						: TL_GV_Acc_Standard(TL_GV_Acc_Standard)
+						: TL_GV_Acc_Specification(TL_GV_Acc_Specification);5
+						: TL_GV_Other(TL_GV_Other);5
+				:o Transformer_Losses_Assessment(Transformer_Losses_Assessment)
+			:o Transformer_Windings_Nr(Transformer_Windings_Nr);2
+				:g Electrical_414_415(Electrical_414_415) [1,1] 
+					: TWNr_1(TWNr_1)
+					: TWNr_2(TWNr_2)
+					: TWNr_3(TWNr_3)
+					: TWNr_4(TWNr_4)
+					: TWNr_5(TWNr_5)
+			:o Terminals_Markings(Terminals_Markings);2
+				:g Electrical_482_483(Electrical_482_483) [1,1] 
+					: ANSI_X0_X1_X2_X3_H0_H1_H2_H3(ANSI_X0_X1_X2_X3_H0_H1_H2_H3)
+					: IEC_1U_1V_1W_2U_2V_2W(IEC_1U_1V_1W_2U_2V_2W)
+					: NTC_U_V_W_PN_x_y_z_pn(NTC_U_V_W_PN_x_y_z_pn)
+					: Terminals_Markings_other(Terminals_Markings_other);5
+			:o K_factor(K_factor)
+				:g Electrical_488_489(Electrical_488_489) [1,1] 
+					: K_factor_1_normal(K_factor_1_normal)
+					: K_factor_special(K_factor_special)
+			:o Impedance(Impedance)
+				:m HV_LV_Impedance(HV_LV_Impedance);4
+					:g Electrical_277_278_320(Electrical_277_278_320) [1,1] 
+						: HVLVI_Acc_Standard(HVLVI_Acc_Standard)
+						: HVLVL_Other(HVLVL_Other)
+		:m Thermal(Thermal)
+			:m Cooling(Cooling)
+				:g Electrical_Thermal_Acoustic_117_118_121(Electrical_Thermal_Acoustic_117_118_121) [1,*] 
+					: ONAN(ONAN)
+					: ONAF(ONAF)
+					: ONAF2(ONAF2)
+			:o Transformer_Temp_Rise1(Transformer_Temp_Rise1);2
+				:g Thermal_468_469(Thermal_468_469) [1,1] 
+					: Rise_60_65_78(Rise_60_65_78)
+					: Rise_65_65_80(Rise_65_65_80)
+					: Rise_55_55_65(Rise_55_55_65)
+					: Rise_acc_to_final_design(Rise_acc_to_final_design)
+					: Rise_other(Rise_other);5
+			:o Transformer_Temp_Rise2(Transformer_Temp_Rise2);2
+				:g Thermal_475_476(Thermal_475_476) [1,1] 
+					: Rise2_60_65_78(Rise2_60_65_78)
+					: Rise2_65_65_80(Rise2_65_65_80)
+					: Rise2_55_55_65(Rise2_55_55_65)
+					: Rise2_acc_to_final_design(Rise2_acc_to_final_design)
+					: Rise2_other(Rise2_other);5
+		:m Acoustic(Acoustic)
+			:m Noise_Level(Noise_Level)
+				:g Electrical_Thermal_Acoustic_124_125_126(Electrical_Thermal_Acoustic_124_125_126) [1,1] 
+					: Nema_TR1(Nema_TR1)
+	:m Mechanical(Mechanical)
+		:m Oil_Preservation_System(Oil_Preservation_System)
+			:m OPS_Type1(OPS_Type1)
+				:g _id_0(__id_0) [1,1] 
+					: OPS_Open_System(OPS_Open_System)
+					: OPS_Closed_System(OPS_Closed_System)
+			:m OPS_Type2(OPS_Type2)
+				:g Oil_Preservation_System_101(Oil_Preservation_System_101) [1,1] 
+					: OPS_Constant_Volume(OPS_Constant_Volume)
+					: OPS_Constant_Pressure(OPS_Constant_Pressure)
+		:m Tank_Type(Tank_Type)
+			:g _id_1(_id_1) [1,1] 
+				: Sealed_Tank(Sealed_Tank)
+				: Conservator_Tank(Conservator_Tank)
+		:m Tank_Shape(Tank_Shape)
+			:g Mechanical_126_127(Mechanical_126_127) [1,1] 
+				: Rectangular_Tank(Rectangular_Tank)
+				: Oval_Tank(Oval_Tank)
+				: Circular_Tank(Circular_Tank)
+		:m Bushings_Location(Bushings_Location)
+			:m High_Voltage_Bushing_Location(High_Voltage_Bushing_Location)
+				:g _id_2(__id_2) [1,1] 
+					: HVBL_Side_s1_Left(HVBL_Side_s1_Left)
+					: HVBL_Cover_s3(HVBL_Cover_s3)
+			:m Low_Voltage_Bushing_Location(Low_Voltage_Bushing_Location)
+				:g _id_3(_id_3) [1,1] 
+					: LVBL_Side_s1_Right(LVBL_Side_s1_Right)
+					: LVBL_Side_s1(LVBL_Side_s1)
+					: LVBL_Cover_s1(LVBL_Cover_s1)
+		:m Base_Type(Base_Type)
+			:g _id_4(_id_4) [1,1] 
+				: Chassis_for_rollers(Chassis_for_rollers)
+					:o Rollers(Rollers)
+				: Skid(Skid)
+				: Pad_type_base(Pad_type_base)
+				: Base_not_applicable(Base_not_applicable)
+		:m Surface_Protection(Surface_Protection);2
+			:m SP_Level(SP_Level)
+				:g _id_5(_id_5) [1,1] 
+					: ISO_12944_2_Caso_C2_y_C3(ISO_12944_2_Caso_C2_y_C3)
+					: Acc_to_ISO12944_2_Case_C1_Very_Low(Acc_to_ISO12944_2_Case_C1_Very_Low)
+			:m Surface_Protection_External_Color(Surface_Protection_External_Color)
+				:g _id_6(_id_6) [1,1] 
+					: Light_Grey_RAL7035(Light_Grey_RAL7035)
+					: Grey_ANSI61(Grey_ANSI61)
+					: Light_Grey_ANSI70(Light_Grey_ANSI70)
+					: SPEC_Other(SPEC_Other);5
+		:m Active_Part(Active_Part)
+			:m Core(Core)
+				:m Core_Type(Core_Type)
+					:g _id_7(_id_7) [1,1] 
+						: Stacked_Core(Stacked_Core)
+						: Wounded_Core(Wounded_Core)
+				:m Core_Grounding(Core_Grounding)
+					:g _id_8(_id_8) [1,1] 
+						: CG_Internal(CG_Internal)
+						: CG_External(CG_External)
+			:m Winding(Winding)
+				:m Winding_Material(Winding_Material)
+					:m Winding_Material_HV(Winding_Material_HV);2
+						:g Winding_Material_129_131(Winding_Material_129_131) [1,1] 
+							: WM_HV_Copper(WM_HV_Copper)
+							: WM_HV_Aluminum(WM_HV_Aluminum)
+							: WM_HV_Design(WM_HV_Design)
+					:m Winding_Material_LV(Winding_Material_LV);2
+						:g Winding_Material_130_134(Winding_Material_130_134) [1,1] 
+							: WM_LV_Copper(WM_LV_Copper)
+							: WM_LV_Aluminum(WM_LV_Aluminum)
+							: WM_LV_Design(WM_LV_Design);2
+				:o Winding_Electrostatic_Shield(Winding_Electrostatic_Shield)
+					:m WES_Grounding(WES_Grounding)
+						:g _id_10(_id_10) [1,1] 
+							: WESG_Internal(WESG_Internal)
+							: WESG_External(WESG_External)
+			:o Internal_Current_Transformers(Internal_Current_Transformers)
+				:o ICT_HV(ICT_HV)
+				:o ICT_LV(ICT_LV)
+		:o Bushings_Enclosure(Bushings_Enclosure)
+			:g _id_11(_id_11) [1,1] 
+				: High_Low_Voltage_Shared_Bushing_Enclosure(High_Low_Voltage_Shared_Bushing_Enclosure)
+					:m HLV_Enclosure_type(HLV_Enclosure_type)
+						:g _id_12(_id_12) [1,1] 
+							: HLVSBE_Nema_3R(HLVSBE_Nema_3R)
+							: HLVSBE_Nema_4(HLVSBE_Nema_4)
+							: HLVSBE_No_Nema(HLVSBE_No_Nema)
+					:m HLVE_Conductors_per_Phase(HLVE_Conductors_per_Phase)
+						:m HLVSBE_CPP_High_Voltage(HLVSBE_CPP_High_Voltage)
+							:m HLVSBE_CPP_High_Voltage_Number(HLVSBE_CPP_High_Voltage_Number)
+								:g _id_13(_id_13) [1,1] 
+									: HLV_SBE_CPPHV_1(HLV_SBE_CPPHV_1)
+							:m HLVSBE_CPP_High_Voltage_Size(HLVSBE_CPP_High_Voltage_Size)
+						:m HLVSBE_CPP_Low_Voltage(HLVSBE_CPP_Low_Voltage)
+							:m HLVSBE_CPP_Low_Voltage_Number(HLVSBE_CPP_Low_Voltage_Number)
+								:g _id_14(_id_14) [1,1] 
+									: HLV_SBE_CPPLV_3(HLV_SBE_CPPLV_3)
+							:m HLVSBE_CPP_Low_Voltage_Size(HLVSBE_CPP_Low_Voltage_Size)
+					:m HLVE_Conductors_Entry(HLVE_Conductors_Entry)
+						:m HLVE_CE_High_Voltage(HLVE_CE_High_Voltage)
+							:g _id_15(_id_15) [1,1] 
+								: HLVE_CEHV_Bottom(HLVE_CEHV_Bottom)
+						:m HLVE_CE_Low_Voltage(HLVE_CE_Low_Voltage)
+							:g _id_16(_id_16) [1,1] 
+								: HLVE_CELV_Bottom(HLVE_CELV_Bottom)
+					:o HLVE_Provisions_for_surge_arrestors(HLVE_Provisions_for_surge_arrestors)
+						:g Provisions_for_surge_arrestors_123(Provisions_for_surge_arrestors_123) [1,*] 
+							: HLVE_P_SA_HV(HLVE_P_SA_HV)
+							: HLVE_P_SA_LV(HLVE_P_SA_LV)
+					:o HLVE_Provisions_for_cable_terminations(HLVE_Provisions_for_cable_terminations)
+						:g Provisions_for_cable_terminations_126(Provisions_for_cable_terminations_126) [1,*] 
+							: HLVE_PFCT_High_Voltage(HLVE_PFCT_High_Voltage)
+							: HLVE_PFCT_Low_Voltage(HLVE_PFCT_Low_Voltage)
+					:m HLVE_Access_means(HLVE_Access_means)
+						:g _id_17(_id_17) [1,1] 
+							: HLVE_AM_Door(HLVE_AM_Door)
+								:m HLVE_AM_Lock_type(HLVE_AM_Lock_type)
+									:g _id_18(_id_18) [1,1] 
+										: HLVE_AM_D_LT_3_point_locking_System(HLVE_AM_D_LT_3_point_locking_System)
+						:o HLVE_security_shield_avoiding_accidental_contact(HLVE_security_shield_avoiding_accidental_contact)
+				: High_Low_Voltage_Independent_Bushing_Enclosure(High_Low_Voltage_Independent_Bushing_Enclosure)
+					:o High_Voltage_Bushing_Enclosure(High_Voltage_Bushing_Enclosure)
+						:m HV_Enclosure_Type(HV_Enclosure_Type)
+							:g _id_20(_id_20) [1,1] 
+								: HVET_Nema_3R(HVET_Nema_3R)
+								: HVET_Nema_4(HVET_Nema_4)
+								: HVET_Nema_4X(HVET_Nema_4X)
+						:m HVE_Conductors_per_Phase(HVE_Conductors_per_Phase)
+							:m HVE_CPP_Number(HVE_CPP_Number)
+								:g _id_21(_id_21) [1,1] 
+									: HVE_CPP_N1(HVE_CPP_N1)
+							:m HVE_CPP_Size(HVE_CPP_Size)
+						:m HVE_Conductors_Entry(HVE_Conductors_Entry)
+							:g _id_22(_id_22) [1,1] 
+								: HVE_CE_Bottom(HVE_CE_Bottom)
+						:o HVE_Provisions_for_surge_arrestors(HVE_Provisions_for_surge_arrestors)
+						:o HVE_Provisions_for_cable_terminations(HVE_Provisions_for_cable_terminations)
+						:m HVE_Access_means(HVE_Access_means)
+							:g _id_23(_id_23) [1,1] 
+								: HVE_AM_Door(HVE_AM_Door)
+									:m HVE_AM_D_Lock_type(HVE_AM_D_Lock_type)
+										:g _id_24(_id_24) [1,1] 
+											: HVE_AM_D_LT_3_point_locking_system(HVE_AM_D_LT_3_point_locking_system)
+											: HVE_AM_D_LT_1_point_locking_system(HVE_AM_D_LT_1_point_locking_system)
+							:o HVE_security_shield_avoiding_accidental_contact(HVE_security_shield_avoiding_accidental_contact)
+					:o Low_Voltage_Bushing_Enclosure(Low_Voltage_Bushing_Enclosure)
+						:m LV_Enclosure_Type(LV_Enclosure_Type)
+							:g _id_25(_id_25) [1,1] 
+								: LVET_Nema_3R(LVET_Nema_3R)
+								: LVET_Nema_4(LVET_Nema_4)
+								: LVET_Nema_4X(LVET_Nema_4X)
+						:m LVE_Conductors_per_Phase(LVE_Conductors_per_Phase)
+							:m LVE_CPP_Number(LVE_CPP_Number)
+								:g Conductors_per_Phase_2_106_107(Conductors_per_Phase_2_106_107) [1,1] 
+									: LVE_CPP_N1(LVE_CPP_N1)
+							:m LVE_CPP_Size(LVE_CPP_Size)
+						:m LVE_Conductors_Entry(LVE_Conductors_Entry)
+							:g Low_Voltage_Bushing_Enclosure_109_110(Low_Voltage_Bushing_Enclosure_109_110) [1,1] 
+								: LVE_CE_Bottom(LVE_CE_Bottom)
+						:o LVE_Provisions_for_surge_arrestors(LVE_Provisions_for_surge_arrestors)
+						:o LVE_Provisions_for_cable_terminations(LVE_Provisions_for_cable_terminations)
+						:m LVE_Access_means(LVE_Access_means)
+							:g Low_Voltage_Bushing_Enclosure_114_115(Low_Voltage_Bushing_Enclosure_114_115) [1,1] 
+								: LVE_AM_Door(LVE_AM_Door)
+									:m LVE_AM_D_Lock_type(LVE_AM_D_Lock_type)
+										:g Low_Voltage_Bushing_Enclosure_114_115_116_117_118(Low_Voltage_Bushing_Enclosure_114_115_116_117_118) [1,1] 
+											: LVE_AM_D_LT_3_point_locking_System(LVE_AM_D_LT_3_point_locking_System)
+											: LVE_AM_D_LT_1_point_locking_System(LVE_AM_D_LT_1_point_locking_System)
+							:o LVE_security_shield_avoiding_accidental_contact(LVE_security_shield_avoiding_accidental_contact)
+					:m HLVI_Enclosure_type(HLVI_Enclosure_type)
+						:g High_Low_Voltage_Independent_Bushing_Enclosure_137_138(High_Low_Voltage_Independent_Bushing_Enclosure_137_138) [1,1] 
+							: HLVI_Nema_3R(HLVI_Nema_3R)
+							: HLVI_Nema_4(HLVI_Nema_4)
+							: HLVI_Nema_4X(HLVI_Nema_4X)
+		:o Oil(Oil)
+			:m Oil_Type(Oil_Type);2
+				:g Electrical_Thermal_Acoustic_5712_121_232_233_234(Electrical_Thermal_Acoustic_5712_121_232_233_234) [1,1] 
+					: OT_Mineral_ASTM(OT_Mineral_ASTM)
+					: OT_Mineral_IEC(OT_Mineral_IEC)
+					: OT_Mineral_Other(OT_Mineral_Other);5
+					: OT_Vegetal(OT_Vegetal)
+					: OT_Other_oil(OT_Other_oil)
+		:o Special_Markings(Special_Markings)
+		:o Dimensional_Restrictions(Dimensional_Restrictions)
+	:m Accessories(Accessories)
+		:m Bushings(Bushings)
+			:m High_Voltage_Bushing_Acc(High_Voltage_Bushing_Acc)
+				:m HVBAcc_Quantity(HVBAcc_Quantity)
+					:g High_Voltage_Bushing_Acc_76_77(High_Voltage_Bushing_Acc_76_77) [1,1] 
+						: HVBAcc_Qty_3(HVBAcc_Qty_3)
+						: HVBAcc_Qty_6(HVBAcc_Qty_6)
+				:m HVBAcc_Material(HVBAcc_Material)
+					:g High_Voltage_Bushing_Acc_80_81(High_Voltage_Bushing_Acc_80_81) [1,1] 
+						: HVBAcc_Solid_Dry_Porcelain(HVBAcc_Solid_Dry_Porcelain)
+						: HVBAcc_Molded(HVBAcc_Molded)
+				:m HVBAcc_Terminal(HVBAcc_Terminal)
+					:g High_Voltage_Bushing_Acc_83_84(High_Voltage_Bushing_Acc_83_84) [1,1] 
+						: HVBAcc_T_Eyebolt(HVBAcc_T_Eyebolt)
+						: HVBAcc_T_Spade_4_holes(HVBAcc_T_Spade_4_holes)
+						: HVBAcc_T_Molded(HVBAcc_T_Molded)
+			:m Low_Voltage_Bushing_Acc(Low_Voltage_Bushing_Acc)
+				:m LVBAcc_Quantity(LVBAcc_Quantity)
+					:g Low_Voltage_Bushing_Acc_87_88(Low_Voltage_Bushing_Acc_87_88) [1,1] 
+						: LVBAcc_Qty_4(LVBAcc_Qty_4)
+						: LVBAcc_Qty_3(LVBAcc_Qty_3)
+				:m LVBAcc_Material(LVBAcc_Material)
+					:g Low_Voltage_Bushing_Acc_93_94(Low_Voltage_Bushing_Acc_93_94) [1,1] 
+						: LVBAcc_Solid_Dry_Porcelain(LVBAcc_Solid_Dry_Porcelain)
+				:m LVBAcc_Terminal(LVBAcc_Terminal)
+					:g Low_Voltage_Bushing_Acc_96_97(Low_Voltage_Bushing_Acc_96_97) [1,1] 
+						: LVBAcc_T_Spade_4_holes_or_dual_According_to_design(LVBAcc_T_Spade_4_holes_or_dual_According_to_design)
+						: LVBAcc_T_Spade_4_holes(LVBAcc_T_Spade_4_holes)
+						: LVBAcc_T_Spade_6_holes(LVBAcc_T_Spade_6_holes)
+						: LVBAcc_T_Eyebolt(LVBAcc_T_Eyebolt)
+		:m Tap_Changer(Tap_Changer)
+			:m Tap_Changer_Type(Tap_Changer_Type);2
+				:g Tap_Changer_103_104(Tap_Changer_103_104) [1,1] 
+					: NLTC(NLTC)
+					: OLTC(OLTC)
+			:m Tap_Changer_Location(Tap_Changer_Location)
+				:g Tap_Changer_76_77(Tap_Changer_76_77) [1,1] 
+					: NLTCL_Side_Wall_s3(NLTCL_Side_Wall_s3)
+					: NLTCL_Side_Wall_s1(NLTCL_Side_Wall_s1)
+		:m Protective_Control_Acc(Protective_Control_Acc)
+			:o Oil_Level_Indicator(Oil_Level_Indicator)
+				:o OLI_Contacts(OLI_Contacts)
+					:g OLI_Contacts_94(OLI_Contacts_94) [1,1] 
+						: OLI_Contacts_QTY1(OLI_Contacts_QTY1)
+						: OLI_Contacts_QTY2(OLI_Contacts_QTY2)
+				:o OLI_Contacts_Scheme(OLI_Contacts_Scheme)
+					:g Oil_Level_Indicator_90_91(Oil_Level_Indicator_90_91) [1,1] 
+						: Low_Very_Low(Low_Very_Low)
+						: Low_High(Low_High)
+			:o Oil_Temperature_Indicator(Oil_Temperature_Indicator)
+				:o OTI_Contacts(OTI_Contacts)
+					:g OTI_Contacts_97(OTI_Contacts_97) [1,1] 
+						: OTI_Contacts_QTY2(OTI_Contacts_QTY2)
+			:o Winding_Temperature_Indicator(Winding_Temperature_Indicator)
+				:m WTI_Contacts(WTI_Contacts)
+					:m WTI_Contacts_QTY4(WTI_Contacts_QTY4)
+				:m WTI_Output_Analog(WTI_Output_Analog)
+					:g Winding_Temperature_Indicator_81_99(Winding_Temperature_Indicator_81_99) [1,1] 
+						: WTI_OA_PT100_QTY1(WTI_OA_PT100_QTY1)
+			:o Buchholz_Relay(Buchholz_Relay)
+				:m BR_Contacts(BR_Contacts)
+					:g Buchholz_Relay_84_85(Buchholz_Relay_84_85) [1,1] 
+						: BR_Contacts_QTY2(BR_Contacts_QTY2)
+						: BR_Contacts_QTY3(BR_Contacts_QTY3)
+				:m BR_Oil_Capacity(BR_Oil_Capacity)
+					:g Buchholz_Relay_87_89(Buchholz_Relay_87_89) [1,1] 
+						: BROC_less_1600kg(BROC_less_1600kg)
+						: BROC_less_10000kg(BROC_less_10000kg)
+						: BROC_less_35000kg(BROC_less_35000kg)
+			:o Air_Filter(Air_Filter)
+				:m AF_capacity(AF_capacity)
+					:g Air_Filter_93_94(Air_Filter_93_94) [1,1] 
+						: AFC_1kg(AFC_1kg)
+						: AFC_2_2kg(AFC_2_2kg)
+						: AFC_5_2_kg(AFC_5_2_kg)
+			:o Air_Rubber_Cell(Air_Rubber_Cell)
+			:m Pressure_Relief_Valve(Pressure_Relief_Valve)
+				:o PRD_Contacts(PRD_Contacts)
+					:g PRD_Contacts_101(PRD_Contacts_101) [1,1] 
+						: PRD_Contacts_QTY1(PRD_Contacts_QTY1)
+						: PRD_Contacts_QTY2(PRD_Contacts_QTY2)
+			:o Pressure_Vacuum_Gauge(Pressure_Vacuum_Gauge)
+			:o Transformer_Control_Box(Transformer_Control_Box)
+				:m External_Wiring(External_Wiring)
+					:g _id_11(__id_11) [1,1] 
+						: Flexible_Liquid_tight_Conduit(Flexible_Liquid_tight_Conduit)
+						: Rigid_Conduit(Rigid_Conduit)
+				:m TCB_Enclosure_type(TCB_Enclosure_type)
+					:g Control_Box_107_108(Control_Box_107_108) [1,1] 
+						: TCB_ET_Nema_3R(TCB_ET_Nema_3R)
+						: TCB_ET_Nema_4(TCB_ET_Nema_4)
+				:m TCB_Access_means(TCB_Access_means)
+					:g Control_Box_111_112(Control_Box_111_112) [1,1] 
+						: TCB_AM_Door(TCB_AM_Door)
+							:m TCB_AM_D_Lock_type(TCB_AM_D_Lock_type)
+								:g Control_Box_111_112_113_114_115(Control_Box_111_112_113_114_115) [1,1] 
+									: TCB_AM_D_Lock_type_3_point_locking_system(TCB_AM_D_Lock_type_3_point_locking_system)
+									: TCB_AM_D_Lock_type_1_point_locking_system(TCB_AM_D_Lock_type_1_point_locking_system)
+			:o Surge_Arresters(Surge_Arresters)
+				:g Surge_Arresters_108(Surge_Arresters_108) [1,*] 
+					: High_voltage_Surge_Arresters(High_voltage_Surge_Arresters)
+					: Low_voltage_Surge_Arresters(Low_voltage_Surge_Arresters)
+			:o Sudden_Pressure_Relay(Sudden_Pressure_Relay)
+				:m SPR_Contacts(SPR_Contacts)
+					:g SPR_Contacts_104(SPR_Contacts_104) [1,1] 
+						: SPR_Contacts_QTY1(SPR_Contacts_QTY1)
+		:o Protection_and_control_scheme(Protection_and_control_scheme)
+			:g Accessories_78_79(Accessories_78_79) [1,1] 
+				: S(S)
+					:g Accessories_78_79_80_81(Accessories_78_79_80_81) [1,1] 
+						: S1(S1)
+				: M(M)
+					:g Accessories_78_79_93_94(Accessories_78_79_93_94) [1,1] 
+						: M1(M1)
+						: M2(M2)
+						: M3(M3)
+				: B(B)
+					:g Accessories_78_79_97_98(Accessories_78_79_97_98) [1,1] 
+						: B1(B1)
+				: XS(XS)
+					:g Accessories_78_79_102_103(Accessories_78_79_102_103) [1,1] 
+						: XS1(XS1)
+		:o Spare_parts(Spare_parts)
+	:m Mechanical_Acc(Mechanical_Acc)
+		:m Oil_Valves(Oil_Valves)
+			:o Upper_Filter_Filling_Device(Upper_Filter_Filling_Device)
+				:g _id_13(__id_13) [1,1] 
+					: UFFD_Cap(UFFD_Cap)
+					: UFFD_1_inch_external_thread_sampling_dev(UFFD_1_inch_external_thread_sampling_dev)
+					: UFFD_2_inch_external_thread_sampling_dev(UFFD_2_inch_external_thread_sampling_dev)
+			:o Lower_Filter_Drain_Valve(Lower_Filter_Drain_Valve)
+				:g _id_14(__id_14) [1,1] 
+					: LFFD_1_inch_external_thread_sampling_dev(LFFD_1_inch_external_thread_sampling_dev)
+					: LFFD_2_inch_external_thread_sampling_dev(LFFD_2_inch_external_thread_sampling_dev)
+		:m Lifting_Moving_Jacking_Facilities(Lifting_Moving_Jacking_Facilities)
+			:m Lifting_Lugs_Complete_transformer(Lifting_Lugs_Complete_transformer)
+			:m Moving_Facilities(Moving_Facilities)
+				:o MF_Rollers(MF_Rollers)
+					:g Moving_Facilities_51_52(Moving_Facilities_51_52) [1,1] 
+						: Non_Flanged_wheel_for_for_U_Shape_rail(Non_Flanged_wheel_for_for_U_Shape_rail)
+							:m Distance_between_rollers_centers_s1(Distance_between_rollers_centers_s1)
+							:m Distance_between_rollers_centers_s2(Distance_between_rollers_centers_s2)
+						: Flanged_wheel_for_I_Shape_rail(Flanged_wheel_for_I_Shape_rail)
+							:m Rail_gauge_between_I_Profile_s1(Rail_gauge_between_I_Profile_s1)
+							:m Rail_gauge_between_I_Profile_s2(Rail_gauge_between_I_Profile_s2)
+			:o Jacking_Pads(Jacking_Pads)
+			:o Provision_for_Pulling_two_directions_complete_transformer(Provision_for_Pulling_two_directions_complete_transformer)
+		:m Main_Tank_and_Cover_acc(Main_Tank_and_Cover_acc)
+			:m Cover(Cover)
+				:g _id_17(__id_17) [1,1] 
+					: C_Bolted(C_Bolted)
+					: C_Welded(C_Welded)
+			:m Main_Tank_Ground_Pads(Main_Tank_Ground_Pads)
+				:g _id_18(__id_18) [1,1] 
+					: MTGP_2_Screws(MTGP_2_Screws)
+					: MTGP_2_ANSI_Pads_mm(MTGP_2_ANSI_Pads_mm)
+			:o Neutral_Bushing_Ground_Pad(Neutral_Bushing_Ground_Pad)
+				:g _id_19(_id_19) [1,1] 
+					: NBGP_Screw(NBGP_Screw)
+					: NBGP_Threaded_Cap(NBGP_Threaded_Cap)
+		:o Tank_access_means(Tank_access_means)
+			:g _id_20(__id_20) [1,*] 
+				: Handhole(Handhole)
+		:o Impact_Detector(Impact_Detector)
+			:g _id_21(__id_21) [1,*] 
+				: Impact_Indicator(Impact_Indicator)
+		:o Surge_Arresters_Support(Surge_Arresters_Support)
+			:o High_Voltage_Surge_Arresters_Support(High_Voltage_Surge_Arresters_Support)
+				:g High_Voltage_Surge_Arresters_Support_60(High_Voltage_Surge_Arresters_Support_60) [1,1] 
+					: HV_Distribution_arresters_support(HV_Distribution_arresters_support)
+					: HV_Station_arresters_support(HV_Station_arresters_support)
+		:m Cooling_System(Cooling_System)
+			:o Radiators(Radiators)
+				:m Mechanical_Coupling(Mechanical_Coupling)
+					:g Radiators_124_125(Radiators_124_125) [1,1] 
+						: Welded_to_tank(Welded_to_tank)
+						: Detachable(Detachable)
+			:o Fans(Fans)
+		:m Screwed_connections(Screwed_connections)
+			:m Material(Material)
+				:g Mechanical_Acc_131_132_133(Mechanical_Acc_131_132_133) [1,1] 
+					: Bicromatized_steel(Bicromatized_steel)
+					: Stainless_steel(Stainless_steel)
+	:m DS_Dispatch(DS_Dispatch)
+		:m DS_Main_tank_dispatch_condition(DS_Main_tank_dispatch_condition)
+			:g DS_Main_tank_dispatch_condition_20(DS_Main_tank_dispatch_condition_20) [1,*] 
+				: MT_Wood_protections_for_accessories(MT_Wood_protections_for_accessories)
+				: MT_Liquid_filled(MT_Liquid_filled)
+		:o DS_Conservator_tank(DS_Conservator_tank)
+			:m DS_Conservator_tank_feature(DS_Conservator_tank_feature)
+				:g DS_Conservator_tank_30_31(DS_Conservator_tank_30_31) [1,*] 
+					: MTCT_Mounted_on_main_tank(MTCT_Mounted_on_main_tank)
+					: MTCT_Liquid_filled(MTCT_Liquid_filled)
+					: MTCT_Unassembled(MTCT_Unassembled)
+		:o DS_Liquid_to_finish_filling_job_site(DS_Liquid_to_finish_filling_job_site)
+			:m DS_Liquid_site_delivery_form(DS_Liquid_site_delivery_form)
+				:g DS_Liquid_to_finish_filling_job_site_19_21(DS_Liquid_to_finish_filling_job_site_19_21) [1,1] 
+					: DSL_Barrels(DSL_Barrels)
+			:m DS_Liquid_site_source(DS_Liquid_site_source)
+				:g DS_Liquid_to_finish_filling_job_site_20_23(DS_Liquid_to_finish_filling_job_site_20_23) [1,1] 
+					: DSLSS_factory(DSLSS_factory)
+		:o DS_Buchholz_relay(DS_Buchholz_relay)
+			:g DS_BR_Unassembled_28(DS_BR_Unassembled_28) [1,*] 
+				: DS_BR_Unassembled(DS_BR_Unassembled)
+		:m DS_Instructions_manual(DS_Instructions_manual)
+			:m DSM_Type(DSM_Type)
+				:g DS_Instructions_manual_1(DS_Instructions_manual_1) [1,1] 
+					: DSMT_Type1(DSMT_Type1)
+			:m DSM_Printed_copies(DSM_Printed_copies)
+				:g DS_Instructions_manual_2(DS_Instructions_manual_2) [1,1] 
+					: DSMP_Qty_1(DSMP_Qty_1)
+		:o DS_Radiators(DS_Radiators)
+			:g DS_Radiators_24(DS_Radiators_24) [1,1] 
+				: DSR_Unassembled(DSR_Unassembled)
+	:g Other_group(Other_group) [1,*] 
+		: Other(Other)
+			:o Siemens_Standard(Siemens_Standard)
+			:m Tests(Tests)
+				:m Routine_Tests(Routine_Tests)
+					:m Medicion_de_resistencia_de_los_devanados(Medicion_de_resistencia_de_los_devanados)
+					:m Medicion_de_la_relacion_de_transformacion(Medicion_de_la_relacion_de_transformacion)
+					:m Medicion_de_las_perdidas_con_carga_e_impedancia(Medicion_de_las_perdidas_con_carga_e_impedancia)
+					:m Medicion_de_las_perdidas_sin_carga_y_corriente_de_excitacion(Medicion_de_las_perdidas_sin_carga_y_corriente_de_excitacion)
+					:m Prueba_de_tension_inducida(Prueba_de_tension_inducida)
+					:m Prueba_de_tension_aplicada(Prueba_de_tension_aplicada)
+					:m Medicion_de_resistencia_de_aislamiento_de_los_devanados(Medicion_de_resistencia_de_aislamiento_de_los_devanados)
+				:o Type_Tests(Type_Tests)
+					:o Calentamiento(Calentamiento)
+					:o Descargas_parciales(Descargas_parciales)
+					:o Impulso(Impulso)
+					:o Ruido(Ruido)
+					:o Sobrecarga(Sobrecarga)
+					:o Tangente_delta(Tangente_delta)
+					:o Uz_secuencia_cero(Uz_secuencia_cero)
+</feature_tree>
+<constraints>
+constraint_1:~Minimum or ~Fixed_Frequency
+constraint_8:Fixed_Frequency or ~C57_12
+constraint_6:Fixed_Frequency or ~NTC3997
+constraint_5:Fixed_Frequency or ~NTC819_4arev
+constraint_2:~Maximum or ~Fixed_Frequency
+c6:~Loc_Indoor or TMax_site
+c7:TMin20 or ~Loc_Outdoor
+c8:TMax40 or ~Loc_Outdoor
+c9:TAve30 or ~Loc_Outdoor
+c10:~Loc_Indoor or TAve_site
+c11:~Loc_Indoor or Tmin_site
+c12:ONAN or ~ONAF
+c13:LVET_Nema_4X or ~LV_Enclosure_Type or ~HLVI_Nema_4X
+c14:~Sealed_Tank or OPS_Closed_System
+c15:HVET_Nema_4 or ~High_Voltage_Bushing_Enclosure or ~HLVI_Nema_4
+c16:Sealed_Tank or ~OPS_Constant_Volume
+c17:HVET_Nema_4X or ~High_Voltage_Bushing_Enclosure or ~HLVI_Nema_4X
+c18:HVET_Nema_3R or ~High_Voltage_Bushing_Enclosure or ~HLVI_Nema_3R
+c19:Conservator_Tank or ~OPS_Constant_Pressure
+c20:LVET_Nema_3R or ~Low_Voltage_Bushing_Enclosure or ~HLVI_Nema_3R
+c21:LVET_Nema_4 or ~Low_Voltage_Bushing_Enclosure or ~HLVI_Nema_4
+c22:~WTI_Contacts or Transformer_Control_Box
+c23:~BR_Contacts or Transformer_Control_Box
+c24:~PRD_Contacts or Transformer_Control_Box
+c25:Transformer_Control_Box or ~SPR_Contacts
+c26:~OTI_Contacts or Transformer_Control_Box
+c27:~OLI_Contacts_Scheme or ~OLI_Contacts_QTY1
+c28:OLI_Contacts or ~OLI_Contacts_Scheme
+c29:~OLI_Contacts or Transformer_Control_Box
+c30:~MT_Liquid_filled or ~MTCT_Liquid_filled or ~DS_Liquid_to_finish_filling_job_site or DSR_Unassembled
+c31:MTCT_Mounted_on_main_tank or ~MTCT_Liquid_filled
+c32:MTCT_Liquid_filled or ~DS_Conservator_tank or DS_Liquid_to_finish_filling_job_site
+c33:MTCT_Mounted_on_main_tank or ~DS_Conservator_tank or DS_Liquid_to_finish_filling_job_site
+c34:DS_Conservator_tank or ~DS_Liquid_to_finish_filling_job_site or DS_Radiators
+c35:MT_Liquid_filled or DS_Liquid_to_finish_filling_job_site
+c36:~MTCT_Mounted_on_main_tank or MTCT_Liquid_filled
+c37:MT_Wood_protections_for_accessories or ~DS_Main_tank_dispatch_condition
+c38:DS_Conservator_tank or ~DS_Buchholz_relay
+c39:DS_Liquid_to_finish_filling_job_site or ~DSR_Unassembled
+c40:MT_Liquid_filled or ~DS_Main_tank_dispatch_condition
+c41:~MTCT_Mounted_on_main_tank or ~MTCT_Unassembled
+c42:~MTCT_Unassembled or ~MTCT_Mounted_on_main_tank
+nc_43:~NTC_Std or COLOMBIA
+nc_44:~FrecuenciaVariableSUT or Variable_Frequency
+nc_45:~FrecuenciaVariableSUT or ~Fixed_Frequency
+nc_46:~ECOPETROLVEP_SIP_P_ELE_ET_032R020130708 or Variable_Frequency
+nc_47:~ECOPETROLVEP_SIP_P_ELE_ET_032R020130708 or FrecuenciaVariableSUT
+nc_48:~Poste or ~NTC3997
+nc_49:~NTC3997 or Light_Grey_RAL7035
+nc_50:~PedestalRadial or Loc_Outdoor
+nc_51:~FrecuenciaVariableSUT or VTW_HV_variable_per_tap_20_taps
+nc_52:FrecuenciaVariableSUT or ~VTW_HV_variable_per_tap_20_taps
+nc_53:~FrecuenciaVariableSUT or Dd0_Yd1
+nc_54:~FrecuenciaVariableSUT or StepUp
+nc_55:~PedestalRadial or StepDown
+nc_56:~Poste or StepDown
+nc_57:~Seco_Clase_F or StepDown
+nc_58:~FrecuenciaVariableSUT or ~ONAF
+nc_59:~PedestalRadial or ~ONAF
+nc_60:~Poste or ~ONAF
+nc_61:~Seco_Clase_F or ~ONAF
+nc_62:~FrecuenciaVariableSUT or OPS_Closed_System
+nc_63:~FrecuenciaVariableSUT or OPS_Constant_Volume
+nc_64:~FrecuenciaVariableSUT or Sealed_Tank
+nc_65:~FrecuenciaVariableSUT or Rectangular_Tank
+nc_66:~FrecuenciaVariableSUT or HVBL_Side_s1_Left
+nc_67:~FrecuenciaVariableSUT or LVBL_Side_s1_Right
+nc_68:~FrecuenciaVariableSUT or Skid
+nc_69:~FrecuenciaVariableSUT or CG_Internal
+nc_70:~FrecuenciaVariableSUT or ~Winding_Electrostatic_Shield
+nc_71:~FrecuenciaVariableSUT or High_Low_Voltage_Shared_Bushing_Enclosure
+nc_72:~FrecuenciaVariableSUT or ~Standardtransformer or Grey_ANSI61
+nc_73:~FrecuenciaVariableSUT or ~Standardtransformer or ~Winding_Electrostatic_Shield
+nc_74:~FrecuenciaVariableSUT or ~Standardtransformer or HLVSBE_Nema_3R
+nc_75:~PedestalRadial or OPS_Closed_System
+nc_76:~PedestalRadial or OPS_Constant_Volume
+nc_77:~PedestalRadial or Sealed_Tank
+nc_78:~PedestalRadial or Rectangular_Tank
+nc_79:~PedestalRadial or HVBL_Side_s1_Left
+nc_80:~PedestalRadial or LVBL_Side_s1_Right
+nc_81:~PedestalRadial or CG_Internal
+nc_82:~PedestalRadial or High_Low_Voltage_Shared_Bushing_Enclosure
+nc_83:~PedestalRadial or HLVSBE_No_Nema
+nc_84:~PedestalRadial or ~HLVE_Provisions_for_cable_terminations
+nc_85:~PedestalRadial or ~Winding_Electrostatic_Shield
+nc_86:~PedestalRadial or ~TCB_AM_Door
+nc_87:~PedestalRadial or ~Standardtransformer or Light_Grey_RAL7035
+nc_88:~Convencional or Rectangular_Tank
+nc_89:~Convencional or HVBL_Cover_s3
+nc_90:~Convencional or ~LVBL_Side_s1_Right
+nc_91:~Convencional or ~Bushings_Enclosure
+nc_92:~PedestalRadial or Pad_type_base
+nc_93:~PedestalRadial or ~HLVE_Provisions_for_surge_arrestors
+nc_94:~Poste or ~Standardtransformer or Light_Grey_RAL7035
+nc_95:~PedestalRadial or HVBAcc_Molded
+nc_96:~PedestalRadial or HVBAcc_Qty_3
+nc_97:~PedestalRadial or LVBAcc_Qty_4
+nc_98:~PedestalRadial or ~OLI_Contacts
+nc_99:~PedestalRadial or ~Oil_Temperature_Indicator
+nc_100:~PedestalRadial or ~Winding_Temperature_Indicator
+nc_101:~PedestalRadial or ~PRD_Contacts
+nc_102:~PedestalRadial or ~Pressure_Vacuum_Gauge
+nc_103:~PedestalRadial or ~Sudden_Pressure_Relay
+nc_104:~Standardtransformer or Bicromatized_steel
+nc_105:~PedestalRadial or ~Standardtransformer or C_Bolted
+nc_106:~PedestalRadial or ~Provision_for_Pulling_two_directions_complete_transformer
+nc_107:~PedestalRadial or ~Impact_Detector
+nc_108:~PedestalRadial or ~Tank_access_means
+nc_109:~PedestalRadial or ~Surge_Arresters_Support
+nc_110:~Poste or ~Upper_Filter_Filling_Device
+nc_111:~Poste or ~Lower_Filter_Drain_Valve
+nc_112:~ONAF or Fans
+nc_113:ONAF or ~Fans
+nc_114:Conservator_Tank or ~Buchholz_Relay
+nc_115:Conservator_Tank or ~Air_Filter
+nc_116:Conservator_Tank or ~Air_Rubber_Cell
+nc_117:~Conservator_Tank or ~OPS_Open_System or ~Air_Rubber_Cell
+nc_118:~Conservator_Tank or ~OPS_Closed_System or Air_Rubber_Cell
+nc_119:~Conservator_Tank or Air_Filter
+nc_120:~Convencional or ~Surge_Arresters or ~Low_Voltage_Bushing_Enclosure or LVE_Provisions_for_surge_arrestors
+nc_121:~Convencional or ~Surge_Arresters or ~High_Voltage_Bushing_Enclosure or HVE_Provisions_for_surge_arrestors
+nc_122:~Convencional or ~Surge_Arresters or ~High_Low_Voltage_Shared_Bushing_Enclosure or HLVE_Provisions_for_surge_arrestors
+nc_123:~Rollers or MF_Rollers
+nc_124:Rollers or ~MF_Rollers
+nc_125:~Surge_Arresters or Surge_Arresters_Support
+nc_126:~Convencional or ~High_voltage_Surge_Arresters or High_Voltage_Surge_Arresters_Support
+nc_127:~Buchholz_Relay or DS_BR_Unassembled
+nc_128:Buchholz_Relay or ~DS_BR_Unassembled
+mg_129:~Other or ~OLTC or ~NLTC
+mg_130:~Other or NLTC or OLTC
+mg_131:~Other or High_Voltage_Bushing_Acc
+mg_132:~Other or Tap_Changer
+mg_133:~Other or Protective_Control_Acc
+mg_134:~Other or ~WM_LV_Copper
+mg_135:~Other or ~WM_LV_Aluminum
+mg_136:~Other or WM_LV_Design
+mg_137:~Other or ~WM_HV_Copper
+mg_138:~Other or ~WM_HV_Aluminum
+mg_139:~Other or WM_HV_Design
+mg_140:~Other or Winding_Material
+mg_141:~Other or ~Grey_ANSI61 or ~Light_Grey_RAL7035
+mg_142:~Other or ~Light_Grey_ANSI70 or ~Light_Grey_RAL7035
+mg_143:~Other or ~Light_Grey_ANSI70 or ~Grey_ANSI61
+mg_144:~Other or ~SPEC_Other or ~Light_Grey_RAL7035
+mg_145:~Other or ~SPEC_Other or ~Grey_ANSI61
+mg_146:~Other or ~SPEC_Other or ~Light_Grey_ANSI70
+mg_147:~Other or Light_Grey_RAL7035 or Grey_ANSI61 or Light_Grey_ANSI70 or SPEC_Other
+mg_148:~Other or Surface_Protection
+mg_149:~Other or Oil
+mg_150:~Other or Cooling
+mg_151:~Other or Transformer_Temp_Rise1
+mg_152:~Other or ~TL_GV_Acc_Specification or ~TL_GV_Acc_Standard
+mg_153:~Other or ~TL_GV_Other or ~TL_GV_Acc_Standard
+mg_154:~Other or ~TL_GV_Other or ~TL_GV_Acc_Specification
+mg_155:~Other or TL_GV_Acc_Standard or TL_GV_Acc_Specification or TL_GV_Other
+mg_156:~Other or ~TL_Special
+mg_157:~Other or ~TL_DOE or ~TL_NTC
+mg_158:~Other or ~TL_Other or ~TL_NTC
+mg_159:~Other or ~TL_Other or ~TL_DOE
+mg_160:~Other or TL_NTC or TL_DOE or TL_Other
+mg_161:~Other or ~ZNyn11yn11 or ~ZN_plus_Dyn1
+mg_162:~Other or ~Dzn0_Yzn11 or ~ZN_plus_Dyn1
+mg_163:~Other or ~Dzn0_Yzn11 or ~ZNyn11yn11
+mg_164:~Other or ~Dzn10_Yzn11 or ~ZN_plus_Dyn1
+mg_165:~Other or ~Dzn10_Yzn11 or ~ZNyn11yn11
+mg_166:~Other or ~Dzn10_Yzn11 or ~Dzn0_Yzn11
+mg_167:~Other or ~YNa0_d_ or ~ZN_plus_Dyn1
+mg_168:~Other or ~YNa0_d_ or ~ZNyn11yn11
+mg_169:~Other or ~YNa0_d_ or ~Dzn0_Yzn11
+mg_170:~Other or ~YNa0_d_ or ~Dzn10_Yzn11
+mg_171:~Other or ~YNa0_d1_ or ~ZN_plus_Dyn1
+mg_172:~Other or ~YNa0_d1_ or ~ZNyn11yn11
+mg_173:~Other or ~YNa0_d1_ or ~Dzn0_Yzn11
+mg_174:~Other or ~YNa0_d1_ or ~Dzn10_Yzn11
+mg_175:~Other or ~YNa0_d1_ or ~YNa0_d_
+mg_176:~Other or ~YNa0d1 or ~ZN_plus_Dyn1
+mg_177:~Other or ~YNa0d1 or ~ZNyn11yn11
+mg_178:~Other or ~YNa0d1 or ~Dzn0_Yzn11
+mg_179:~Other or ~YNa0d1 or ~Dzn10_Yzn11
+mg_180:~Other or ~YNa0d1 or ~YNa0_d_
+mg_181:~Other or ~YNa0d1 or ~YNa0_d1_
+mg_182:~Other or ~YNyn0d1 or ~ZN_plus_Dyn1
+mg_183:~Other or ~YNyn0d1 or ~ZNyn11yn11
+mg_184:~Other or ~YNyn0d1 or ~Dzn0_Yzn11
+mg_185:~Other or ~YNyn0d1 or ~Dzn10_Yzn11
+mg_186:~Other or ~YNyn0d1 or ~YNa0_d_
+mg_187:~Other or ~YNyn0d1 or ~YNa0_d1_
+mg_188:~Other or ~YNyn0d1 or ~YNa0d1
+mg_189:~Other or ~Yyn0_d1_ or ~ZN_plus_Dyn1
+mg_190:~Other or ~Yyn0_d1_ or ~ZNyn11yn11
+mg_191:~Other or ~Yyn0_d1_ or ~Dzn0_Yzn11
+mg_192:~Other or ~Yyn0_d1_ or ~Dzn10_Yzn11
+mg_193:~Other or ~Yyn0_d1_ or ~YNa0_d_
+mg_194:~Other or ~Yyn0_d1_ or ~YNa0_d1_
+mg_195:~Other or ~Yyn0_d1_ or ~YNa0d1
+mg_196:~Other or ~Yyn0_d1_ or ~YNyn0d1
+mg_197:~Other or ~YNyn0d11 or ~ZN_plus_Dyn1
+mg_198:~Other or ~YNyn0d11 or ~ZNyn11yn11
+mg_199:~Other or ~YNyn0d11 or ~Dzn0_Yzn11
+mg_200:~Other or ~YNyn0d11 or ~Dzn10_Yzn11
+mg_201:~Other or ~YNyn0d11 or ~YNa0_d_
+mg_202:~Other or ~YNyn0d11 or ~YNa0_d1_
+mg_203:~Other or ~YNyn0d11 or ~YNa0d1
+mg_204:~Other or ~YNyn0d11 or ~YNyn0d1
+mg_205:~Other or ~YNyn0d11 or ~Yyn0_d1_
+mg_206:~Other or ~YNyn1d1 or ~ZN_plus_Dyn1
+mg_207:~Other or ~YNyn1d1 or ~ZNyn11yn11
+mg_208:~Other or ~YNyn1d1 or ~Dzn0_Yzn11
+mg_209:~Other or ~YNyn1d1 or ~Dzn10_Yzn11
+mg_210:~Other or ~YNyn1d1 or ~YNa0_d_
+mg_211:~Other or ~YNyn1d1 or ~YNa0_d1_
+mg_212:~Other or ~YNyn1d1 or ~YNa0d1
+mg_213:~Other or ~YNyn1d1 or ~YNyn0d1
+mg_214:~Other or ~YNyn1d1 or ~Yyn0_d1_
+mg_215:~Other or ~YNyn1d1 or ~YNyn0d11
+mg_216:~Other or ~YNyn0d5 or ~ZN_plus_Dyn1
+mg_217:~Other or ~YNyn0d5 or ~ZNyn11yn11
+mg_218:~Other or ~YNyn0d5 or ~Dzn0_Yzn11
+mg_219:~Other or ~YNyn0d5 or ~Dzn10_Yzn11
+mg_220:~Other or ~YNyn0d5 or ~YNa0_d_
+mg_221:~Other or ~YNyn0d5 or ~YNa0_d1_
+mg_222:~Other or ~YNyn0d5 or ~YNa0d1
+mg_223:~Other or ~YNyn0d5 or ~YNyn0d1
+mg_224:~Other or ~YNyn0d5 or ~Yyn0_d1_
+mg_225:~Other or ~YNyn0d5 or ~YNyn0d11
+mg_226:~Other or ~YNyn0d5 or ~YNyn1d1
+mg_227:~Other or ~YNynyn0 or ~ZN_plus_Dyn1
+mg_228:~Other or ~YNynyn0 or ~ZNyn11yn11
+mg_229:~Other or ~YNynyn0 or ~Dzn0_Yzn11
+mg_230:~Other or ~YNynyn0 or ~Dzn10_Yzn11
+mg_231:~Other or ~YNynyn0 or ~YNa0_d_
+mg_232:~Other or ~YNynyn0 or ~YNa0_d1_
+mg_233:~Other or ~YNynyn0 or ~YNa0d1
+mg_234:~Other or ~YNynyn0 or ~YNyn0d1
+mg_235:~Other or ~YNynyn0 or ~Yyn0_d1_
+mg_236:~Other or ~YNynyn0 or ~YNyn0d11
+mg_237:~Other or ~YNynyn0 or ~YNyn1d1
+mg_238:~Other or ~YNynyn0 or ~YNyn0d5
+mg_239:~Other or ~Dd0_Yd1 or ~ZN_plus_Dyn1
+mg_240:~Other or ~Dd0_Yd1 or ~ZNyn11yn11
+mg_241:~Other or ~Dd0_Yd1 or ~Dzn0_Yzn11
+mg_242:~Other or ~Dd0_Yd1 or ~Dzn10_Yzn11
+mg_243:~Other or ~Dd0_Yd1 or ~YNa0_d_
+mg_244:~Other or ~Dd0_Yd1 or ~YNa0_d1_
+mg_245:~Other or ~Dd0_Yd1 or ~YNa0d1
+mg_246:~Other or ~Dd0_Yd1 or ~YNyn0d1
+mg_247:~Other or ~Dd0_Yd1 or ~Yyn0_d1_
+mg_248:~Other or ~Dd0_Yd1 or ~YNyn0d11
+mg_249:~Other or ~Dd0_Yd1 or ~YNyn1d1
+mg_250:~Other or ~Dd0_Yd1 or ~YNyn0d5
+mg_251:~Other or ~Dd0_Yd1 or ~YNynyn0
+mg_252:~Other or ~Dd0_Dyn1 or ~ZN_plus_Dyn1
+mg_253:~Other or ~Dd0_Dyn1 or ~ZNyn11yn11
+mg_254:~Other or ~Dd0_Dyn1 or ~Dzn0_Yzn11
+mg_255:~Other or ~Dd0_Dyn1 or ~Dzn10_Yzn11
+mg_256:~Other or ~Dd0_Dyn1 or ~YNa0_d_
+mg_257:~Other or ~Dd0_Dyn1 or ~YNa0_d1_
+mg_258:~Other or ~Dd0_Dyn1 or ~YNa0d1
+mg_259:~Other or ~Dd0_Dyn1 or ~YNyn0d1
+mg_260:~Other or ~Dd0_Dyn1 or ~Yyn0_d1_
+mg_261:~Other or ~Dd0_Dyn1 or ~YNyn0d11
+mg_262:~Other or ~Dd0_Dyn1 or ~YNyn1d1
+mg_263:~Other or ~Dd0_Dyn1 or ~YNyn0d5
+mg_264:~Other or ~Dd0_Dyn1 or ~YNynyn0
+mg_265:~Other or ~Dd0_Dyn1 or ~Dd0_Yd1
+mg_266:~Other or ~Dd0yn5 or ~ZN_plus_Dyn1
+mg_267:~Other or ~Dd0yn5 or ~ZNyn11yn11
+mg_268:~Other or ~Dd0yn5 or ~Dzn0_Yzn11
+mg_269:~Other or ~Dd0yn5 or ~Dzn10_Yzn11
+mg_270:~Other or ~Dd0yn5 or ~YNa0_d_
+mg_271:~Other or ~Dd0yn5 or ~YNa0_d1_
+mg_272:~Other or ~Dd0yn5 or ~YNa0d1
+mg_273:~Other or ~Dd0yn5 or ~YNyn0d1
+mg_274:~Other or ~Dd0yn5 or ~Yyn0_d1_
+mg_275:~Other or ~Dd0yn5 or ~YNyn0d11
+mg_276:~Other or ~Dd0yn5 or ~YNyn1d1
+mg_277:~Other or ~Dd0yn5 or ~YNyn0d5
+mg_278:~Other or ~Dd0yn5 or ~YNynyn0
+mg_279:~Other or ~Dd0yn5 or ~Dd0_Yd1
+mg_280:~Other or ~Dd0yn5 or ~Dd0_Dyn1
+mg_281:~Other or ~Dyn1yn1 or ~ZN_plus_Dyn1
+mg_282:~Other or ~Dyn1yn1 or ~ZNyn11yn11
+mg_283:~Other or ~Dyn1yn1 or ~Dzn0_Yzn11
+mg_284:~Other or ~Dyn1yn1 or ~Dzn10_Yzn11
+mg_285:~Other or ~Dyn1yn1 or ~YNa0_d_
+mg_286:~Other or ~Dyn1yn1 or ~YNa0_d1_
+mg_287:~Other or ~Dyn1yn1 or ~YNa0d1
+mg_288:~Other or ~Dyn1yn1 or ~YNyn0d1
+mg_289:~Other or ~Dyn1yn1 or ~Yyn0_d1_
+mg_290:~Other or ~Dyn1yn1 or ~YNyn0d11
+mg_291:~Other or ~Dyn1yn1 or ~YNyn1d1
+mg_292:~Other or ~Dyn1yn1 or ~YNyn0d5
+mg_293:~Other or ~Dyn1yn1 or ~YNynyn0
+mg_294:~Other or ~Dyn1yn1 or ~Dd0_Yd1
+mg_295:~Other or ~Dyn1yn1 or ~Dd0_Dyn1
+mg_296:~Other or ~Dyn1yn1 or ~Dd0yn5
+mg_297:~Other or ~Dyn5d0 or ~ZN_plus_Dyn1
+mg_298:~Other or ~Dyn5d0 or ~ZNyn11yn11
+mg_299:~Other or ~Dyn5d0 or ~Dzn0_Yzn11
+mg_300:~Other or ~Dyn5d0 or ~Dzn10_Yzn11
+mg_301:~Other or ~Dyn5d0 or ~YNa0_d_
+mg_302:~Other or ~Dyn5d0 or ~YNa0_d1_
+mg_303:~Other or ~Dyn5d0 or ~YNa0d1
+mg_304:~Other or ~Dyn5d0 or ~YNyn0d1
+mg_305:~Other or ~Dyn5d0 or ~Yyn0_d1_
+mg_306:~Other or ~Dyn5d0 or ~YNyn0d11
+mg_307:~Other or ~Dyn5d0 or ~YNyn1d1
+mg_308:~Other or ~Dyn5d0 or ~YNyn0d5
+mg_309:~Other or ~Dyn5d0 or ~YNynyn0
+mg_310:~Other or ~Dyn5d0 or ~Dd0_Yd1
+mg_311:~Other or ~Dyn5d0 or ~Dd0_Dyn1
+mg_312:~Other or ~Dyn5d0 or ~Dd0yn5
+mg_313:~Other or ~Dyn5d0 or ~Dyn1yn1
+mg_314:~Other or ~Dyn5yn5 or ~ZN_plus_Dyn1
+mg_315:~Other or ~Dyn5yn5 or ~ZNyn11yn11
+mg_316:~Other or ~Dyn5yn5 or ~Dzn0_Yzn11
+mg_317:~Other or ~Dyn5yn5 or ~Dzn10_Yzn11
+mg_318:~Other or ~Dyn5yn5 or ~YNa0_d_
+mg_319:~Other or ~Dyn5yn5 or ~YNa0_d1_
+mg_320:~Other or ~Dyn5yn5 or ~YNa0d1
+mg_321:~Other or ~Dyn5yn5 or ~YNyn0d1
+mg_322:~Other or ~Dyn5yn5 or ~Yyn0_d1_
+mg_323:~Other or ~Dyn5yn5 or ~YNyn0d11
+mg_324:~Other or ~Dyn5yn5 or ~YNyn1d1
+mg_325:~Other or ~Dyn5yn5 or ~YNyn0d5
+mg_326:~Other or ~Dyn5yn5 or ~YNynyn0
+mg_327:~Other or ~Dyn5yn5 or ~Dd0_Yd1
+mg_328:~Other or ~Dyn5yn5 or ~Dd0_Dyn1
+mg_329:~Other or ~Dyn5yn5 or ~Dd0yn5
+mg_330:~Other or ~Dyn5yn5 or ~Dyn1yn1
+mg_331:~Other or ~Dyn5yn5 or ~Dyn5d0
+mg_332:~Other or ~Dyn5_Dd6 or ~ZN_plus_Dyn1
+mg_333:~Other or ~Dyn5_Dd6 or ~ZNyn11yn11
+mg_334:~Other or ~Dyn5_Dd6 or ~Dzn0_Yzn11
+mg_335:~Other or ~Dyn5_Dd6 or ~Dzn10_Yzn11
+mg_336:~Other or ~Dyn5_Dd6 or ~YNa0_d_
+mg_337:~Other or ~Dyn5_Dd6 or ~YNa0_d1_
+mg_338:~Other or ~Dyn5_Dd6 or ~YNa0d1
+mg_339:~Other or ~Dyn5_Dd6 or ~YNyn0d1
+mg_340:~Other or ~Dyn5_Dd6 or ~Yyn0_d1_
+mg_341:~Other or ~Dyn5_Dd6 or ~YNyn0d11
+mg_342:~Other or ~Dyn5_Dd6 or ~YNyn1d1
+mg_343:~Other or ~Dyn5_Dd6 or ~YNyn0d5
+mg_344:~Other or ~Dyn5_Dd6 or ~YNynyn0
+mg_345:~Other or ~Dyn5_Dd6 or ~Dd0_Yd1
+mg_346:~Other or ~Dyn5_Dd6 or ~Dd0_Dyn1
+mg_347:~Other or ~Dyn5_Dd6 or ~Dd0yn5
+mg_348:~Other or ~Dyn5_Dd6 or ~Dyn1yn1
+mg_349:~Other or ~Dyn5_Dd6 or ~Dyn5d0
+mg_350:~Other or ~Dyn5_Dd6 or ~Dyn5yn5
+mg_351:~Other or ~Dyn11yn11 or ~ZN_plus_Dyn1
+mg_352:~Other or ~Dyn11yn11 or ~ZNyn11yn11
+mg_353:~Other or ~Dyn11yn11 or ~Dzn0_Yzn11
+mg_354:~Other or ~Dyn11yn11 or ~Dzn10_Yzn11
+mg_355:~Other or ~Dyn11yn11 or ~YNa0_d_
+mg_356:~Other or ~Dyn11yn11 or ~YNa0_d1_
+mg_357:~Other or ~Dyn11yn11 or ~YNa0d1
+mg_358:~Other or ~Dyn11yn11 or ~YNyn0d1
+mg_359:~Other or ~Dyn11yn11 or ~Yyn0_d1_
+mg_360:~Other or ~Dyn11yn11 or ~YNyn0d11
+mg_361:~Other or ~Dyn11yn11 or ~YNyn1d1
+mg_362:~Other or ~Dyn11yn11 or ~YNyn0d5
+mg_363:~Other or ~Dyn11yn11 or ~YNynyn0
+mg_364:~Other or ~Dyn11yn11 or ~Dd0_Yd1
+mg_365:~Other or ~Dyn11yn11 or ~Dd0_Dyn1
+mg_366:~Other or ~Dyn11yn11 or ~Dd0yn5
+mg_367:~Other or ~Dyn11yn11 or ~Dyn1yn1
+mg_368:~Other or ~Dyn11yn11 or ~Dyn5d0
+mg_369:~Other or ~Dyn11yn11 or ~Dyn5yn5
+mg_370:~Other or ~Dyn11yn11 or ~Dyn5_Dd6
+mg_371:~Other or ~VG_3W_other or ~ZN_plus_Dyn1
+mg_372:~Other or ~VG_3W_other or ~ZNyn11yn11
+mg_373:~Other or ~VG_3W_other or ~Dzn0_Yzn11
+mg_374:~Other or ~VG_3W_other or ~Dzn10_Yzn11
+mg_375:~Other or ~VG_3W_other or ~YNa0_d_
+mg_376:~Other or ~VG_3W_other or ~YNa0_d1_
+mg_377:~Other or ~VG_3W_other or ~YNa0d1
+mg_378:~Other or ~VG_3W_other or ~YNyn0d1
+mg_379:~Other or ~VG_3W_other or ~Yyn0_d1_
+mg_380:~Other or ~VG_3W_other or ~YNyn0d11
+mg_381:~Other or ~VG_3W_other or ~YNyn1d1
+mg_382:~Other or ~VG_3W_other or ~YNyn0d5
+mg_383:~Other or ~VG_3W_other or ~YNynyn0
+mg_384:~Other or ~VG_3W_other or ~Dd0_Yd1
+mg_385:~Other or ~VG_3W_other or ~Dd0_Dyn1
+mg_386:~Other or ~VG_3W_other or ~Dd0yn5
+mg_387:~Other or ~VG_3W_other or ~Dyn1yn1
+mg_388:~Other or ~VG_3W_other or ~Dyn5d0
+mg_389:~Other or ~VG_3W_other or ~Dyn5yn5
+mg_390:~Other or ~VG_3W_other or ~Dyn5_Dd6
+mg_391:~Other or ~VG_3W_other or ~Dyn11yn11
+mg_393:~Other or ~ZNd0 or ~Dyn5
+mg_394:~Other or ~ZNyn11 or ~Dyn5
+mg_395:~Other or ~ZNyn11 or ~ZNd0
+mg_396:~Other or ~ZNyn1 or ~Dyn5
+mg_397:~Other or ~ZNyn1 or ~ZNd0
+mg_398:~Other or ~ZNyn1 or ~ZNyn11
+mg_399:~Other or ~Dyn1 or ~Dyn5
+mg_400:~Other or ~Dyn1 or ~ZNd0
+mg_401:~Other or ~Dyn1 or ~ZNyn11
+mg_402:~Other or ~Dyn1 or ~ZNyn1
+mg_403:~Other or ~Dyn11 or ~Dyn5
+mg_404:~Other or ~Dyn11 or ~ZNd0
+mg_405:~Other or ~Dyn11 or ~ZNyn11
+mg_406:~Other or ~Dyn11 or ~ZNyn1
+mg_407:~Other or ~Dyn11 or ~Dyn1
+mg_408:~Other or ~Dd0 or ~Dyn5
+mg_409:~Other or ~Dd0 or ~ZNd0
+mg_410:~Other or ~Dd0 or ~ZNyn11
+mg_411:~Other or ~Dd0 or ~ZNyn1
+mg_412:~Other or ~Dd0 or ~Dyn1
+mg_413:~Other or ~Dd0 or ~Dyn11
+mg_414:~Other or ~YNd7 or ~Dyn5
+mg_415:~Other or ~YNd7 or ~ZNd0
+mg_416:~Other or ~YNd7 or ~ZNyn11
+mg_417:~Other or ~YNd7 or ~ZNyn1
+mg_418:~Other or ~YNd7 or ~Dyn1
+mg_419:~Other or ~YNd7 or ~Dyn11
+mg_420:~Other or ~YNd7 or ~Dd0
+mg_421:~Other or ~YNyn0 or ~Dyn5
+mg_422:~Other or ~YNyn0 or ~ZNd0
+mg_423:~Other or ~YNyn0 or ~ZNyn11
+mg_424:~Other or ~YNyn0 or ~ZNyn1
+mg_425:~Other or ~YNyn0 or ~Dyn1
+mg_426:~Other or ~YNyn0 or ~Dyn11
+mg_427:~Other or ~YNyn0 or ~Dd0
+mg_428:~Other or ~YNyn0 or ~YNd7
+mg_429:~Other or ~Yy0 or ~Dyn5
+mg_430:~Other or ~Yy0 or ~ZNd0
+mg_431:~Other or ~Yy0 or ~ZNyn11
+mg_432:~Other or ~Yy0 or ~ZNyn1
+mg_433:~Other or ~Yy0 or ~Dyn1
+mg_434:~Other or ~Yy0 or ~Dyn11
+mg_435:~Other or ~Yy0 or ~Dd0
+mg_436:~Other or ~Yy0 or ~YNd7
+mg_437:~Other or ~Yy0 or ~YNyn0
+mg_438:~Other or ~Yyn0 or ~Dyn5
+mg_439:~Other or ~Yyn0 or ~ZNd0
+mg_440:~Other or ~Yyn0 or ~ZNyn11
+mg_441:~Other or ~Yyn0 or ~ZNyn1
+mg_442:~Other or ~Yyn0 or ~Dyn1
+mg_443:~Other or ~Yyn0 or ~Dyn11
+mg_444:~Other or ~Yyn0 or ~Dd0
+mg_445:~Other or ~Yyn0 or ~YNd7
+mg_446:~Other or ~Yyn0 or ~YNyn0
+mg_447:~Other or ~Yyn0 or ~Yy0
+mg_448:~Other or ~YNd1 or ~Dyn5
+mg_449:~Other or ~YNd1 or ~ZNd0
+mg_450:~Other or ~YNd1 or ~ZNyn11
+mg_451:~Other or ~YNd1 or ~ZNyn1
+mg_452:~Other or ~YNd1 or ~Dyn1
+mg_453:~Other or ~YNd1 or ~Dyn11
+mg_454:~Other or ~YNd1 or ~Dd0
+mg_455:~Other or ~YNd1 or ~YNd7
+mg_456:~Other or ~YNd1 or ~YNyn0
+mg_457:~Other or ~YNd1 or ~Yy0
+mg_458:~Other or ~YNd1 or ~Yyn0
+mg_459:~Other or ~YNd11 or ~Dyn5
+mg_460:~Other or ~YNd11 or ~ZNd0
+mg_461:~Other or ~YNd11 or ~ZNyn11
+mg_462:~Other or ~YNd11 or ~ZNyn1
+mg_463:~Other or ~YNd11 or ~Dyn1
+mg_464:~Other or ~YNd11 or ~Dyn11
+mg_465:~Other or ~YNd11 or ~Dd0
+mg_466:~Other or ~YNd11 or ~YNd7
+mg_467:~Other or ~YNd11 or ~YNyn0
+mg_468:~Other or ~YNd11 or ~Yy0
+mg_469:~Other or ~YNd11 or ~Yyn0
+mg_470:~Other or ~YNd11 or ~YNd1
+mg_471:~Other or ~YNd5 or ~Dyn5
+mg_472:~Other or ~YNd5 or ~ZNd0
+mg_473:~Other or ~YNd5 or ~ZNyn11
+mg_474:~Other or ~YNd5 or ~ZNyn1
+mg_475:~Other or ~YNd5 or ~Dyn1
+mg_476:~Other or ~YNd5 or ~Dyn11
+mg_477:~Other or ~YNd5 or ~Dd0
+mg_478:~Other or ~YNd5 or ~YNd7
+mg_479:~Other or ~YNd5 or ~YNyn0
+mg_480:~Other or ~YNd5 or ~Yy0
+mg_481:~Other or ~YNd5 or ~Yyn0
+mg_482:~Other or ~YNd5 or ~YNd1
+mg_483:~Other or ~YNd5 or ~YNd11
+mg_484:~Other or ~YNa0 or ~Dyn5
+mg_485:~Other or ~YNa0 or ~ZNd0
+mg_486:~Other or ~YNa0 or ~ZNyn11
+mg_487:~Other or ~YNa0 or ~ZNyn1
+mg_488:~Other or ~YNa0 or ~Dyn1
+mg_489:~Other or ~YNa0 or ~Dyn11
+mg_490:~Other or ~YNa0 or ~Dd0
+mg_491:~Other or ~YNa0 or ~YNd7
+mg_492:~Other or ~YNa0 or ~YNyn0
+mg_493:~Other or ~YNa0 or ~Yy0
+mg_494:~Other or ~YNa0 or ~Yyn0
+mg_495:~Other or ~YNa0 or ~YNd1
+mg_496:~Other or ~YNa0 or ~YNd11
+mg_497:~Other or ~YNa0 or ~YNd5
+mg_498:~Other or ~Ii0 or ~Dyn5
+mg_499:~Other or ~Ii0 or ~ZNd0
+mg_500:~Other or ~Ii0 or ~ZNyn11
+mg_501:~Other or ~Ii0 or ~ZNyn1
+mg_502:~Other or ~Ii0 or ~Dyn1
+mg_503:~Other or ~Ii0 or ~Dyn11
+mg_504:~Other or ~Ii0 or ~Dd0
+mg_505:~Other or ~Ii0 or ~YNd7
+mg_506:~Other or ~Ii0 or ~YNyn0
+mg_507:~Other or ~Ii0 or ~Yy0
+mg_508:~Other or ~Ii0 or ~Yyn0
+mg_509:~Other or ~Ii0 or ~YNd1
+mg_510:~Other or ~Ii0 or ~YNd11
+mg_511:~Other or ~Ii0 or ~YNd5
+mg_512:~Other or ~Ii0 or ~YNa0
+mg_513:~Other or ~Ii6 or ~Dyn5
+mg_514:~Other or ~Ii6 or ~ZNd0
+mg_515:~Other or ~Ii6 or ~ZNyn11
+mg_516:~Other or ~Ii6 or ~ZNyn1
+mg_517:~Other or ~Ii6 or ~Dyn1
+mg_518:~Other or ~Ii6 or ~Dyn11
+mg_519:~Other or ~Ii6 or ~Dd0
+mg_520:~Other or ~Ii6 or ~YNd7
+mg_521:~Other or ~Ii6 or ~YNyn0
+mg_522:~Other or ~Ii6 or ~Yy0
+mg_523:~Other or ~Ii6 or ~Yyn0
+mg_524:~Other or ~Ii6 or ~YNd1
+mg_525:~Other or ~Ii6 or ~YNd11
+mg_526:~Other or ~Ii6 or ~YNd5
+mg_527:~Other or ~Ii6 or ~YNa0
+mg_528:~Other or ~Ii6 or ~Ii0
+mg_529:~Other or ~VG_2W_other or ~Dyn5
+mg_530:~Other or ~VG_2W_other or ~ZNd0
+mg_531:~Other or ~VG_2W_other or ~ZNyn11
+mg_532:~Other or ~VG_2W_other or ~ZNyn1
+mg_533:~Other or ~VG_2W_other or ~Dyn1
+mg_534:~Other or ~VG_2W_other or ~Dyn11
+mg_535:~Other or ~VG_2W_other or ~Dd0
+mg_536:~Other or ~VG_2W_other or ~YNd7
+mg_537:~Other or ~VG_2W_other or ~YNyn0
+mg_538:~Other or ~VG_2W_other or ~Yy0
+mg_539:~Other or ~VG_2W_other or ~Yyn0
+mg_540:~Other or ~VG_2W_other or ~YNd1
+mg_541:~Other or ~VG_2W_other or ~YNd11
+mg_542:~Other or ~VG_2W_other or ~YNd5
+mg_543:~Other or ~VG_2W_other or ~YNa0
+mg_544:~Other or ~VG_2W_other or ~Ii0
+mg_545:~Other or ~VG_2W_other or ~Ii6
+mg_546:~Other or Dyn5 or ZNd0 or ZNyn11 or ZNyn1 or Dyn1 or Dyn11 or Dd0 or YNd7 or YNyn0 or Yy0 or Yyn0 or YNd1 or YNd11 or YNd5 or YNa0 or Ii0 or Ii6 or VG_2W_other
+mg_547:~Other or Vector_Group
+mg_548:~Other or Low_Voltage_Group
+mg_549:~Other or LV_BIL
+mg_550:~Other or LV_AC
+mg_551:~Other or High_Voltage_Group
+mg_552:~Other or HV_BIL
+mg_553:~Other or HV_AC
+mg_554:~Other or Power_group
+mg_555:~Other or Transformer_Phases
+mg_556:~Other or Operation
+mg_557:~Other or Transformer_Windings_Nr
+mg_558:~Other or Terminals_Markings
+mg_559:~Other or Impedance
+mg_560:~Other or ~Seco_Clase_F
+mg_561:~Other or ~ZigZag or ~Autoprotegido
+mg_562:~Other or ~Poste or ~Autoprotegido
+mg_563:~Other or ~Poste or ~ZigZag
+mg_564:~Other or ~Convencional or ~Autoprotegido
+mg_565:~Other or ~Convencional or ~ZigZag
+mg_566:~Other or ~Convencional or ~Poste
+mg_567:~Other or ~Petrolero or ~Autoprotegido
+mg_568:~Other or ~Petrolero or ~ZigZag
+mg_569:~Other or ~Petrolero or ~Poste
+mg_570:~Other or ~Petrolero or ~Convencional
+mg_571:~Other or ~PedestalRadial or ~Autoprotegido
+mg_572:~Other or ~PedestalRadial or ~ZigZag
+mg_573:~Other or ~PedestalRadial or ~Poste
+mg_574:~Other or ~PedestalRadial or ~Convencional
+mg_575:~Other or ~PedestalRadial or ~Petrolero
+mg_576:~Other or ~PedestalAnillo or ~Autoprotegido
+mg_577:~Other or ~PedestalAnillo or ~ZigZag
+mg_578:~Other or ~PedestalAnillo or ~Poste
+mg_579:~Other or ~PedestalAnillo or ~Convencional
+mg_580:~Other or ~PedestalAnillo or ~Petrolero
+mg_581:~Other or ~PedestalAnillo or ~PedestalRadial
+mg_582:~Other or ~FrecuenciaVariableSUT or ~Autoprotegido
+mg_583:~Other or ~FrecuenciaVariableSUT or ~ZigZag
+mg_584:~Other or ~FrecuenciaVariableSUT or ~Poste
+mg_585:~Other or ~FrecuenciaVariableSUT or ~Convencional
+mg_586:~Other or ~FrecuenciaVariableSUT or ~Petrolero
+mg_587:~Other or ~FrecuenciaVariableSUT or ~PedestalRadial
+mg_588:~Other or ~FrecuenciaVariableSUT or ~PedestalAnillo
+mg_589:~Other or Autoprotegido or ZigZag or Poste or Convencional or Petrolero or PedestalRadial or PedestalAnillo or FrecuenciaVariableSUT
+mg_590:~Other or ~ARGENTINA or ~COLOMBIA
+mg_591:~Other or ~BOLIVIA or ~COLOMBIA
+mg_592:~Other or ~BOLIVIA or ~ARGENTINA
+mg_593:~Other or ~BRASIL or ~COLOMBIA
+mg_594:~Other or ~BRASIL or ~ARGENTINA
+mg_595:~Other or ~BRASIL or ~BOLIVIA
+mg_596:~Other or ~CANADA or ~COLOMBIA
+mg_597:~Other or ~CANADA or ~ARGENTINA
+mg_598:~Other or ~CANADA or ~BOLIVIA
+mg_599:~Other or ~CANADA or ~BRASIL
+mg_600:~Other or ~COSTA_RICA or ~COLOMBIA
+mg_601:~Other or ~COSTA_RICA or ~ARGENTINA
+mg_602:~Other or ~COSTA_RICA or ~BOLIVIA
+mg_603:~Other or ~COSTA_RICA or ~BRASIL
+mg_604:~Other or ~COSTA_RICA or ~CANADA
+mg_605:~Other or ~CHILE or ~COLOMBIA
+mg_606:~Other or ~CHILE or ~ARGENTINA
+mg_607:~Other or ~CHILE or ~BOLIVIA
+mg_608:~Other or ~CHILE or ~BRASIL
+mg_609:~Other or ~CHILE or ~CANADA
+mg_610:~Other or ~CHILE or ~COSTA_RICA
+mg_611:~Other or ~ECUADOR or ~COLOMBIA
+mg_612:~Other or ~ECUADOR or ~ARGENTINA
+mg_613:~Other or ~ECUADOR or ~BOLIVIA
+mg_614:~Other or ~ECUADOR or ~BRASIL
+mg_615:~Other or ~ECUADOR or ~CANADA
+mg_616:~Other or ~ECUADOR or ~COSTA_RICA
+mg_617:~Other or ~ECUADOR or ~CHILE
+mg_618:~Other or ~EL_SALVADOR or ~COLOMBIA
+mg_619:~Other or ~EL_SALVADOR or ~ARGENTINA
+mg_620:~Other or ~EL_SALVADOR or ~BOLIVIA
+mg_621:~Other or ~EL_SALVADOR or ~BRASIL
+mg_622:~Other or ~EL_SALVADOR or ~CANADA
+mg_623:~Other or ~EL_SALVADOR or ~COSTA_RICA
+mg_624:~Other or ~EL_SALVADOR or ~CHILE
+mg_625:~Other or ~EL_SALVADOR or ~ECUADOR
+mg_626:~Other or ~ESTADOS_UNIDOS or ~COLOMBIA
+mg_627:~Other or ~ESTADOS_UNIDOS or ~ARGENTINA
+mg_628:~Other or ~ESTADOS_UNIDOS or ~BOLIVIA
+mg_629:~Other or ~ESTADOS_UNIDOS or ~BRASIL
+mg_630:~Other or ~ESTADOS_UNIDOS or ~CANADA
+mg_631:~Other or ~ESTADOS_UNIDOS or ~COSTA_RICA
+mg_632:~Other or ~ESTADOS_UNIDOS or ~CHILE
+mg_633:~Other or ~ESTADOS_UNIDOS or ~ECUADOR
+mg_634:~Other or ~ESTADOS_UNIDOS or ~EL_SALVADOR
+mg_635:~Other or ~GUATEMALA or ~COLOMBIA
+mg_636:~Other or ~GUATEMALA or ~ARGENTINA
+mg_637:~Other or ~GUATEMALA or ~BOLIVIA
+mg_638:~Other or ~GUATEMALA or ~BRASIL
+mg_639:~Other or ~GUATEMALA or ~CANADA
+mg_640:~Other or ~GUATEMALA or ~COSTA_RICA
+mg_641:~Other or ~GUATEMALA or ~CHILE
+mg_642:~Other or ~GUATEMALA or ~ECUADOR
+mg_643:~Other or ~GUATEMALA or ~EL_SALVADOR
+mg_644:~Other or ~GUATEMALA or ~ESTADOS_UNIDOS
+mg_645:~Other or ~HONDURAS or ~COLOMBIA
+mg_646:~Other or ~HONDURAS or ~ARGENTINA
+mg_647:~Other or ~HONDURAS or ~BOLIVIA
+mg_648:~Other or ~HONDURAS or ~BRASIL
+mg_649:~Other or ~HONDURAS or ~CANADA
+mg_650:~Other or ~HONDURAS or ~COSTA_RICA
+mg_651:~Other or ~HONDURAS or ~CHILE
+mg_652:~Other or ~HONDURAS or ~ECUADOR
+mg_653:~Other or ~HONDURAS or ~EL_SALVADOR
+mg_654:~Other or ~HONDURAS or ~ESTADOS_UNIDOS
+mg_655:~Other or ~HONDURAS or ~GUATEMALA
+mg_656:~Other or ~MEXICO or ~COLOMBIA
+mg_657:~Other or ~MEXICO or ~ARGENTINA
+mg_658:~Other or ~MEXICO or ~BOLIVIA
+mg_659:~Other or ~MEXICO or ~BRASIL
+mg_660:~Other or ~MEXICO or ~CANADA
+mg_661:~Other or ~MEXICO or ~COSTA_RICA
+mg_662:~Other or ~MEXICO or ~CHILE
+mg_663:~Other or ~MEXICO or ~ECUADOR
+mg_664:~Other or ~MEXICO or ~EL_SALVADOR
+mg_665:~Other or ~MEXICO or ~ESTADOS_UNIDOS
+mg_666:~Other or ~MEXICO or ~GUATEMALA
+mg_667:~Other or ~MEXICO or ~HONDURAS
+mg_668:~Other or ~NICARAGUA or ~COLOMBIA
+mg_669:~Other or ~NICARAGUA or ~ARGENTINA
+mg_670:~Other or ~NICARAGUA or ~BOLIVIA
+mg_671:~Other or ~NICARAGUA or ~BRASIL
+mg_672:~Other or ~NICARAGUA or ~CANADA
+mg_673:~Other or ~NICARAGUA or ~COSTA_RICA
+mg_674:~Other or ~NICARAGUA or ~CHILE
+mg_675:~Other or ~NICARAGUA or ~ECUADOR
+mg_676:~Other or ~NICARAGUA or ~EL_SALVADOR
+mg_677:~Other or ~NICARAGUA or ~ESTADOS_UNIDOS
+mg_678:~Other or ~NICARAGUA or ~GUATEMALA
+mg_679:~Other or ~NICARAGUA or ~HONDURAS
+mg_680:~Other or ~NICARAGUA or ~MEXICO
+mg_681:~Other or ~PANAMA or ~COLOMBIA
+mg_682:~Other or ~PANAMA or ~ARGENTINA
+mg_683:~Other or ~PANAMA or ~BOLIVIA
+mg_684:~Other or ~PANAMA or ~BRASIL
+mg_685:~Other or ~PANAMA or ~CANADA
+mg_686:~Other or ~PANAMA or ~COSTA_RICA
+mg_687:~Other or ~PANAMA or ~CHILE
+mg_688:~Other or ~PANAMA or ~ECUADOR
+mg_689:~Other or ~PANAMA or ~EL_SALVADOR
+mg_690:~Other or ~PANAMA or ~ESTADOS_UNIDOS
+mg_691:~Other or ~PANAMA or ~GUATEMALA
+mg_692:~Other or ~PANAMA or ~HONDURAS
+mg_693:~Other or ~PANAMA or ~MEXICO
+mg_694:~Other or ~PANAMA or ~NICARAGUA
+mg_695:~Other or ~PARAGUAY or ~COLOMBIA
+mg_696:~Other or ~PARAGUAY or ~ARGENTINA
+mg_697:~Other or ~PARAGUAY or ~BOLIVIA
+mg_698:~Other or ~PARAGUAY or ~BRASIL
+mg_699:~Other or ~PARAGUAY or ~CANADA
+mg_700:~Other or ~PARAGUAY or ~COSTA_RICA
+mg_701:~Other or ~PARAGUAY or ~CHILE
+mg_702:~Other or ~PARAGUAY or ~ECUADOR
+mg_703:~Other or ~PARAGUAY or ~EL_SALVADOR
+mg_704:~Other or ~PARAGUAY or ~ESTADOS_UNIDOS
+mg_705:~Other or ~PARAGUAY or ~GUATEMALA
+mg_706:~Other or ~PARAGUAY or ~HONDURAS
+mg_707:~Other or ~PARAGUAY or ~MEXICO
+mg_708:~Other or ~PARAGUAY or ~NICARAGUA
+mg_709:~Other or ~PARAGUAY or ~PANAMA
+mg_710:~Other or ~PERU or ~COLOMBIA
+mg_711:~Other or ~PERU or ~ARGENTINA
+mg_712:~Other or ~PERU or ~BOLIVIA
+mg_713:~Other or ~PERU or ~BRASIL
+mg_714:~Other or ~PERU or ~CANADA
+mg_715:~Other or ~PERU or ~COSTA_RICA
+mg_716:~Other or ~PERU or ~CHILE
+mg_717:~Other or ~PERU or ~ECUADOR
+mg_718:~Other or ~PERU or ~EL_SALVADOR
+mg_719:~Other or ~PERU or ~ESTADOS_UNIDOS
+mg_720:~Other or ~PERU or ~GUATEMALA
+mg_721:~Other or ~PERU or ~HONDURAS
+mg_722:~Other or ~PERU or ~MEXICO
+mg_723:~Other or ~PERU or ~NICARAGUA
+mg_724:~Other or ~PERU or ~PANAMA
+mg_725:~Other or ~PERU or ~PARAGUAY
+mg_726:~Other or ~PUERTO_RICO or ~COLOMBIA
+mg_727:~Other or ~PUERTO_RICO or ~ARGENTINA
+mg_728:~Other or ~PUERTO_RICO or ~BOLIVIA
+mg_729:~Other or ~PUERTO_RICO or ~BRASIL
+mg_730:~Other or ~PUERTO_RICO or ~CANADA
+mg_731:~Other or ~PUERTO_RICO or ~COSTA_RICA
+mg_732:~Other or ~PUERTO_RICO or ~CHILE
+mg_733:~Other or ~PUERTO_RICO or ~ECUADOR
+mg_734:~Other or ~PUERTO_RICO or ~EL_SALVADOR
+mg_735:~Other or ~PUERTO_RICO or ~ESTADOS_UNIDOS
+mg_736:~Other or ~PUERTO_RICO or ~GUATEMALA
+mg_737:~Other or ~PUERTO_RICO or ~HONDURAS
+mg_738:~Other or ~PUERTO_RICO or ~MEXICO
+mg_739:~Other or ~PUERTO_RICO or ~NICARAGUA
+mg_740:~Other or ~PUERTO_RICO or ~PANAMA
+mg_741:~Other or ~PUERTO_RICO or ~PARAGUAY
+mg_742:~Other or ~PUERTO_RICO or ~PERU
+mg_743:~Other or ~REP_DOMINICANA or ~COLOMBIA
+mg_744:~Other or ~REP_DOMINICANA or ~ARGENTINA
+mg_745:~Other or ~REP_DOMINICANA or ~BOLIVIA
+mg_746:~Other or ~REP_DOMINICANA or ~BRASIL
+mg_747:~Other or ~REP_DOMINICANA or ~CANADA
+mg_748:~Other or ~REP_DOMINICANA or ~COSTA_RICA
+mg_749:~Other or ~REP_DOMINICANA or ~CHILE
+mg_750:~Other or ~REP_DOMINICANA or ~ECUADOR
+mg_751:~Other or ~REP_DOMINICANA or ~EL_SALVADOR
+mg_752:~Other or ~REP_DOMINICANA or ~ESTADOS_UNIDOS
+mg_753:~Other or ~REP_DOMINICANA or ~GUATEMALA
+mg_754:~Other or ~REP_DOMINICANA or ~HONDURAS
+mg_755:~Other or ~REP_DOMINICANA or ~MEXICO
+mg_756:~Other or ~REP_DOMINICANA or ~NICARAGUA
+mg_757:~Other or ~REP_DOMINICANA or ~PANAMA
+mg_758:~Other or ~REP_DOMINICANA or ~PARAGUAY
+mg_759:~Other or ~REP_DOMINICANA or ~PERU
+mg_760:~Other or ~REP_DOMINICANA or ~PUERTO_RICO
+mg_761:~Other or ~URUGUAY or ~COLOMBIA
+mg_762:~Other or ~URUGUAY or ~ARGENTINA
+mg_763:~Other or ~URUGUAY or ~BOLIVIA
+mg_764:~Other or ~URUGUAY or ~BRASIL
+mg_765:~Other or ~URUGUAY or ~CANADA
+mg_766:~Other or ~URUGUAY or ~COSTA_RICA
+mg_767:~Other or ~URUGUAY or ~CHILE
+mg_768:~Other or ~URUGUAY or ~ECUADOR
+mg_769:~Other or ~URUGUAY or ~EL_SALVADOR
+mg_770:~Other or ~URUGUAY or ~ESTADOS_UNIDOS
+mg_771:~Other or ~URUGUAY or ~GUATEMALA
+mg_772:~Other or ~URUGUAY or ~HONDURAS
+mg_773:~Other or ~URUGUAY or ~MEXICO
+mg_774:~Other or ~URUGUAY or ~NICARAGUA
+mg_775:~Other or ~URUGUAY or ~PANAMA
+mg_776:~Other or ~URUGUAY or ~PARAGUAY
+mg_777:~Other or ~URUGUAY or ~PERU
+mg_778:~Other or ~URUGUAY or ~PUERTO_RICO
+mg_779:~Other or ~URUGUAY or ~REP_DOMINICANA
+mg_780:~Other or ~VENEZUELA or ~COLOMBIA
+mg_781:~Other or ~VENEZUELA or ~ARGENTINA
+mg_782:~Other or ~VENEZUELA or ~BOLIVIA
+mg_783:~Other or ~VENEZUELA or ~BRASIL
+mg_784:~Other or ~VENEZUELA or ~CANADA
+mg_785:~Other or ~VENEZUELA or ~COSTA_RICA
+mg_786:~Other or ~VENEZUELA or ~CHILE
+mg_787:~Other or ~VENEZUELA or ~ECUADOR
+mg_788:~Other or ~VENEZUELA or ~EL_SALVADOR
+mg_789:~Other or ~VENEZUELA or ~ESTADOS_UNIDOS
+mg_790:~Other or ~VENEZUELA or ~GUATEMALA
+mg_791:~Other or ~VENEZUELA or ~HONDURAS
+mg_792:~Other or ~VENEZUELA or ~MEXICO
+mg_793:~Other or ~VENEZUELA or ~NICARAGUA
+mg_794:~Other or ~VENEZUELA or ~PANAMA
+mg_795:~Other or ~VENEZUELA or ~PARAGUAY
+mg_796:~Other or ~VENEZUELA or ~PERU
+mg_797:~Other or ~VENEZUELA or ~PUERTO_RICO
+mg_798:~Other or ~VENEZUELA or ~REP_DOMINICANA
+mg_799:~Other or ~VENEZUELA or ~URUGUAY
+mg_800:~Other or COLOMBIA or ARGENTINA or BOLIVIA or BRASIL or CANADA or COSTA_RICA or CHILE or ECUADOR or EL_SALVADOR or ESTADOS_UNIDOS or GUATEMALA or HONDURAS or MEXICO or NICARAGUA or PANAMA or PARAGUAY or PERU or PUERTO_RICO or REP_DOMINICANA or URUGUAY or VENEZUELA
+mg_801:~Other or ~IA1000 or ~Altitude_Other
+mg_802:~Other or ~IA2600 or ~Altitude_Other
+mg_803:~Other or ~IA2600 or ~IA1000
+mg_804:~Other or Altitude_Other or IA1000 or IA2600
+mg_805:~Other or ~ANSI_Std
+mg_806:~Other or ~ECOPETROL_Std
+mg_807:~Other or ~Standard_Other or ~IEC_Std
+mg_808:~Other or ~NTC_Std or ~IEC_Std
+mg_809:~Other or ~NTC_Std or ~Standard_Other
+mg_810:~Other or IEC_Std or Standard_Other or NTC_Std
+mg_811:~Other or ~F60 or ~F50
+mg_812:~Other or F50 or F60
+mg_813:~Other or Frequency
+c814:~PRD_Contacts or ~Poste
+c815:~OLI_Contacts or ~Poste
+c816:~Siemens_Standard or ~Special_Markings or ~NTC_Std
+c817:~PH1 or ~ZNyn1 or ~Poste
+c818:~PH1 or ~ZNyn11 or ~Poste
+c819:~PH1 or ~Dyn11 or ~Poste
+c820:~PH1 or ~Dyn1 or ~Poste
+c821:~PH1 or ~YNd7 or ~Poste
+c822:~PH1 or ~Dd0 or ~Poste
+c823:~PH1 or ~Yy0 or ~Poste
+c824:~PH1 or ~YNyn0 or ~Poste
+c825:~Rise_65_65_80 or ~Transformer_Temp_Rise2
+c826:~Rise_60_65_78 or ~Transformer_Temp_Rise2
+c827:~LV_Value_Loaded or ~StepUp
+c828:~PH1 or ~Yyn0 or ~Poste
+c829:~PH1 or ~YNd1 or ~Poste
+c830:~PH1 or ~YNd11 or ~Poste
+c831:~Siemens_Standard or ~Dimensional_Restrictions or ~NTC_Std
+c832:~PH1 or ~Oil_Level_Indicator or ~NTC_Std or ~Poste
+c833:~VG_1W or TWNr_1
+c834:~PH3 or Oil_Level_Indicator or ~NTC_Std or ~Poste
+c835:~VG_2W or TWNr_2
+c836:LVV_no_load or ~PH1 or ~Poste
+c837:~VG_3W or TWNr_3
+c838:~PH3 or TWNr_2 or ~Poste
+c839:~VG_4W or TWNr_4
+c840:~Siemens_Standard or ~NTC_Std or ~Internal_Current_Transformers
+c841:~VG_5W or TWNr_5
+c842:StepDown or ~NTC_Std or ~COLOMBIA or ~Poste
+c843:~Rise_55_55_65 or ~Rise2_55_55_65
+c844:NTC_U_V_W_PN_x_y_z_pn or ~Siemens_Standard or ~NTC_Std
+c845:TL_NTC or ~Siemens_Standard or ~NTC_Std
+c846:Rise_60_65_78 or ~Siemens_Standard or ~NTC_Std
+c847:~K_factor or ~Siemens_Standard or ~NTC_Std
+c848:~PH1 or TWNr_2 or ~Poste
+c849:~PG_0_14 or ~LV_Voltage_Tapped_Winding
+c850:~LV_Voltage_Tapped_Winding or ~Poste
+c851:~HV_VTW_2point5percent_per_tap_1_up_3_down_5_taps or HVVTWTA_1
+c852:~HV_VTW_2point5percent_per_tap_2_up_2_down_5_taps or HVVTWT_5
+c853:~HV_VTW_2point5percent_per_tap_2_up_2_down_5_taps or HVVTWTB_2
+c854:~HV_VTW_2point5percent_per_tap_2_up_2_down_5_taps or HVVTWTA_2
+c855:~HV_VTW_2point5percent_per_tap_1_up_3_down_5_taps or HVVTWR_2point5percent
+c856:~HV_VTW_2point5percent_per_tap_2_up_2_down_5_taps or HVVTWR_2point5percent
+c857:~HV_VTW_2point5percent_per_tap_1_up_3_down_5_taps or HVVTWT_5
+c858:~HV_VTW_2point5percent_per_tap_1_up_3_down_5_taps or HVVTWTB_3
+c859:~PG_46_74 or ~LV_Voltage_Tapped_Winding
+c860:~PG_15_45 or ~LV_Voltage_Tapped_Winding
+c861:~PH1 or ~Dyn5 or ~Poste
+c862:~PH1 or ~ZNd0 or ~Poste
+c863:~PG_1001_2000 or ~LV_Voltage_Tapped_Winding
+c864:~PG_801_1000 or ~LV_Voltage_Tapped_Winding
+c865:~HV_Value_Loaded or ~StepDown
+c866:~PG_2001_4999 or ~LV_Voltage_Tapped_Winding
+c867:~PG_150 or ~LV_Voltage_Tapped_Winding
+c868:~Siemens_Standard or OT_Mineral_ASTM or ~NTC_Std
+c869:~PG_75_149 or ~LV_Voltage_Tapped_Winding
+c870:~PG_601_800 or ~LV_Voltage_Tapped_Winding
+c871:~Siemens_Standard or Light_Grey_RAL7035 or ~NTC_Std
+c872:~PG_151_600 or ~LV_Voltage_Tapped_Winding
+c873:~Transformer_Losses_Assessment or ~Siemens_Standard or ~NTC_Std
+c874:VG_1W or ~TWNr_1
+c875:HV_BIL_Acc_Standard or ~Siemens_Standard or ~NTC_Std
+c876:~Transformer_Temp_Rise2 or ~Poste
+c877:F60 or ~PANAMA
+c878:F60 or ~MEXICO
+c879:~ONAF2 or ~Poste
+c880:~ONAF or ~Poste
+c881:HV_AC_Acc_Standard or ~Siemens_Standard or ~NTC_Std
+c882:LV_AC_Acc_Standard or ~Siemens_Standard or ~NTC_Std
+c883:LV_BIL_Acc_Standard or ~Siemens_Standard or ~NTC_Std
+c884:VG_4W or ~TWNr_4
+c885:VG_5W or ~TWNr_5
+c886:VG_2W or ~TWNr_2
+c887:VG_3W or ~TWNr_3
+c888:HV_VTW_2point5percent_per_tap_1_up_3_down_5_taps or ~NTC_Std or ~Poste
+c889:~Siemens_Standard or ~NTC_Std or ~Poste or HVLVI_Acc_Standard
+c890:F60 or ~ECUADOR
+c891:F60 or ~VENEZUELA
+c892:F60 or ~COLOMBIA
+c893:HV_Voltage_Tapped_Winding or ~Poste
+c894:NLTC or ~Tap_Changer or ~Poste
+c895:~PH1 or ~YNa0 or ~Poste
+c896:~PH1 or ~YNd5 or ~Poste
+c897:F60 or ~BRASIL
+c898:F50 or ~CHILE
+c899:F60 or ~PERU
+c900:F50 or ~BOLIVIA
+</constraints>
+</feature_model>

@@ -1,0 +1,1206 @@
+<feature_model name="NTC819_4arev.Convencional.configurator.fm">
+<meta>
+<data name="uuid">704</data>
+<data name="description">system.fm</data>
+<data name="creator">Carlos Rangel</data>
+<data name="address"></data>
+<data name="email">carlos.rangel@siemens.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Siemens</data>
+<data name="department"></data>
+<data name="date">2016-01-06</data>
+<data name="reference">Rev. DE C.Rozo el 20151021</data>
+</meta>
+<feature_tree>
+:r sat(sat)
+	:m System(System)
+		:m Frequency(Frequency)
+			:o Minimum(Minimum)
+				:g _id_0_sys(_id_0_sys) [1,1] 
+					: FMin10(FMin10)
+					: FMin30(FMin30)
+			:o Maximum(Maximum)
+				:g _id_1_sys(_id_1_sys) [1,1] 
+					: FMax80(FMax80)
+					: FMax90(FMax90)
+			:m Frequency_Type(Frequency_Type)
+				:g Frecuency_19(Frecuency_19) [1,1] 
+					: Fixed_Frequency(Fixed_Frequency)
+					: Variable_Frequency(Variable_Frequency)
+			:m Rated_Frequency(Rated_Frequency)
+				:g Frecuency_22_23(Frecuency_22_23) [1,1] 
+					: F60(F60)
+		:m Standard(Standard)
+			:g _id_2(_id_2) [1,1] 
+				: ANSI_Std(ANSI_Std)
+					:g _id_2_25_26(_id_2_25_26) [1,1] 
+						: C57_12(C57_12)
+				: ECOPETROL_Std(ECOPETROL_Std)
+					:g _id_2_28_29(_id_2_28_29) [1,1] 
+						: ECOPETROLVEP_SIP_P_ELE_ET_032R020130708(ECOPETROLVEP_SIP_P_ELE_ET_032R020130708)
+							:g _id_2_28_29_30_31(_id_2_28_29_30_31) [1,1] 
+								: ECOP_Power_Transformer(ECOP_Power_Transformer)
+								: ECOP_Distribution_Transformer(ECOP_Distribution_Transformer)
+				: NTC_Std(NTC_Std)
+					:g _id_2_34_35(_id_2_34_35) [1,1] 
+						: NTC819_4arev(NTC819_4arev)
+							:o Siemens_Standard(Siemens_Standard)
+								:g Electrical_Thermal_Acoustic_58_59(Electrical_Thermal_Acoustic_58_59) [1,1] 
+									: Siemens_Std_Pole_Mounted(Siemens_Std_Pole_Mounted)
+									: Siemens_Std_Convencional(Siemens_Std_Convencional)
+										:g Electrical_Thermal_Acoustic_58_59_61_71(Electrical_Thermal_Acoustic_58_59_61_71) [1,1] 
+											: Yes_4000A_rule(Yes_4000A_rule)
+											: No_4000A_rule(No_4000A_rule)
+										:m Transformer_Family(Transformer_Family)
+											:g Siemens_Std_Convencional_73_74(Siemens_Std_Convencional_73_74) [1,1] 
+												: C01(C01)
+												: C02(C02)
+												: C03(C03)
+												: C04(C04)
+												: C05(C05)
+												: C06(C06)
+												: C07(C07)
+												: C08(C08)
+												: C09(C09)
+												: C10(C10)
+												: C11(C11)
+												: C12(C12)
+						: NTC3997(NTC3997)
+	:m Installation(Installation)
+		:m Altitude(Altitude)
+			:g _id_0_install(_id_0_install) [1,1] 
+				: IA1000(IA1000)
+				: IA2600(IA2600)
+		:m Temperature(Temperature)
+			:m MaxTemp(MaxTemp)
+				:g Maximum_17(Maximum_17) [1,1] 
+					: TMax40(TMax40)
+					: TMax_site(TMax_site)
+			:m AvgTemp(AvgTemp)
+				:g Average_19(Average_19) [1,1] 
+					: TAve30(TAve30)
+					: TAve_site(TAve_site)
+			:m MinTemp(MinTemp)
+				:g Minimum_21(Minimum_21) [1,1] 
+					: TMin20(TMin20)
+					: Tmin_site(Tmin_site)
+		:m Location(Location)
+			:g _id_1_install(_id_1_install) [1,1] 
+				: Loc_Outdoor(Loc_Outdoor)
+				: Loc_Indoor(Loc_Indoor)
+		:m Installation_Country(Installation_Country)
+			:g _id_2_install(_id_2_install) [1,1] 
+				: COLOMBIA(COLOMBIA)
+	:m Type(Type)
+		:m Transformer_Type(Transformer_Type)
+			:g _id_0(_id_0) [1,1] 
+				: FrecuenciaVariableSUT(FrecuenciaVariableSUT)
+				: PedestalRadial(PedestalRadial)
+				: Convencional(Convencional)
+				: Poste(Poste)
+				: Petrolero(Petrolero)
+				: Seco_Clase_F(Seco_Clase_F)
+		:m Variant(Variant)
+			:g Type_19_20(Type_19_20) [1,1] 
+				: Standardtransformer(Standardtransformer)
+				: Customizedtransformer(Customizedtransformer)
+	:m Electrical_Thermal_Acoustic(Electrical_Thermal_Acoustic)
+		:m Electrical(Electrical)
+			:m Power(Power)
+				:o Power_group(Power_group);2
+					:g Electrical_Thermal_Acoustic_81_82_71_72(Electrical_Thermal_Acoustic_81_82_71_72) [1,1] 
+						: PG15_45(PG15_45)
+							:g Electrical_Thermal_Acoustic_81_82_71_72_73_70(Electrical_Thermal_Acoustic_81_82_71_72_73_70) [1,1] 
+								: P15(P15)
+								: P30(P30)
+								: P45(P45)
+						: PG225(PG225)
+							:g Electrical_Thermal_Acoustic_81_82_71_72_74_83(Electrical_Thermal_Acoustic_81_82_71_72_74_83) [1,1] 
+								: P225(P225)
+						: PG4000_10000(PG4000_10000)
+							:g Electrical_Thermal_Acoustic_81_82_71_72_75_101(Electrical_Thermal_Acoustic_81_82_71_72_75_101) [1,1] 
+								: P4000(P4000)
+								: P5000(P5000)
+								: P6000(P6000)
+								: P7500(P7500)
+								: P10000(P10000)
+						: PG75_112_5(PG75_112_5)
+							:g Electrical_Thermal_Acoustic_81_82_71_72_66_74(Electrical_Thermal_Acoustic_81_82_71_72_66_74) [1,1] 
+								: P75(P75)
+								: P112_5(P112_5)
+						: PG1600_2000(PG1600_2000)
+							:g Electrical_Thermal_Acoustic_81_82_71_72_68_94(Electrical_Thermal_Acoustic_81_82_71_72_68_94) [1,1] 
+								: P1600(P1600)
+								: P2000(P2000)
+						: PG3750(PG3750)
+							:g Electrical_Thermal_Acoustic_81_82_71_72_70_99(Electrical_Thermal_Acoustic_81_82_71_72_70_99) [1,1] 
+								: P3750(P3750)
+						: PG150(PG150)
+							:g Electrical_Thermal_Acoustic_81_82_71_72_80_81(Electrical_Thermal_Acoustic_81_82_71_72_80_81) [1,1] 
+								: P150(P150)
+						: PG300_1250(PG300_1250)
+							:g Electrical_Thermal_Acoustic_81_82_71_72_85_86(Electrical_Thermal_Acoustic_81_82_71_72_85_86) [1,1] 
+								: P300(P300)
+								: P400(P400)
+								: P500(P500)
+								: P630(P630)
+								: P750(P750)
+								: P800(P800)
+								: P1000(P1000)
+								: P1250(P1250)
+						: PG2500_3000(PG2500_3000)
+							:g Electrical_Thermal_Acoustic_81_82_71_72_71_72(Electrical_Thermal_Acoustic_81_82_71_72_71_72) [1,1] 
+								: P2500(P2500)
+								: P3000(P3000)
+			:m High_voltage(High_voltage)
+				:o High_Voltage_Group(High_Voltage_Group);2
+					:g Electrical_Thermal_Acoustic_81_83_76_75(Electrical_Thermal_Acoustic_81_83_76_75) [1,1] 
+						: HVG15(HVG15)
+							:g Electrical_Thermal_Acoustic_81_83_76_75_77_109(Electrical_Thermal_Acoustic_81_83_76_75_77_109) [1,1] 
+								: HV11400(HV11400)
+								: HV13200(HV13200)
+								: HV13800(HV13800)
+						: HVG34_5(HVG34_5)
+							:g Electrical_Thermal_Acoustic_81_83_76_75_78_113(Electrical_Thermal_Acoustic_81_83_76_75_78_113) [1,1] 
+								: HV33000(HV33000)
+								: HV34500(HV34500)
+			:m Low_Voltage(Low_Voltage)
+				:o Low_Voltage_Group(Low_Voltage_Group);2
+					:g Electrical_Thermal_Acoustic_81_84_77_78(Electrical_Thermal_Acoustic_81_84_77_78) [1,1] 
+						: LVG214_228(LVG214_228)
+							:g Electrical_Thermal_Acoustic_81_84_77_78_79_116(Electrical_Thermal_Acoustic_81_84_77_78_79_116) [1,1] 
+								: LV214(LV214)
+								: LV228(LV228)
+						: LVG460_480(LVG460_480)
+							:g Electrical_Thermal_Acoustic_81_84_77_78_80_119(Electrical_Thermal_Acoustic_81_84_77_78_80_119) [1,1] 
+								: LV460(LV460)
+								: LV480(LV480)
+						: LVG15(LVG15)
+							:g Electrical_Thermal_Acoustic_81_84_77_78_65_122(Electrical_Thermal_Acoustic_81_84_77_78_65_122) [1,1] 
+								: LV11400(LV11400)
+								: LV13200(LV13200)
+								: LV13800(LV13800)
+			:m Voltage_Tapped_Winding(Voltage_Tapped_Winding)
+				:g Electrical_Thermal_Acoustic_81_85_86(Electrical_Thermal_Acoustic_81_85_86) [1,1] 
+					: VTW_HV_variable_per_tap_20_taps(VTW_HV_variable_per_tap_20_taps)
+					: VTW_HV_2point5percent_per_tap_2_up_2_down_5_taps(VTW_HV_2point5percent_per_tap_2_up_2_down_5_taps)
+					: VTW_HV_2point5percent_per_tap_1_up_3_down_5_taps(VTW_HV_2point5percent_per_tap_1_up_3_down_5_taps)
+			:m Transformer_Phases(Transformer_Phases)
+				:g Electrical_Thermal_Acoustic_81_89_90(Electrical_Thermal_Acoustic_81_89_90) [1,1] 
+					: PH3(PH3)
+			:m Angular_Displacement(Angular_Displacement)
+				:m Vector_Group(Vector_Group)
+					:g Electrical_Thermal_Acoustic_81_92_95_96(Electrical_Thermal_Acoustic_81_92_95_96) [1,1] 
+						: Dd0_Yd1(Dd0_Yd1)
+						: Dyn5(Dyn5)
+				:m Angular_Displacement_Configuration(Angular_Displacement_Configuration)
+					:m HV_connection(HV_connection)
+						:g Electrical_Thermal_Acoustic_81_92_99_105_106(Electrical_Thermal_Acoustic_81_92_99_105_106) [1,1] 
+							: D_Y(D_Y)
+							: D(D)
+					:m LV_connection(LV_connection)
+						:g Electrical_Thermal_Acoustic_81_92_99_109_110(Electrical_Thermal_Acoustic_81_92_99_109_110) [1,1] 
+							: d0_d1(d0_d1)
+							: yn(yn)
+					:m LV_lags_HV_by_30_degrees_cross(LV_lags_HV_by_30_degrees_cross)
+						:g Electrical_Thermal_Acoustic_81_92_99_113_114(Electrical_Thermal_Acoustic_81_92_99_113_114) [1,1] 
+							: A0_1(A0_1)
+							: A5(A5)
+			:m Neutral_Grounding_System(Neutral_Grounding_System)
+				:g Electrical_Thermal_Acoustic_81_128_129(Electrical_Thermal_Acoustic_81_128_129) [1,1] 
+					: Solid_Grounded(Solid_Grounded)
+			:m Operation(Operation)
+				:g Electrical_Thermal_Acoustic_81_133_134(Electrical_Thermal_Acoustic_81_133_134) [1,1] 
+					: StepDown(StepDown)
+					: StepUp(StepUp)
+			:m Transformer_Losses(Transformer_Losses)
+				:g Electrical_Thermal_Acoustic_81_137_138(Electrical_Thermal_Acoustic_81_137_138) [1,1] 
+					: TL_NTC(TL_NTC)
+					: TL_DOE(TL_DOE)
+					: TL_Special(TL_Special)
+					: NTC(NTC)
+		:m Thermal(Thermal)
+			:m Cooling(Cooling)
+				:g Electrical_Thermal_Acoustic_117_118_121(Electrical_Thermal_Acoustic_117_118_121) [1,*] 
+					: ONAN(ONAN)
+					: ONAF(ONAF)
+		:m Acoustic(Acoustic)
+			:m Noise_Level(Noise_Level)
+				:g Electrical_Thermal_Acoustic_124_125_126(Electrical_Thermal_Acoustic_124_125_126) [1,1] 
+					: Nema_TR1(Nema_TR1)
+	:m Mechanical(Mechanical)
+		:m Oil_Preservation_System(Oil_Preservation_System)
+			:m OPS_Type1(OPS_Type1)
+				:g _id_0(__id_0) [1,1] 
+					: OPS_Open_System(OPS_Open_System)
+					: OPS_Closed_System(OPS_Closed_System)
+			:m OPS_Type2(OPS_Type2)
+				:g Oil_Preservation_System_101(Oil_Preservation_System_101) [1,1] 
+					: OPS_Constant_Volume(OPS_Constant_Volume)
+					: OPS_Constant_Pressure(OPS_Constant_Pressure)
+		:m Tank_Type(Tank_Type)
+			:g _id_1(_id_1) [1,1] 
+				: Sealed_Tank(Sealed_Tank)
+				: Conservator_Tank(Conservator_Tank)
+		:m Tank_Shape(Tank_Shape)
+			:g Mechanical_126_127(Mechanical_126_127) [1,1] 
+				: Rectangular_Tank(Rectangular_Tank)
+				: Oval_Tank(Oval_Tank)
+				: Circular_Tank(Circular_Tank)
+		:m Bushings_Location(Bushings_Location)
+			:m High_Voltage_Bushing_Location(High_Voltage_Bushing_Location)
+				:g _id_2(__id_2) [1,1] 
+					: HVBL_Side_s1_Left(HVBL_Side_s1_Left)
+					: HVBL_Cover_s3(HVBL_Cover_s3)
+			:m Low_Voltage_Bushing_Location(Low_Voltage_Bushing_Location)
+				:g _id_3(_id_3) [1,1] 
+					: LVBL_Side_s1_Right(LVBL_Side_s1_Right)
+					: LVBL_Side_s1(LVBL_Side_s1)
+					: LVBL_Cover_s1(LVBL_Cover_s1)
+		:m Base_Type(Base_Type)
+			:g _id_4(_id_4) [1,1] 
+				: Chassis_for_rollers(Chassis_for_rollers)
+					:o Rollers(Rollers)
+				: Skid(Skid)
+				: Pad_type_base(Pad_type_base)
+				: Base_not_applicable(Base_not_applicable)
+		:m Surface_Protection(Surface_Protection)
+			:m SP_Level(SP_Level)
+				:g _id_5(_id_5) [1,1] 
+					: ISO_12944_2_Caso_C2_y_C3(ISO_12944_2_Caso_C2_y_C3)
+					: Acc_to_ISO12944_2_Case_C1_Very_Low(Acc_to_ISO12944_2_Case_C1_Very_Low)
+			:m Surface_Protection_External_Color(Surface_Protection_External_Color)
+				:g _id_6(_id_6) [1,1] 
+					: Light_Grey_RAL7035(Light_Grey_RAL7035)
+					: Grey_ANSI61(Grey_ANSI61)
+					: Light_Grey_ANSI70(Light_Grey_ANSI70)
+		:m Active_Part(Active_Part)
+			:m Core(Core)
+				:m Core_Type(Core_Type)
+					:g _id_7(_id_7) [1,1] 
+						: Stacked_Core(Stacked_Core)
+						: Wounded_Core(Wounded_Core)
+				:m Core_Grounding(Core_Grounding)
+					:g _id_8(_id_8) [1,1] 
+						: CG_Internal(CG_Internal)
+						: CG_External(CG_External)
+			:m Winding(Winding)
+				:m Winding_Material(Winding_Material)
+					:m Winding_Material_HV(Winding_Material_HV)
+						:g Winding_Material_129_131(Winding_Material_129_131) [1,1] 
+							: WM_HV_Copper(WM_HV_Copper)
+							: WM_HV_Aluminum(WM_HV_Aluminum)
+					:m Winding_Material_LV(Winding_Material_LV)
+						:g Winding_Material_130_134(Winding_Material_130_134) [1,1] 
+							: WM_LV_Copper(WM_LV_Copper)
+							: WM_LV_Aluminum(WM_LV_Aluminum)
+				:o Winding_Electrostatic_Shield(Winding_Electrostatic_Shield)
+					:m WES_Grounding(WES_Grounding)
+						:g _id_10(_id_10) [1,1] 
+							: WESG_Internal(WESG_Internal)
+							: WESG_External(WESG_External)
+		:o Bushings_Enclosure(Bushings_Enclosure)
+			:g _id_11(_id_11) [1,1] 
+				: High_Low_Voltage_Shared_Bushing_Enclosure(High_Low_Voltage_Shared_Bushing_Enclosure)
+					:m HLV_Enclosure_type(HLV_Enclosure_type)
+						:g _id_12(_id_12) [1,1] 
+							: HLVSBE_Nema_3R(HLVSBE_Nema_3R)
+							: HLVSBE_Nema_4(HLVSBE_Nema_4)
+							: HLVSBE_No_Nema(HLVSBE_No_Nema)
+					:m HLVE_Conductors_per_Phase(HLVE_Conductors_per_Phase)
+						:m HLVSBE_CPP_High_Voltage(HLVSBE_CPP_High_Voltage)
+							:m HLVSBE_CPP_High_Voltage_Number(HLVSBE_CPP_High_Voltage_Number)
+								:g _id_13(_id_13) [1,1] 
+									: HLV_SBE_CPPHV_1(HLV_SBE_CPPHV_1)
+							:m HLVSBE_CPP_High_Voltage_Size(HLVSBE_CPP_High_Voltage_Size)
+						:m HLVSBE_CPP_Low_Voltage(HLVSBE_CPP_Low_Voltage)
+							:m HLVSBE_CPP_Low_Voltage_Number(HLVSBE_CPP_Low_Voltage_Number)
+								:g _id_14(_id_14) [1,1] 
+									: HLV_SBE_CPPLV_3(HLV_SBE_CPPLV_3)
+							:m HLVSBE_CPP_Low_Voltage_Size(HLVSBE_CPP_Low_Voltage_Size)
+					:m HLVE_Conductors_Entry(HLVE_Conductors_Entry)
+						:m HLVE_CE_High_Voltage(HLVE_CE_High_Voltage)
+							:g _id_15(_id_15) [1,1] 
+								: HLVE_CEHV_Bottom(HLVE_CEHV_Bottom)
+						:m HLVE_CE_Low_Voltage(HLVE_CE_Low_Voltage)
+							:g _id_16(_id_16) [1,1] 
+								: HLVE_CELV_Bottom(HLVE_CELV_Bottom)
+					:o HLVE_Provisions_for_surge_arrestors(HLVE_Provisions_for_surge_arrestors)
+						:g Provisions_for_surge_arrestors_123(Provisions_for_surge_arrestors_123) [1,*] 
+							: HLVE_P_SA_HV(HLVE_P_SA_HV)
+							: HLVE_P_SA_LV(HLVE_P_SA_LV)
+					:o HLVE_Provisions_for_cable_terminations(HLVE_Provisions_for_cable_terminations)
+						:g Provisions_for_cable_terminations_126(Provisions_for_cable_terminations_126) [1,*] 
+							: HLVE_PFCT_High_Voltage(HLVE_PFCT_High_Voltage)
+							: HLVE_PFCT_Low_Voltage(HLVE_PFCT_Low_Voltage)
+					:m HLVE_Access_means(HLVE_Access_means)
+						:g _id_17(_id_17) [1,1] 
+							: HLVE_AM_Door(HLVE_AM_Door)
+								:m HLVE_AM_Lock_type(HLVE_AM_Lock_type)
+									:g _id_18(_id_18) [1,1] 
+										: HLVE_AM_D_LT_3_point_locking_System(HLVE_AM_D_LT_3_point_locking_System)
+						:o HLVE_security_shield_avoiding_accidental_contact(HLVE_security_shield_avoiding_accidental_contact)
+				: High_Low_Voltage_Independent_Bushing_Enclosure(High_Low_Voltage_Independent_Bushing_Enclosure)
+					:o High_Voltage_Bushing_Enclosure(High_Voltage_Bushing_Enclosure)
+						:m HV_Enclosure_Type(HV_Enclosure_Type)
+							:g _id_20(_id_20) [1,1] 
+								: HVET_Nema_3R(HVET_Nema_3R)
+								: HVET_Nema_4(HVET_Nema_4)
+								: HVET_Nema_4X(HVET_Nema_4X)
+						:m HVE_Conductors_per_Phase(HVE_Conductors_per_Phase)
+							:m HVE_CPP_Number(HVE_CPP_Number)
+								:g _id_21(_id_21) [1,1] 
+									: HVE_CPP_N1(HVE_CPP_N1)
+							:m HVE_CPP_Size(HVE_CPP_Size)
+						:m HVE_Conductors_Entry(HVE_Conductors_Entry)
+							:g _id_22(_id_22) [1,1] 
+								: HVE_CE_Bottom(HVE_CE_Bottom)
+						:o HVE_Provisions_for_surge_arrestors(HVE_Provisions_for_surge_arrestors)
+						:o HVE_Provisions_for_cable_terminations(HVE_Provisions_for_cable_terminations)
+						:m HVE_Access_means(HVE_Access_means)
+							:g _id_23(_id_23) [1,1] 
+								: HVE_AM_Door(HVE_AM_Door)
+									:m HVE_AM_D_Lock_type(HVE_AM_D_Lock_type)
+										:g _id_24(_id_24) [1,1] 
+											: HVE_AM_D_LT_3_point_locking_system(HVE_AM_D_LT_3_point_locking_system)
+											: HVE_AM_D_LT_1_point_locking_system(HVE_AM_D_LT_1_point_locking_system)
+							:o HVE_security_shield_avoiding_accidental_contact(HVE_security_shield_avoiding_accidental_contact)
+					:o Low_Voltage_Bushing_Enclosure(Low_Voltage_Bushing_Enclosure)
+						:m LV_Enclosure_Type(LV_Enclosure_Type)
+							:g _id_25(_id_25) [1,1] 
+								: LVET_Nema_3R(LVET_Nema_3R)
+								: LVET_Nema_4(LVET_Nema_4)
+								: LVET_Nema_4X(LVET_Nema_4X)
+						:m LVE_Conductors_per_Phase(LVE_Conductors_per_Phase)
+							:m LVE_CPP_Number(LVE_CPP_Number)
+								:g Conductors_per_Phase_2_106_107(Conductors_per_Phase_2_106_107) [1,1] 
+									: LVE_CPP_N1(LVE_CPP_N1)
+							:m LVE_CPP_Size(LVE_CPP_Size)
+						:m LVE_Conductors_Entry(LVE_Conductors_Entry)
+							:g Low_Voltage_Bushing_Enclosure_109_110(Low_Voltage_Bushing_Enclosure_109_110) [1,1] 
+								: LVE_CE_Bottom(LVE_CE_Bottom)
+						:o LVE_Provisions_for_surge_arrestors(LVE_Provisions_for_surge_arrestors)
+						:o LVE_Provisions_for_cable_terminations(LVE_Provisions_for_cable_terminations)
+						:m LVE_Access_means(LVE_Access_means)
+							:g Low_Voltage_Bushing_Enclosure_114_115(Low_Voltage_Bushing_Enclosure_114_115) [1,1] 
+								: LVE_AM_Door(LVE_AM_Door)
+									:m LVE_AM_D_Lock_type(LVE_AM_D_Lock_type)
+										:g Low_Voltage_Bushing_Enclosure_114_115_116_117_118(Low_Voltage_Bushing_Enclosure_114_115_116_117_118) [1,1] 
+											: LVE_AM_D_LT_3_point_locking_System(LVE_AM_D_LT_3_point_locking_System)
+											: LVE_AM_D_LT_1_point_locking_System(LVE_AM_D_LT_1_point_locking_System)
+							:o LVE_security_shield_avoiding_accidental_contact(LVE_security_shield_avoiding_accidental_contact)
+					:m HLVI_Enclosure_type(HLVI_Enclosure_type)
+						:g High_Low_Voltage_Independent_Bushing_Enclosure_137_138(High_Low_Voltage_Independent_Bushing_Enclosure_137_138) [1,1] 
+							: HLVI_Nema_3R(HLVI_Nema_3R)
+							: HLVI_Nema_4(HLVI_Nema_4)
+							: HLVI_Nema_4X(HLVI_Nema_4X)
+	:m Accessories(Accessories)
+		:m Bushings(Bushings)
+			:m High_Voltage_Bushing_Acc(High_Voltage_Bushing_Acc)
+				:m HVBAcc_Quantity(HVBAcc_Quantity)
+					:g High_Voltage_Bushing_Acc_76_77(High_Voltage_Bushing_Acc_76_77) [1,1] 
+						: HVBAcc_Qty_3(HVBAcc_Qty_3)
+						: HVBAcc_Qty_6(HVBAcc_Qty_6)
+				:m HVBAcc_Material(HVBAcc_Material)
+					:g High_Voltage_Bushing_Acc_80_81(High_Voltage_Bushing_Acc_80_81) [1,1] 
+						: HVBAcc_Solid_Dry_Porcelain(HVBAcc_Solid_Dry_Porcelain)
+						: HVBAcc_Molded(HVBAcc_Molded)
+				:m HVBAcc_Terminal(HVBAcc_Terminal)
+					:g High_Voltage_Bushing_Acc_83_84(High_Voltage_Bushing_Acc_83_84) [1,1] 
+						: HVBAcc_T_Eyebolt(HVBAcc_T_Eyebolt)
+						: HVBAcc_T_Spade_4_holes(HVBAcc_T_Spade_4_holes)
+						: HVBAcc_T_Molded(HVBAcc_T_Molded)
+			:m Low_Voltage_Bushing_Acc(Low_Voltage_Bushing_Acc)
+				:m LVBAcc_Quantity(LVBAcc_Quantity)
+					:g Low_Voltage_Bushing_Acc_87_88(Low_Voltage_Bushing_Acc_87_88) [1,1] 
+						: LVBAcc_Qty_4(LVBAcc_Qty_4)
+						: LVBAcc_Qty_3(LVBAcc_Qty_3)
+				:m LVBAcc_Material(LVBAcc_Material)
+					:g Low_Voltage_Bushing_Acc_93_94(Low_Voltage_Bushing_Acc_93_94) [1,1] 
+						: LVBAcc_Solid_Dry_Porcelain(LVBAcc_Solid_Dry_Porcelain)
+				:m LVBAcc_Terminal(LVBAcc_Terminal)
+					:g Low_Voltage_Bushing_Acc_96_97(Low_Voltage_Bushing_Acc_96_97) [1,1] 
+						: LVBAcc_T_Spade_4_holes_or_dual_According_to_design(LVBAcc_T_Spade_4_holes_or_dual_According_to_design)
+						: LVBAcc_T_Spade_4_holes(LVBAcc_T_Spade_4_holes)
+						: LVBAcc_T_Spade_6_holes(LVBAcc_T_Spade_6_holes)
+						: LVBAcc_T_Eyebolt(LVBAcc_T_Eyebolt)
+		:m Tap_Changer(Tap_Changer)
+			:m Tap_Changer_Type(Tap_Changer_Type)
+				:g Tap_Changer_103_104(Tap_Changer_103_104) [1,1] 
+					: NLTC(NLTC)
+			:m Tap_Changer_Location(Tap_Changer_Location)
+				:g Tap_Changer_76_77(Tap_Changer_76_77) [1,1] 
+					: NLTCL_Side_Wall_s3(NLTCL_Side_Wall_s3)
+					: NLTCL_Side_Wall_s1(NLTCL_Side_Wall_s1)
+		:m Protective_Control_Acc(Protective_Control_Acc)
+			:m Oil_Level_Indicator(Oil_Level_Indicator)
+				:o OLI_Contacts(OLI_Contacts)
+					:g OLI_Contacts_94(OLI_Contacts_94) [1,1] 
+						: OLI_Contacts_QTY1(OLI_Contacts_QTY1)
+						: OLI_Contacts_QTY2(OLI_Contacts_QTY2)
+				:o OLI_Contacts_Scheme(OLI_Contacts_Scheme)
+					:g Oil_Level_Indicator_90_91(Oil_Level_Indicator_90_91) [1,1] 
+						: Low_Very_Low(Low_Very_Low)
+						: Low_High(Low_High)
+			:o Oil_Temperature_Indicator(Oil_Temperature_Indicator)
+				:o OTI_Contacts(OTI_Contacts)
+					:g OTI_Contacts_97(OTI_Contacts_97) [1,1] 
+						: OTI_Contacts_QTY2(OTI_Contacts_QTY2)
+			:o Winding_Temperature_Indicator(Winding_Temperature_Indicator)
+				:m WTI_Contacts(WTI_Contacts)
+					:m WTI_Contacts_QTY4(WTI_Contacts_QTY4)
+				:m WTI_Output_Analog(WTI_Output_Analog)
+					:g Winding_Temperature_Indicator_81_99(Winding_Temperature_Indicator_81_99) [1,1] 
+						: WTI_OA_PT100_QTY1(WTI_OA_PT100_QTY1)
+			:o Buchholz_Relay(Buchholz_Relay)
+				:m BR_Contacts(BR_Contacts)
+					:g Buchholz_Relay_84_85(Buchholz_Relay_84_85) [1,1] 
+						: BR_Contacts_QTY2(BR_Contacts_QTY2)
+						: BR_Contacts_QTY3(BR_Contacts_QTY3)
+				:m BR_Oil_Capacity(BR_Oil_Capacity)
+					:g Buchholz_Relay_87_89(Buchholz_Relay_87_89) [1,1] 
+						: BROC_less_1600kg(BROC_less_1600kg)
+						: BROC_less_10000kg(BROC_less_10000kg)
+						: BROC_less_35000kg(BROC_less_35000kg)
+			:o Air_Filter(Air_Filter)
+				:m AF_capacity(AF_capacity)
+					:g Air_Filter_93_94(Air_Filter_93_94) [1,1] 
+						: AFC_1kg(AFC_1kg)
+						: AFC_2_2kg(AFC_2_2kg)
+						: AFC_5_2_kg(AFC_5_2_kg)
+			:o Air_Rubber_Cell(Air_Rubber_Cell)
+			:m Pressure_Relief_Valve(Pressure_Relief_Valve)
+				:o PRD_Contacts(PRD_Contacts)
+					:g PRD_Contacts_101(PRD_Contacts_101) [1,1] 
+						: PRD_Contacts_QTY1(PRD_Contacts_QTY1)
+						: PRD_Contacts_QTY2(PRD_Contacts_QTY2)
+			:o Pressure_Vacuum_Gauge(Pressure_Vacuum_Gauge)
+			:o Transformer_Control_Box(Transformer_Control_Box)
+				:m External_Wiring(External_Wiring)
+					:g _id_11(__id_11) [1,1] 
+						: Flexible_Liquid_tight_Conduit(Flexible_Liquid_tight_Conduit)
+						: Rigid_Conduit(Rigid_Conduit)
+				:m TCB_Enclosure_type(TCB_Enclosure_type)
+					:g Control_Box_107_108(Control_Box_107_108) [1,1] 
+						: TCB_ET_Nema_3R(TCB_ET_Nema_3R)
+						: TCB_ET_Nema_4(TCB_ET_Nema_4)
+				:m TCB_Access_means(TCB_Access_means)
+					:g Control_Box_111_112(Control_Box_111_112) [1,1] 
+						: TCB_AM_Door(TCB_AM_Door)
+							:m TCB_AM_D_Lock_type(TCB_AM_D_Lock_type)
+								:g Control_Box_111_112_113_114_115(Control_Box_111_112_113_114_115) [1,1] 
+									: TCB_AM_D_Lock_type_3_point_locking_system(TCB_AM_D_Lock_type_3_point_locking_system)
+									: TCB_AM_D_Lock_type_1_point_locking_system(TCB_AM_D_Lock_type_1_point_locking_system)
+			:o Surge_Arresters(Surge_Arresters)
+				:g Surge_Arresters_108(Surge_Arresters_108) [1,*] 
+					: High_voltage_Surge_Arresters(High_voltage_Surge_Arresters)
+			:o Sudden_Pressure_Relay(Sudden_Pressure_Relay)
+				:m SPR_Contacts(SPR_Contacts)
+					:g SPR_Contacts_104(SPR_Contacts_104) [1,1] 
+						: SPR_Contacts_QTY1(SPR_Contacts_QTY1)
+		:o Protection_and_control_scheme(Protection_and_control_scheme)
+			:g Accessories_78_79(Accessories_78_79) [1,1] 
+				: S(S)
+					:g Accessories_78_79_80_81(Accessories_78_79_80_81) [1,1] 
+						: S1(S1)
+				: M(M)
+					:g Accessories_78_79_93_94(Accessories_78_79_93_94) [1,1] 
+						: M1(M1)
+						: M2(M2)
+						: M3(M3)
+				: B(B)
+					:g Accessories_78_79_97_98(Accessories_78_79_97_98) [1,1] 
+						: B1(B1)
+				: XS(XS)
+					:g Accessories_78_79_102_103(Accessories_78_79_102_103) [1,1] 
+						: XS1(XS1)
+	:m Mechanical_Acc(Mechanical_Acc)
+		:m Oil_Valves(Oil_Valves)
+			:o Upper_Filter_Filling_Device(Upper_Filter_Filling_Device)
+				:g _id_13(__id_13) [1,1] 
+					: UFFD_Cap(UFFD_Cap)
+					: UFFD_1_inch_external_thread_sampling_dev(UFFD_1_inch_external_thread_sampling_dev)
+					: UFFD_2_inch_external_thread_sampling_dev(UFFD_2_inch_external_thread_sampling_dev)
+			:o Lower_Filter_Drain_Valve(Lower_Filter_Drain_Valve)
+				:g _id_14(__id_14) [1,1] 
+					: LFFD_1_inch_external_thread_sampling_dev(LFFD_1_inch_external_thread_sampling_dev)
+					: LFFD_2_inch_external_thread_sampling_dev(LFFD_2_inch_external_thread_sampling_dev)
+		:m Lifting_Moving_Jacking_Facilities(Lifting_Moving_Jacking_Facilities)
+			:m Lifting_Lugs_Complete_transformer(Lifting_Lugs_Complete_transformer)
+			:m Moving_Facilities(Moving_Facilities)
+				:o MF_Rollers(MF_Rollers)
+					:g Moving_Facilities_51_52(Moving_Facilities_51_52) [1,1] 
+						: Non_Flanged_wheel_for_for_U_Shape_rail(Non_Flanged_wheel_for_for_U_Shape_rail)
+							:m Distance_between_rollers_centers_s1(Distance_between_rollers_centers_s1)
+							:m Distance_between_rollers_centers_s2(Distance_between_rollers_centers_s2)
+						: Flanged_wheel_for_I_Shape_rail(Flanged_wheel_for_I_Shape_rail)
+							:m Rail_gauge_between_I_Profile_s1(Rail_gauge_between_I_Profile_s1)
+							:m Rail_gauge_between_I_Profile_s2(Rail_gauge_between_I_Profile_s2)
+			:o Jacking_Pads(Jacking_Pads)
+			:o Provision_for_Pulling_two_directions_complete_transformer(Provision_for_Pulling_two_directions_complete_transformer)
+		:m Main_Tank_and_Cover_acc(Main_Tank_and_Cover_acc)
+			:m Cover(Cover)
+				:g _id_17(__id_17) [1,1] 
+					: C_Bolted(C_Bolted)
+					: C_Welded(C_Welded)
+			:m Main_Tank_Ground_Pads(Main_Tank_Ground_Pads)
+				:g _id_18(__id_18) [1,1] 
+					: MTGP_2_Screws(MTGP_2_Screws)
+					: MTGP_2_ANSI_Pads_mm(MTGP_2_ANSI_Pads_mm)
+			:o Neutral_Bushing_Ground_Pad(Neutral_Bushing_Ground_Pad)
+				:g _id_19(_id_19) [1,1] 
+					: NBGP_Screw(NBGP_Screw)
+					: NBGP_Threaded_Cap(NBGP_Threaded_Cap)
+		:o Tank_access_means(Tank_access_means)
+			:g _id_20(__id_20) [1,*] 
+				: Handhole(Handhole)
+		:o Impact_Detector(Impact_Detector)
+			:g _id_21(__id_21) [1,*] 
+				: Impact_Indicator(Impact_Indicator)
+		:o Surge_Arresters_Support(Surge_Arresters_Support)
+			:o High_Voltage_Surge_Arresters_Support(High_Voltage_Surge_Arresters_Support)
+				:g High_Voltage_Surge_Arresters_Support_60(High_Voltage_Surge_Arresters_Support_60) [1,1] 
+					: HV_Distribution_arresters_support(HV_Distribution_arresters_support)
+					: HV_Station_arresters_support(HV_Station_arresters_support)
+		:m Cooling_System(Cooling_System)
+			:o Radiators(Radiators)
+				:m Mechanical_Coupling(Mechanical_Coupling)
+					:g Radiators_124_125(Radiators_124_125) [1,1] 
+						: Welded_to_tank(Welded_to_tank)
+						: Detachable(Detachable)
+			:o Fans(Fans)
+		:m Screwed_connections(Screwed_connections)
+			:m Material(Material)
+				:g Mechanical_Acc_131_132_133(Mechanical_Acc_131_132_133) [1,1] 
+					: Bicromatized_steel(Bicromatized_steel)
+					: Stainless_steel(Stainless_steel)
+	:m DS_Dispatch(DS_Dispatch)
+		:m DS_Main_tank_dispatch_condition(DS_Main_tank_dispatch_condition)
+			:g DS_Main_tank_dispatch_condition_20(DS_Main_tank_dispatch_condition_20) [1,*] 
+				: MT_Wood_protections_for_accessories(MT_Wood_protections_for_accessories)
+				: MT_Liquid_filled(MT_Liquid_filled)
+		:o DS_Conservator_tank(DS_Conservator_tank)
+			:m DS_Conservator_tank_feature(DS_Conservator_tank_feature)
+				:g DS_Conservator_tank_30_31(DS_Conservator_tank_30_31) [1,*] 
+					: MTCT_Mounted_on_main_tank(MTCT_Mounted_on_main_tank)
+					: MTCT_Liquid_filled(MTCT_Liquid_filled)
+					: MTCT_Unassembled(MTCT_Unassembled)
+		:o DS_Liquid_to_finish_filling_job_site(DS_Liquid_to_finish_filling_job_site)
+			:m DS_Liquid_site_delivery_form(DS_Liquid_site_delivery_form)
+				:g DS_Liquid_to_finish_filling_job_site_19_21(DS_Liquid_to_finish_filling_job_site_19_21) [1,1] 
+					: DSL_Barrels(DSL_Barrels)
+			:m DS_Liquid_site_source(DS_Liquid_site_source)
+				:g DS_Liquid_to_finish_filling_job_site_20_23(DS_Liquid_to_finish_filling_job_site_20_23) [1,1] 
+					: DSLSS_factory(DSLSS_factory)
+		:o DS_Buchholz_relay(DS_Buchholz_relay)
+			:g DS_BR_Unassembled_28(DS_BR_Unassembled_28) [1,*] 
+				: DS_BR_Unassembled(DS_BR_Unassembled)
+		:m DS_Instructions_manual(DS_Instructions_manual)
+			:m DSM_Type(DSM_Type)
+				:g DS_Instructions_manual_1(DS_Instructions_manual_1) [1,1] 
+					: DSMT_Type1(DSMT_Type1)
+			:m DSM_Printed_copies(DSM_Printed_copies)
+				:g DS_Instructions_manual_2(DS_Instructions_manual_2) [1,1] 
+					: DSMP_Qty_1(DSMP_Qty_1)
+		:o DS_Radiators(DS_Radiators)
+			:g DS_Radiators_24(DS_Radiators_24) [1,1] 
+				: DSR_Unassembled(DSR_Unassembled)
+	:m Derivation_Model(Derivation_Model)
+		:g (Derivation_Model_402) [1,1] 
+			: 110(110)
+</feature_tree>
+<constraints>
+constraint_1:~Minimum or ~Fixed_Frequency
+constraint_8:Fixed_Frequency or ~C57_12
+constraint_6:Fixed_Frequency or ~NTC3997
+constraint_5:Fixed_Frequency or ~NTC819_4arev
+constraint_2:~Maximum or ~Fixed_Frequency
+c6:~Loc_Indoor or TMax_site
+c7:TMin20 or ~Loc_Outdoor
+c8:TMax40 or ~Loc_Outdoor
+c9:TAve30 or ~Loc_Outdoor
+c10:~Loc_Indoor or TAve_site
+c11:~Loc_Indoor or Tmin_site
+c12:~Dyn5 or A5
+c13:ONAN or ~ONAF
+c14:~Dyn5 or D
+c15:~Dyn5 or yn
+c16:Dd0_Yd1 or ~D_Y or ~d0_d1 or ~A0_1
+c17:~Dd0_Yd1 or d0_d1
+c18:Dyn5 or ~D or ~yn or ~A5
+c19:~Dd0_Yd1 or A0_1
+c20:~Dd0_Yd1 or D_Y
+c21:LVET_Nema_4X or ~LV_Enclosure_Type or ~HLVI_Nema_4X
+c22:~Sealed_Tank or OPS_Closed_System
+c23:HVET_Nema_4 or ~High_Voltage_Bushing_Enclosure or ~HLVI_Nema_4
+c24:Sealed_Tank or ~OPS_Constant_Volume
+c25:HVET_Nema_4X or ~High_Voltage_Bushing_Enclosure or ~HLVI_Nema_4X
+c26:HVET_Nema_3R or ~High_Voltage_Bushing_Enclosure or ~HLVI_Nema_3R
+c27:Conservator_Tank or ~OPS_Constant_Pressure
+c28:LVET_Nema_3R or ~Low_Voltage_Bushing_Enclosure or ~HLVI_Nema_3R
+c29:LVET_Nema_4 or ~Low_Voltage_Bushing_Enclosure or ~HLVI_Nema_4
+c30:~WTI_Contacts or Transformer_Control_Box
+c31:~BR_Contacts or Transformer_Control_Box
+c32:~PRD_Contacts or Transformer_Control_Box
+c33:Transformer_Control_Box or ~SPR_Contacts
+c34:~OTI_Contacts or Transformer_Control_Box
+c35:~OLI_Contacts_Scheme or ~OLI_Contacts_QTY1
+c36:OLI_Contacts or ~OLI_Contacts_Scheme
+c37:~OLI_Contacts or Transformer_Control_Box
+c38:~MT_Liquid_filled or ~MTCT_Liquid_filled or ~DS_Liquid_to_finish_filling_job_site or DSR_Unassembled
+c39:MTCT_Mounted_on_main_tank or ~MTCT_Liquid_filled
+c40:MTCT_Liquid_filled or ~DS_Conservator_tank or DS_Liquid_to_finish_filling_job_site
+c41:MTCT_Mounted_on_main_tank or ~DS_Conservator_tank or DS_Liquid_to_finish_filling_job_site
+c42:DS_Conservator_tank or ~DS_Liquid_to_finish_filling_job_site or DS_Radiators
+c43:MT_Liquid_filled or DS_Liquid_to_finish_filling_job_site
+c44:~MTCT_Mounted_on_main_tank or MTCT_Liquid_filled
+c45:MT_Wood_protections_for_accessories or ~DS_Main_tank_dispatch_condition
+c46:DS_Conservator_tank or ~DS_Buchholz_relay
+c47:DS_Liquid_to_finish_filling_job_site or ~DSR_Unassembled
+c48:MT_Liquid_filled or ~DS_Main_tank_dispatch_condition
+c49:~MTCT_Mounted_on_main_tank or ~MTCT_Unassembled
+c50:~MTCT_Unassembled or ~MTCT_Mounted_on_main_tank
+nc_51:~NTC_Std or COLOMBIA
+nc_52:~FrecuenciaVariableSUT or Variable_Frequency
+nc_53:~FrecuenciaVariableSUT or ~Fixed_Frequency
+nc_54:~ECOPETROLVEP_SIP_P_ELE_ET_032R020130708 or Variable_Frequency
+nc_55:~ECOPETROLVEP_SIP_P_ELE_ET_032R020130708 or FrecuenciaVariableSUT
+nc_56:~NTC3997 or Light_Grey_RAL7035
+nc_57:~PedestalRadial or Loc_Outdoor
+nc_58:~FrecuenciaVariableSUT or VTW_HV_variable_per_tap_20_taps
+nc_59:FrecuenciaVariableSUT or ~VTW_HV_variable_per_tap_20_taps
+nc_60:~FrecuenciaVariableSUT or Dd0_Yd1
+nc_61:~FrecuenciaVariableSUT or StepUp
+nc_62:~PedestalRadial or StepDown
+nc_63:~Poste or StepDown
+nc_64:~Seco_Clase_F or StepDown
+nc_65:~FrecuenciaVariableSUT or ~ONAF
+nc_66:~PedestalRadial or ~ONAF
+nc_67:~Poste or ~ONAF
+nc_68:~Seco_Clase_F or ~ONAF
+nc_69:~FrecuenciaVariableSUT or OPS_Closed_System
+nc_70:~FrecuenciaVariableSUT or OPS_Constant_Volume
+nc_71:~FrecuenciaVariableSUT or Sealed_Tank
+nc_72:~FrecuenciaVariableSUT or Rectangular_Tank
+nc_73:~FrecuenciaVariableSUT or HVBL_Side_s1_Left
+nc_74:~FrecuenciaVariableSUT or LVBL_Side_s1_Right
+nc_75:~FrecuenciaVariableSUT or Skid
+nc_76:~FrecuenciaVariableSUT or CG_Internal
+nc_77:~FrecuenciaVariableSUT or ~Winding_Electrostatic_Shield
+nc_78:~FrecuenciaVariableSUT or High_Low_Voltage_Shared_Bushing_Enclosure
+nc_79:~FrecuenciaVariableSUT or ~Standardtransformer or Grey_ANSI61
+nc_80:~FrecuenciaVariableSUT or ~Standardtransformer or ~Winding_Electrostatic_Shield
+nc_81:~FrecuenciaVariableSUT or ~Standardtransformer or HLVSBE_Nema_3R
+nc_82:~PedestalRadial or OPS_Closed_System
+nc_83:~PedestalRadial or OPS_Constant_Volume
+nc_84:~PedestalRadial or Sealed_Tank
+nc_85:~PedestalRadial or Rectangular_Tank
+nc_86:~PedestalRadial or HVBL_Side_s1_Left
+nc_87:~PedestalRadial or LVBL_Side_s1_Right
+nc_88:~PedestalRadial or CG_Internal
+nc_89:~PedestalRadial or High_Low_Voltage_Shared_Bushing_Enclosure
+nc_90:~PedestalRadial or HLVSBE_No_Nema
+nc_91:~PedestalRadial or ~HLVE_Provisions_for_cable_terminations
+nc_92:~PedestalRadial or ~Winding_Electrostatic_Shield
+nc_93:~PedestalRadial or ~TCB_AM_Door
+nc_94:~PedestalRadial or ~Standardtransformer or Light_Grey_RAL7035
+nc_95:~Convencional or Rectangular_Tank
+nc_96:~Convencional or HVBL_Cover_s3
+nc_97:~Convencional or ~LVBL_Side_s1_Right
+nc_98:~Convencional or ~Bushings_Enclosure
+nc_99:~PedestalRadial or Pad_type_base
+nc_100:~PedestalRadial or ~HLVE_Provisions_for_surge_arrestors
+nc_101:~Poste or ~Standardtransformer or Light_Grey_RAL7035
+nc_102:~PedestalRadial or HVBAcc_Molded
+nc_103:~PedestalRadial or HVBAcc_Qty_3
+nc_104:~PedestalRadial or LVBAcc_Qty_4
+nc_105:~PedestalRadial or ~OLI_Contacts
+nc_106:~PedestalRadial or ~Oil_Temperature_Indicator
+nc_107:~PedestalRadial or ~Winding_Temperature_Indicator
+nc_108:~PedestalRadial or ~PRD_Contacts
+nc_109:~PedestalRadial or ~Pressure_Vacuum_Gauge
+nc_110:~PedestalRadial or ~Sudden_Pressure_Relay
+nc_111:~Standardtransformer or Bicromatized_steel
+nc_112:~PedestalRadial or ~Standardtransformer or C_Bolted
+nc_113:~PedestalRadial or ~Provision_for_Pulling_two_directions_complete_transformer
+nc_114:~PedestalRadial or ~Impact_Detector
+nc_115:~PedestalRadial or ~Tank_access_means
+nc_116:~PedestalRadial or ~Surge_Arresters_Support
+nc_117:~Poste or ~Upper_Filter_Filling_Device
+nc_118:~Poste or ~Lower_Filter_Drain_Valve
+nc_119:~ONAF or Fans
+nc_120:ONAF or ~Fans
+nc_121:Conservator_Tank or ~Buchholz_Relay
+nc_122:Conservator_Tank or ~Air_Filter
+nc_123:Conservator_Tank or ~Air_Rubber_Cell
+nc_124:~Conservator_Tank or ~OPS_Open_System or ~Air_Rubber_Cell
+nc_125:~Conservator_Tank or ~OPS_Closed_System or Air_Rubber_Cell
+nc_126:~Conservator_Tank or Air_Filter
+nc_127:~Convencional or ~Surge_Arresters or ~Low_Voltage_Bushing_Enclosure or LVE_Provisions_for_surge_arrestors
+nc_128:~Convencional or ~Surge_Arresters or ~High_Voltage_Bushing_Enclosure or HVE_Provisions_for_surge_arrestors
+nc_129:~Convencional or ~Surge_Arresters or ~High_Low_Voltage_Shared_Bushing_Enclosure or HLVE_Provisions_for_surge_arrestors
+nc_130:~Rollers or MF_Rollers
+nc_131:Rollers or ~MF_Rollers
+nc_132:~Surge_Arresters or Surge_Arresters_Support
+nc_133:~Convencional or ~High_voltage_Surge_Arresters or High_Voltage_Surge_Arresters_Support
+nc_134:~Buchholz_Relay or DS_BR_Unassembled
+nc_135:Buchholz_Relay or ~DS_BR_Unassembled
+mg_136:~NTC819_4arev or Low_Voltage_Group
+mg_137:~NTC819_4arev or High_Voltage_Group
+mg_138:~NTC819_4arev or Power_group
+mg_139:~NTC819_4arev or Transformer_Phases
+mg_140:~NTC819_4arev or Operation
+mg_141:~NTC819_4arev or Transformer_Losses
+c142:~HVG34_5 or ~Siemens_Std_Pole_Mounted
+c143:~Siemens_Std_Pole_Mounted or ~HV13800
+c144:~PG4000_10000 or ~HVG34_5 or ~LVG460_480 or ~Yes_4000A_rule
+c145:~Siemens_Std_Convencional or ~PG150
+c146:~PG1600_2000 or ~Siemens_Std_Pole_Mounted
+c147:~PG75_112_5 or ~Siemens_Std_Convencional
+c148:~Siemens_Std_Pole_Mounted or ~PG300_1250
+c149:~Siemens_Std_Pole_Mounted or ~LVG15
+c150:~HVG15 or ~LVG15
+c151:~PG4000_10000 or ~HVG15 or ~LVG214_228 or ~Yes_4000A_rule
+c152:~PG4000_10000 or ~HVG15 or ~LVG460_480 or ~Yes_4000A_rule
+c153:~LVG15 or ~Siemens_Std_Pole_Mounted
+c154:~PG4000_10000 or ~HVG34_5 or ~LVG214_228 or ~Yes_4000A_rule
+c155:~PG3750 or ~Siemens_Std_Convencional
+c156:~PG4000_10000 or ~Siemens_Std_Pole_Mounted
+c157:~HVG34_5 or ~LVG214_228 or ~PG1600_2000 or ~Yes_4000A_rule
+c158:~PG3750 or ~Siemens_Std_Pole_Mounted
+c159:~HVG15 or ~LVG214_228 or ~PG1600_2000 or ~Yes_4000A_rule
+c160:~Siemens_Std_Pole_Mounted or ~LV480
+c161:~Siemens_Std_Convencional or ~P750
+c162:~PG1600_2000 or ~HVG34_5 or ~LVG214_228 or ~Yes_4000A_rule
+c163:~PG2500_3000 or ~HVG34_5 or ~LVG214_228 or ~Yes_4000A_rule
+c164:~PG1600_2000 or ~Siemens_Std_Pole_Mounted
+c165:~PG2500_3000 or ~Siemens_Std_Pole_Mounted
+c166:~PG1600_2000 or ~HVG15 or ~LVG214_228 or ~Yes_4000A_rule
+c167:~PG15_45 or ~Siemens_Std_Convencional
+c168:~PG2500_3000 or ~HVG15 or ~LVG214_228 or ~Yes_4000A_rule
+c169:C01 or ~Siemens_Std_Convencional or ~PG225 or ~HVG15 or ~LVG214_228
+c170:C01 or ~Siemens_Std_Convencional or ~PG225 or ~HVG15 or ~LVG460_480
+c171:C01 or ~Siemens_Std_Convencional or ~P300 or ~HVG15 or ~LVG214_228
+c172:C01 or ~Siemens_Std_Convencional or ~P300 or ~HVG15 or ~LVG460_480
+c173:C01 or ~Siemens_Std_Convencional or ~P400 or ~HVG15 or ~LVG214_228
+c174:C01 or ~Siemens_Std_Convencional or ~P400 or ~HVG15 or ~LVG460_480
+c175:C01 or ~Siemens_Std_Convencional or ~P500 or ~HVG15 or ~LVG214_228
+c176:C01 or ~Siemens_Std_Convencional or ~P500 or ~HVG15 or ~LVG460_480
+c177:C02 or ~Siemens_Std_Convencional or ~PG225 or ~HVG34_5 or ~LVG214_228
+c178:C02 or ~Siemens_Std_Convencional or ~PG225 or ~HVG34_5 or ~LVG460_480
+c179:C02 or ~Siemens_Std_Convencional or ~P300 or ~HVG34_5 or ~LVG214_228
+c180:C02 or ~Siemens_Std_Convencional or ~P300 or ~HVG34_5 or ~LVG460_480
+c181:C02 or ~Siemens_Std_Convencional or ~P400 or ~HVG34_5 or ~LVG214_228
+c182:C02 or ~Siemens_Std_Convencional or ~P400 or ~HVG34_5 or ~LVG460_480
+c183:C02 or ~Siemens_Std_Convencional or ~P500 or ~HVG34_5 or ~LVG214_228
+c184:C02 or ~Siemens_Std_Convencional or ~P500 or ~HVG34_5 or ~LVG460_480
+c185:C03 or ~Siemens_Std_Convencional or ~PG225 or ~HVG34_5 or ~LVG15
+c186:C03 or ~Siemens_Std_Convencional or ~P300 or ~HVG34_5 or ~LVG15
+c187:C03 or ~Siemens_Std_Convencional or ~P400 or ~HVG34_5 or ~LVG15
+c188:C03 or ~Siemens_Std_Convencional or ~P500 or ~HVG34_5 or ~LVG15
+c189:C04 or ~Siemens_Std_Convencional or ~P630 or ~HVG15 or ~LVG214_228
+c190:C04 or ~Siemens_Std_Convencional or ~P630 or ~HVG15 or ~LVG460_480
+c191:C04 or ~Siemens_Std_Convencional or ~P800 or ~HVG15 or ~LVG214_228
+c192:C04 or ~Siemens_Std_Convencional or ~P800 or ~HVG15 or ~LVG460_480
+c193:C04 or ~Siemens_Std_Convencional or ~P1000 or ~HVG15 or ~LVG214_228
+c194:C04 or ~Siemens_Std_Convencional or ~P1000 or ~HVG15 or ~LVG460_480
+c195:C05 or ~Siemens_Std_Convencional or ~P630 or ~HVG34_5 or ~LVG214_228
+c196:C05 or ~Siemens_Std_Convencional or ~P630 or ~HVG34_5 or ~LVG460_480
+c197:C05 or ~Siemens_Std_Convencional or ~P800 or ~HVG34_5 or ~LVG214_228
+c198:C05 or ~Siemens_Std_Convencional or ~P800 or ~HVG34_5 or ~LVG460_480
+c199:C05 or ~Siemens_Std_Convencional or ~P1000 or ~HVG34_5 or ~LVG214_228
+c200:C05 or ~Siemens_Std_Convencional or ~P1000 or ~HVG34_5 or ~LVG460_480
+c201:C06 or ~Siemens_Std_Convencional or ~P630 or ~HVG34_5 or ~LVG15
+c202:C06 or ~Siemens_Std_Convencional or ~P800 or ~HVG34_5 or ~LVG15
+c203:C06 or ~Siemens_Std_Convencional or ~P1000 or ~HVG34_5 or ~LVG15
+c204:C04 or ~Siemens_Std_Convencional or ~P1250 or ~HVG15 or ~LVG214_228
+c205:C04 or ~Siemens_Std_Convencional or ~P1250 or ~HVG15 or ~LVG460_480
+c206:C04 or ~Siemens_Std_Convencional or ~P1600 or ~HVG15 or ~LVG214_228
+c207:C04 or ~Siemens_Std_Convencional or ~P1600 or ~HVG15 or ~LVG460_480
+c208:C04 or ~Siemens_Std_Convencional or ~P2000 or ~HVG15 or ~LVG214_228
+c209:C04 or ~Siemens_Std_Convencional or ~P2000 or ~HVG15 or ~LVG460_480
+c210:C05 or ~Siemens_Std_Convencional or ~P1250 or ~HVG34_5 or ~LVG214_228
+c211:C05 or ~Siemens_Std_Convencional or ~P1250 or ~HVG34_5 or ~LVG460_480
+c212:C05 or ~Siemens_Std_Convencional or ~P1600 or ~HVG34_5 or ~LVG214_228
+c213:C05 or ~Siemens_Std_Convencional or ~P1600 or ~HVG34_5 or ~LVG460_480
+c214:C05 or ~Siemens_Std_Convencional or ~P2000 or ~HVG34_5 or ~LVG214_228
+c215:C05 or ~Siemens_Std_Convencional or ~P2000 or ~HVG34_5 or ~LVG460_480
+c216:C06 or ~Siemens_Std_Convencional or ~P1250 or ~HVG34_5 or ~LVG15
+c217:C06 or ~Siemens_Std_Convencional or ~P1600 or ~HVG34_5 or ~LVG15
+c218:C06 or ~Siemens_Std_Convencional or ~P2000 or ~HVG34_5 or ~LVG15
+c219:C07 or ~Siemens_Std_Convencional or ~P2500 or ~HVG15 or ~LVG214_228
+c220:C07 or ~Siemens_Std_Convencional or ~P2500 or ~HVG15 or ~LVG460_480
+c221:C07 or ~Siemens_Std_Convencional or ~P3000 or ~HVG15 or ~LVG214_228
+c222:C07 or ~Siemens_Std_Convencional or ~P3000 or ~HVG15 or ~LVG460_480
+c223:C08 or ~Siemens_Std_Convencional or ~P2500 or ~HVG34_5 or ~LVG214_228
+c224:C08 or ~Siemens_Std_Convencional or ~P2500 or ~HVG34_5 or ~LVG460_480
+c225:C08 or ~Siemens_Std_Convencional or ~P3000 or ~HVG34_5 or ~LVG214_228
+c226:C08 or ~Siemens_Std_Convencional or ~P3000 or ~HVG34_5 or ~LVG460_480
+c227:C09 or ~Siemens_Std_Convencional or ~P2500 or ~HVG34_5 or ~LVG15
+c228:C09 or ~Siemens_Std_Convencional or ~P3000 or ~HVG34_5 or ~LVG15
+c229:C10 or ~Siemens_Std_Convencional or ~P4000 or ~HVG15 or ~LVG214_228
+c230:C10 or ~Siemens_Std_Convencional or ~P4000 or ~HVG15 or ~LVG460_480
+c231:C10 or ~Siemens_Std_Convencional or ~P5000 or ~HVG15 or ~LVG214_228
+c232:C10 or ~Siemens_Std_Convencional or ~P5000 or ~HVG15 or ~LVG460_480
+c233:C10 or ~Siemens_Std_Convencional or ~P6000 or ~HVG15 or ~LVG214_228
+c234:C10 or ~Siemens_Std_Convencional or ~P6000 or ~HVG15 or ~LVG460_480
+c235:C11 or ~Siemens_Std_Convencional or ~P4000 or ~HVG34_5 or ~LVG214_228
+c236:C11 or ~Siemens_Std_Convencional or ~P4000 or ~HVG34_5 or ~LVG460_480
+c237:C11 or ~Siemens_Std_Convencional or ~P5000 or ~HVG34_5 or ~LVG214_228
+c238:C11 or ~Siemens_Std_Convencional or ~P5000 or ~HVG34_5 or ~LVG460_480
+c239:C11 or ~Siemens_Std_Convencional or ~P6000 or ~HVG34_5 or ~LVG214_228
+c240:C11 or ~Siemens_Std_Convencional or ~P6000 or ~HVG34_5 or ~LVG460_480
+c241:C12 or ~Siemens_Std_Convencional or ~P4000 or ~HVG34_5 or ~LVG15
+c242:C12 or ~Siemens_Std_Convencional or ~P5000 or ~HVG34_5 or ~LVG15
+c243:C12 or ~Siemens_Std_Convencional or ~P6000 or ~HVG34_5 or ~LVG15
+c244:C10 or ~Siemens_Std_Convencional or ~P7500 or ~HVG15 or ~LVG214_228
+c245:C10 or ~Siemens_Std_Convencional or ~P7500 or ~HVG15 or ~LVG460_480
+c246:C10 or ~Siemens_Std_Convencional or ~P10000 or ~HVG15 or ~LVG214_228
+c247:C10 or ~Siemens_Std_Convencional or ~P10000 or ~HVG15 or ~LVG460_480
+c248:C11 or ~Siemens_Std_Convencional or ~P7500 or ~HVG34_5 or ~LVG214_228
+c249:C11 or ~Siemens_Std_Convencional or ~P7500 or ~HVG34_5 or ~LVG460_480
+c250:C11 or ~Siemens_Std_Convencional or ~P10000 or ~HVG34_5 or ~LVG214_228
+c251:C11 or ~Siemens_Std_Convencional or ~P10000 or ~HVG34_5 or ~LVG460_480
+c252:C12 or ~Siemens_Std_Convencional or ~P7500 or ~HVG34_5 or ~LVG15
+c253:C12 or ~Siemens_Std_Convencional or ~P10000 or ~HVG34_5 or ~LVG15
+nc_254:~Poste or Fixed_Frequency
+nc_255:~Poste or ~ANSI_Std
+nc_256:~Poste or ~ECOPETROL_Std
+nc_257:~Poste or Loc_Outdoor
+nc_258:~Poste or IA1000
+nc_259:~Poste or VTW_HV_2point5percent_per_tap_1_up_3_down_5_taps
+nc_260:~Poste or Dyn5
+nc_261:~Poste or TL_NTC
+nc_262:~Poste or Sealed_Tank
+nc_263:~Poste or HVBL_Cover_s3
+nc_264:~Poste or LVBL_Side_s1
+nc_265:~Poste or Wounded_Core
+nc_266:~Poste or CG_Internal
+nc_267:~Poste or WM_HV_Aluminum
+nc_268:~Poste or WM_LV_Aluminum
+nc_269:~Poste or ~Winding_Electrostatic_Shield
+nc_270:~Poste or ~Bushings_Enclosure
+nc_271:~Poste or HVBAcc_Qty_3
+nc_272:~Poste or HVBAcc_Solid_Dry_Porcelain
+nc_273:~Poste or HVBAcc_T_Eyebolt
+nc_274:~Poste or LVBAcc_Qty_4
+nc_275:~Poste or ~OLI_Contacts
+nc_276:~Poste or ~PRD_Contacts
+nc_277:~Poste or ~Oil_Temperature_Indicator
+nc_278:~Poste or ~Winding_Temperature_Indicator
+nc_279:~Poste or ~Pressure_Vacuum_Gauge
+nc_280:~Poste or ~Transformer_Control_Box
+nc_281:~Poste or ~MF_Rollers
+nc_282:~Poste or ~Jacking_Pads
+nc_283:~Poste or ~Provision_for_Pulling_two_directions_complete_transformer
+nc_284:~Poste or C_Bolted
+nc_285:~Poste or MTGP_2_Screws
+nc_286:~Poste or NBGP_Screw
+nc_287:~Poste or ~Impact_Detector
+nc_288:~Poste or HV_Distribution_arresters_support
+nc_289:~Poste or Welded_to_tank
+nc_290:~Poste or ~PG15_45 or Base_not_applicable
+nc_291:~Poste or ~PG75_112_5 or Base_not_applicable
+nc_292:~Poste or ~PG150 or Base_not_applicable
+nc_293:~Poste or ~PG225 or Chassis_for_rollers
+nc_294:~Poste or ~Siemens_Standard or ~PG15_45 or LVBAcc_T_Eyebolt
+nc_295:~Poste or ~Siemens_Standard or ~PG75_112_5 or LVBAcc_T_Spade_4_holes_or_dual_According_to_design
+nc_296:~Poste or ~Siemens_Standard or ~P150 or LVBAcc_T_Spade_4_holes
+nc_297:~Siemens_Std_Pole_Mounted or Loc_Outdoor
+nc_298:~Siemens_Std_Pole_Mounted or Poste
+nc_299:~Siemens_Std_Pole_Mounted or Standardtransformer
+nc_300:~Siemens_Std_Pole_Mounted or Base_not_applicable
+nc_301:~Siemens_Std_Pole_Mounted or ~Tank_access_means
+nc_302:~Poste or NLTCL_Side_Wall_s3
+nc_303:~Siemens_Std_Convencional or Loc_Outdoor
+nc_304:~Siemens_Std_Convencional or Convencional
+nc_305:~Convencional or NTC819_4arev
+nc_306:~NTC819_4arev or Convencional
+nc_307:~Siemens_Std_Convencional or Standardtransformer
+nc_308:~Siemens_Std_Convencional or Dyn5
+nc_309:~Siemens_Std_Convencional or StepDown
+nc_310:~Siemens_Std_Convencional or TL_NTC
+nc_311:~Siemens_Std_Convencional or ~PG225 or Wounded_Core
+nc_312:~Siemens_Std_Convencional or ~PG300_1250 or Wounded_Core
+nc_313:~Siemens_Std_Convencional or ~P1600 or Wounded_Core
+nc_314:~Siemens_Std_Convencional or ~P2000 or Wounded_Core
+nc_315:~Siemens_Std_Convencional or ~P2500 or Stacked_Core
+nc_316:~Siemens_Std_Convencional or ~P3000 or Stacked_Core
+nc_317:~Siemens_Std_Convencional or ~Winding_Electrostatic_Shield
+nc_318:~Siemens_Std_Convencional or ~D or HVBAcc_Qty_3
+nc_319:~Siemens_Std_Convencional or ~yn or LVBAcc_Qty_4
+nc_320:~Siemens_Std_Convencional or HVBAcc_Solid_Dry_Porcelain
+nc_321:~Siemens_Std_Convencional or NLTCL_Side_Wall_s3
+nc_322:~Siemens_Std_Convencional or C_Bolted
+nc_323:~Siemens_Std_Convencional or ~PG225 or Sealed_Tank
+nc_324:~Siemens_Std_Convencional or ~PG300_1250 or Sealed_Tank
+nc_325:~Siemens_Std_Convencional or ~PG1600_2000 or Sealed_Tank
+nc_326:~Siemens_Std_Convencional or ~P4000 or ~MF_Rollers or Non_Flanged_wheel_for_for_U_Shape_rail
+nc_327:~Siemens_Std_Convencional or ~PG1600_2000 or ~MF_Rollers or Non_Flanged_wheel_for_for_U_Shape_rail
+nc_328:~Siemens_Std_Convencional or ~PG225 or ~MF_Rollers or Non_Flanged_wheel_for_for_U_Shape_rail
+nc_329:~Siemens_Std_Convencional or ~PG2500_3000 or ~MF_Rollers or Non_Flanged_wheel_for_for_U_Shape_rail
+nc_330:~Siemens_Std_Convencional or ~PG300_1250 or ~MF_Rollers or Non_Flanged_wheel_for_for_U_Shape_rail
+nc_331:~Siemens_Std_Convencional or ~PG225 or CG_Internal
+nc_332:~Siemens_Std_Convencional or ~PG300_1250 or CG_Internal
+nc_333:~Siemens_Std_Convencional or ~PG1600_2000 or CG_Internal
+nc_334:~Siemens_Std_Convencional or ~PG225 or ~Transformer_Control_Box or TCB_ET_Nema_3R
+nc_335:~Siemens_Std_Convencional or ~PG300_1250 or ~Transformer_Control_Box or TCB_ET_Nema_3R
+nc_336:~Siemens_Std_Convencional or ~PG1600_2000 or ~Transformer_Control_Box or TCB_ET_Nema_3R
+nc_337:~Siemens_Std_Convencional or ~PG225 or UFFD_Cap
+nc_338:~Siemens_Std_Convencional or ~P300 or UFFD_Cap
+nc_339:~Siemens_Std_Convencional or ~P400 or UFFD_Cap
+nc_340:~Siemens_Std_Convencional or ~P500 or UFFD_Cap
+nc_341:~Siemens_Std_Convencional or ~P630 or UFFD_1_inch_external_thread_sampling_dev
+nc_342:~Siemens_Std_Convencional or ~P800 or UFFD_1_inch_external_thread_sampling_dev
+nc_343:~Siemens_Std_Convencional or ~P1000 or UFFD_1_inch_external_thread_sampling_dev
+nc_344:~Siemens_Std_Convencional or ~P1250 or UFFD_1_inch_external_thread_sampling_dev
+nc_345:~Siemens_Std_Convencional or ~P1600 or UFFD_1_inch_external_thread_sampling_dev
+nc_346:~Siemens_Std_Convencional or ~P2000 or UFFD_1_inch_external_thread_sampling_dev
+nc_347:~Siemens_Std_Convencional or ~PG225 or LFFD_1_inch_external_thread_sampling_dev
+nc_348:~Siemens_Std_Convencional or ~P300 or LFFD_1_inch_external_thread_sampling_dev
+nc_349:~Siemens_Std_Convencional or ~P400 or LFFD_1_inch_external_thread_sampling_dev
+nc_350:~Siemens_Std_Convencional or ~P500 or LFFD_1_inch_external_thread_sampling_dev
+nc_351:~Siemens_Std_Convencional or ~P630 or LFFD_1_inch_external_thread_sampling_dev
+nc_352:~Siemens_Std_Convencional or ~P800 or LFFD_1_inch_external_thread_sampling_dev
+nc_353:~Siemens_Std_Convencional or ~P1000 or LFFD_1_inch_external_thread_sampling_dev
+nc_354:~Siemens_Std_Convencional or ~P1250 or LFFD_1_inch_external_thread_sampling_dev
+nc_355:~Siemens_Std_Convencional or ~P1600 or LFFD_1_inch_external_thread_sampling_dev
+nc_356:~Siemens_Std_Convencional or ~P2000 or LFFD_1_inch_external_thread_sampling_dev
+nc_357:~Siemens_Std_Convencional or ~PG225 or ~Jacking_Pads
+nc_358:~Siemens_Std_Convencional or ~PG300_1250 or ~Jacking_Pads
+nc_359:~Siemens_Std_Convencional or ~PG1600_2000 or ~Jacking_Pads
+nc_360:~Siemens_Std_Convencional or ~PG225 or ~Provision_for_Pulling_two_directions_complete_transformer
+nc_361:~Siemens_Std_Convencional or ~PG300_1250 or ~Provision_for_Pulling_two_directions_complete_transformer
+nc_362:~Siemens_Std_Convencional or ~PG1600_2000 or ~Provision_for_Pulling_two_directions_complete_transformer
+nc_363:~Siemens_Std_Convencional or ~P630 or ~Impact_Indicator
+nc_364:~Siemens_Std_Convencional or ~P800 or ~Impact_Indicator
+nc_365:~Siemens_Std_Convencional or ~P1000 or ~Impact_Indicator
+nc_366:~Siemens_Std_Convencional or ~P1250 or ~Impact_Indicator
+nc_367:~Siemens_Std_Convencional or ~PG1600_2000 or ~Impact_Indicator
+nc_368:~Siemens_Std_Convencional or ~PG225 or ~ONAF
+nc_369:~Siemens_Std_Convencional or ~PG300_1250 or ~ONAF
+nc_370:~Siemens_Std_Convencional or ~PG1600_2000 or ~ONAF
+nc_371:~Siemens_Std_Convencional or ~PG2500_3000 or ~ONAF
+nc_372:~Siemens_Std_Convencional or ~PG3750 or ~ONAF
+nc_373:~Siemens_Std_Convencional or ~Yes_4000A_rule or ~LVG214_228 or LVBL_Side_s1
+nc_374:~Siemens_Std_Convencional or ~Yes_4000A_rule or ~LVG460_480 or LVBL_Side_s1
+nc_375:~Siemens_Std_Convencional or ~Yes_4000A_rule or ~LVG15 or LVBL_Cover_s1
+nc_376:~Siemens_Std_Convencional or ~PG225 or ~Tank_access_means
+nc_377:~Siemens_Std_Convencional or ~PG300_1250 or ~Tank_access_means
+nc_378:~Siemens_Std_Convencional or ~PG1600_2000 or ~Tank_access_means
+nc_379:~Siemens_Std_Convencional or ~PG225 or Welded_to_tank
+nc_380:~Siemens_Std_Convencional or ~PG300_1250 or Welded_to_tank
+nc_381:~Siemens_Std_Convencional or ~PG1600_2000 or Welded_to_tank
+nc_382:~Siemens_Std_Convencional or ~PG225 or VTW_HV_2point5percent_per_tap_1_up_3_down_5_taps
+nc_383:~Siemens_Std_Convencional or ~P300 or VTW_HV_2point5percent_per_tap_1_up_3_down_5_taps
+nc_384:~Siemens_Std_Convencional or ~P400 or VTW_HV_2point5percent_per_tap_1_up_3_down_5_taps
+nc_385:~Siemens_Std_Convencional or ~P500 or VTW_HV_2point5percent_per_tap_1_up_3_down_5_taps
+nc_386:~Siemens_Std_Convencional or ~P630 or VTW_HV_2point5percent_per_tap_2_up_2_down_5_taps
+nc_387:~Siemens_Std_Convencional or ~P800 or VTW_HV_2point5percent_per_tap_2_up_2_down_5_taps
+nc_388:~Siemens_Std_Convencional or ~P1000 or VTW_HV_2point5percent_per_tap_2_up_2_down_5_taps
+nc_389:~Siemens_Std_Convencional or ~P1250 or VTW_HV_2point5percent_per_tap_2_up_2_down_5_taps
+nc_390:~Siemens_Std_Convencional or ~P1600 or VTW_HV_2point5percent_per_tap_2_up_2_down_5_taps
+nc_391:~Siemens_Std_Convencional or ~P2000 or VTW_HV_2point5percent_per_tap_2_up_2_down_5_taps
+nc_392:~Siemens_Std_Convencional or ~PG2500_3000 or VTW_HV_2point5percent_per_tap_2_up_2_down_5_taps
+nc_393:~Siemens_Std_Convencional or ~PG4000_10000 or VTW_HV_2point5percent_per_tap_2_up_2_down_5_taps
+nc_394:~Siemens_Std_Convencional or ~P2500 or Sealed_Tank
+nc_395:~Siemens_Std_Convencional or ~P3000 or Sealed_Tank
+nc_396:~Siemens_Std_Convencional or ~P4000 or Sealed_Tank
+nc_397:~Siemens_Std_Convencional or ~PG2500_3000 or CG_Internal
+nc_398:~Siemens_Std_Convencional or ~P4000 or CG_Internal
+nc_399:~Siemens_Std_Convencional or ~P5000 or CG_External
+nc_400:~Siemens_Std_Convencional or ~P6000 or CG_External
+nc_401:~Siemens_Std_Convencional or ~P7500 or CG_External
+nc_402:~Siemens_Std_Convencional or ~P10000 or CG_External
+nc_403:~Siemens_Std_Convencional or ~Conservator_Tank or ~PG2500_3000 or Buchholz_Relay
+nc_404:~Siemens_Std_Convencional or ~Conservator_Tank or ~PG4000_10000 or Buchholz_Relay
+nc_405:~Siemens_Std_Convencional or ~Transformer_Control_Box or Flexible_Liquid_tight_Conduit
+nc_406:~Siemens_Std_Convencional or ~Transformer_Control_Box or TCB_ET_Nema_3R
+nc_407:~Siemens_Std_Convencional or ~PG2500_3000 or Upper_Filter_Filling_Device
+nc_408:~Siemens_Std_Convencional or ~PG4000_10000 or Lower_Filter_Drain_Valve
+nc_409:~Siemens_Std_Convencional or ~PG2500_3000 or UFFD_1_inch_external_thread_sampling_dev
+nc_410:~Siemens_Std_Convencional or ~P4000 or UFFD_1_inch_external_thread_sampling_dev
+nc_411:~Siemens_Std_Convencional or ~P5000 or UFFD_2_inch_external_thread_sampling_dev
+nc_412:~Siemens_Std_Convencional or ~P6000 or UFFD_2_inch_external_thread_sampling_dev
+nc_413:~Siemens_Std_Convencional or ~P7500 or UFFD_2_inch_external_thread_sampling_dev
+nc_414:~Siemens_Std_Convencional or ~P10000 or UFFD_2_inch_external_thread_sampling_dev
+nc_415:~Siemens_Std_Convencional or ~PG2500_3000 or LFFD_2_inch_external_thread_sampling_dev
+nc_416:~Siemens_Std_Convencional or ~PG4000_10000 or LFFD_2_inch_external_thread_sampling_dev
+nc_417:~Siemens_Std_Convencional or ~PG2500_3000 or Jacking_Pads
+nc_418:~Siemens_Std_Convencional or ~PG4000_10000 or Jacking_Pads
+nc_419:~Siemens_Std_Convencional or ~PG2500_3000 or Provision_for_Pulling_two_directions_complete_transformer
+nc_420:~Siemens_Std_Convencional or ~PG4000_10000 or Provision_for_Pulling_two_directions_complete_transformer
+nc_421:~Siemens_Std_Convencional or ~PG2500_3000 or MTGP_2_ANSI_Pads_mm
+nc_422:~Siemens_Std_Convencional or ~PG4000_10000 or MTGP_2_ANSI_Pads_mm
+nc_423:~Siemens_Std_Convencional or ~PG2500_3000 or NBGP_Threaded_Cap
+nc_424:~Siemens_Std_Convencional or ~PG4000_10000 or NBGP_Threaded_Cap
+nc_425:~Siemens_Std_Convencional or ~PG2500_3000 or Impact_Indicator
+nc_426:~Siemens_Std_Convencional or ~PG4000_10000 or Impact_Indicator
+nc_427:~Siemens_Std_Convencional or ~PG2500_3000 or Detachable
+nc_428:~Siemens_Std_Convencional or ~PG4000_10000 or Detachable
+nc_429:~Siemens_Std_Convencional or ~PG2500_3000 or ~Tank_access_means
+nc_430:~Siemens_Std_Convencional or ~P4000 or ~Tank_access_means
+nc_431:~Siemens_Std_Convencional or ~P5000 or Handhole
+nc_432:~Siemens_Std_Convencional or ~P6000 or Handhole
+nc_433:~Siemens_Std_Convencional or ~P7500 or Handhole
+nc_434:~Siemens_Std_Convencional or ~P10000 or Handhole
+nc_435:~Siemens_Std_Convencional or Protection_and_control_scheme
+nc_436:~Siemens_Std_Convencional or ~Protection_and_control_scheme or ~PG225 or S
+nc_437:~Siemens_Std_Convencional or ~Protection_and_control_scheme or ~P300 or S
+nc_438:~Siemens_Std_Convencional or ~Protection_and_control_scheme or ~P400 or S
+nc_439:~Siemens_Std_Convencional or ~Protection_and_control_scheme or ~P500 or S
+nc_440:~Siemens_Std_Convencional or ~Protection_and_control_scheme or ~P630 or M
+nc_441:~Siemens_Std_Convencional or ~Protection_and_control_scheme or ~P800 or M
+nc_442:~Siemens_Std_Convencional or ~Protection_and_control_scheme or ~P1000 or M
+nc_443:~Siemens_Std_Convencional or ~Protection_and_control_scheme or ~P1250 or M
+nc_444:~Siemens_Std_Convencional or ~Protection_and_control_scheme or ~P1600 or M
+nc_445:~Siemens_Std_Convencional or ~Protection_and_control_scheme or ~P2000 or M
+nc_446:~Siemens_Std_Convencional or ~Protection_and_control_scheme or ~P2500 or B
+nc_447:~Siemens_Std_Convencional or ~Protection_and_control_scheme or ~P3000 or B
+nc_448:~Siemens_Std_Convencional or ~Protection_and_control_scheme or ~P4000 or B
+nc_449:~Siemens_Std_Convencional or ~Protection_and_control_scheme or ~P5000 or B
+nc_450:~Siemens_Std_Convencional or ~Protection_and_control_scheme or ~P6000 or B
+nc_451:~Siemens_Std_Convencional or ~Protection_and_control_scheme or ~P7500 or B
+nc_452:~Siemens_Std_Convencional or ~Protection_and_control_scheme or ~P10000 or B
+nc_453:~M1 or ~PRD_Contacts
+nc_454:~M1 or ~Oil_Temperature_Indicator
+nc_455:~M1 or ~Transformer_Control_Box
+nc_456:~M1 or ~OLI_Contacts
+nc_457:~M1 or ~Winding_Temperature_Indicator
+nc_458:~M1 or ~Pressure_Vacuum_Gauge
+nc_459:~M1 or ~Sudden_Pressure_Relay
+nc_460:~M2 or ~PRD_Contacts
+nc_461:~M2 or ~OTI_Contacts
+nc_462:~M2 or ~Transformer_Control_Box
+nc_463:~M2 or ~OLI_Contacts
+nc_464:~M2 or ~Winding_Temperature_Indicator
+nc_465:~M2 or ~Pressure_Vacuum_Gauge
+nc_466:~M2 or ~Sudden_Pressure_Relay
+nc_467:~M2 or Oil_Temperature_Indicator
+nc_468:~M3 or PRD_Contacts_QTY1
+nc_469:~M3 or OTI_Contacts_QTY2
+nc_470:~M3 or OLI_Contacts_QTY2
+nc_471:~M3 or Low_Very_Low
+nc_472:~M3 or ~Winding_Temperature_Indicator
+nc_473:~M3 or ~Pressure_Vacuum_Gauge
+nc_474:~M3 or ~Sudden_Pressure_Relay
+nc_475:~M or MTGP_2_Screws
+nc_476:~M or NBGP_Screw
+nc_477:~M or HVBAcc_T_Eyebolt
+nc_478:~M or LVBAcc_T_Spade_4_holes
+nc_479:~M or ~Transformer_Control_Box or TCB_AM_D_Lock_type_1_point_locking_system
+nc_480:~M or HV_Distribution_arresters_support
+nc_481:~M or WM_HV_Aluminum
+nc_482:~M or WM_LV_Aluminum
+nc_483:~Siemens_Std_Convencional or ~PG15_45 or ~Impact_Indicator
+nc_484:~Siemens_Std_Convencional or ~PG75_112_5 or ~Impact_Indicator
+nc_485:~Siemens_Std_Convencional or ~PG225 or ~Impact_Indicator
+nc_486:~Siemens_Std_Convencional or ~P300 or ~Impact_Indicator
+nc_487:~Siemens_Std_Convencional or ~P400 or ~Impact_Indicator
+nc_488:~Siemens_Std_Convencional or ~P500 or ~Impact_Indicator
+nc_489:~S or MTGP_2_Screws
+nc_490:~S or NBGP_Screw
+nc_491:~S or HVBAcc_T_Eyebolt
+nc_492:~S or LVBAcc_T_Spade_4_holes
+nc_493:~S or ~Transformer_Control_Box or TCB_AM_D_Lock_type_1_point_locking_system
+nc_494:~S or HV_Distribution_arresters_support
+nc_495:~S or WM_HV_Aluminum
+nc_496:~S or WM_LV_Aluminum
+nc_497:~S1 or ~PRD_Contacts
+nc_498:~S1 or ~Oil_Temperature_Indicator
+nc_499:~S1 or ~Transformer_Control_Box
+nc_500:~S1 or ~OLI_Contacts
+nc_501:~S1 or ~Winding_Temperature_Indicator
+nc_502:~S1 or ~Pressure_Vacuum_Gauge
+nc_503:~S1 or ~Sudden_Pressure_Relay
+nc_504:~B or Oil_Temperature_Indicator
+nc_505:~B or Low_Very_Low
+nc_506:~B or Pressure_Vacuum_Gauge
+nc_507:~B1 or PRD_Contacts_QTY2
+nc_508:~B1 or OTI_Contacts_QTY2
+nc_509:~B1 or OLI_Contacts_QTY2
+nc_510:~B1 or ~P2500 or ~Winding_Temperature_Indicator
+nc_511:~B1 or ~P3000 or ~Winding_Temperature_Indicator
+nc_512:~B1 or ~P4000 or ~Winding_Temperature_Indicator
+nc_513:~B1 or ~P2500 or ~Sudden_Pressure_Relay
+nc_514:~B1 or ~P3000 or ~Sudden_Pressure_Relay
+nc_515:~B1 or ~P4000 or ~Sudden_Pressure_Relay
+nc_516:~B1 or ~P2500 or ~Conservator_Tank or BR_Contacts_QTY2
+nc_517:~B1 or ~P3000 or ~Conservator_Tank or BR_Contacts_QTY2
+nc_518:~B1 or ~P4000 or ~Conservator_Tank or BR_Contacts_QTY2
+nc_519:~B1 or ~P5000 or Winding_Temperature_Indicator
+nc_520:~B1 or ~P6000 or Winding_Temperature_Indicator
+nc_521:~B1 or ~P7500 or Winding_Temperature_Indicator
+nc_522:~B1 or ~P10000 or Winding_Temperature_Indicator
+nc_523:~B1 or ~P5000 or ~Sealed_Tank or Sudden_Pressure_Relay
+nc_524:~B1 or ~P6000 or ~Sealed_Tank or Sudden_Pressure_Relay
+nc_525:~B1 or ~P7500 or ~Sealed_Tank or Sudden_Pressure_Relay
+nc_526:~B1 or ~P10000 or ~Sealed_Tank or Sudden_Pressure_Relay
+nc_527:~B1 or ~P5000 or ~Conservator_Tank or ~Sudden_Pressure_Relay
+nc_528:~B1 or ~P6000 or ~Conservator_Tank or ~Sudden_Pressure_Relay
+nc_529:~B1 or ~P7500 or ~Conservator_Tank or ~Sudden_Pressure_Relay
+nc_530:~B1 or ~P10000 or ~Conservator_Tank or ~Sudden_Pressure_Relay
+nc_531:~B1 or ~P5000 or ~Conservator_Tank or BR_Contacts_QTY2
+nc_532:~B1 or ~P6000 or ~Conservator_Tank or BR_Contacts_QTY2
+nc_533:~B1 or ~P7500 or ~Conservator_Tank or BR_Contacts_QTY2
+nc_534:~B1 or ~P10000 or ~Conservator_Tank or BR_Contacts_QTY2
+nc_535:~XS or ~MF_Rollers
+nc_536:~S or ~MF_Rollers or Non_Flanged_wheel_for_for_U_Shape_rail
+nc_537:~M or ~MF_Rollers or Non_Flanged_wheel_for_for_U_Shape_rail
+nc_538:~B or ~MF_Rollers or Non_Flanged_wheel_for_for_U_Shape_rail
+nc_539:~XS or Wounded_Core
+nc_540:~S or Wounded_Core
+nc_541:~M or ~PG225 or Wounded_Core
+nc_542:~M or ~PG300_1250 or Wounded_Core
+nc_543:~M or ~PG1600_2000 or Wounded_Core
+nc_544:~B or Stacked_Core
+nc_545:~XS or CG_Internal
+nc_546:~S or CG_Internal
+nc_547:~M or CG_Internal
+nc_548:~Siemens_Standard or ~Siemens_Std_Convencional or Yes_4000A_rule
+nc_549:~Conservator_Tank or DS_Conservator_tank
+nc_550:Conservator_Tank or ~DS_Conservator_tank
+nc_551:~Detachable or DS_Radiators
+nc_552:Detachable or ~DS_Radiators
+nc_553:~Buchholz_Relay or DS_BR_Unassembled
+nc_554:Buchholz_Relay or ~DS_BR_Unassembled
+nc_555:~PG15_45 or ~Conservator_Tank or MTCT_Mounted_on_main_tank
+nc_556:~PG75_112_5 or ~Conservator_Tank or MTCT_Mounted_on_main_tank
+nc_557:~PG150 or ~Conservator_Tank or MTCT_Mounted_on_main_tank
+nc_558:~PG225 or ~Conservator_Tank or MTCT_Mounted_on_main_tank
+nc_559:~P300 or ~Conservator_Tank or MTCT_Mounted_on_main_tank
+nc_560:~P400 or ~Conservator_Tank or MTCT_Mounted_on_main_tank
+nc_561:~P500 or ~Conservator_Tank or MTCT_Mounted_on_main_tank
+nc_562:~P630 or ~Conservator_Tank or MTCT_Mounted_on_main_tank
+nc_563:~P750 or ~Conservator_Tank or MTCT_Mounted_on_main_tank
+nc_564:~P800 or ~Conservator_Tank or MTCT_Mounted_on_main_tank
+nc_565:~P1000 or ~Conservator_Tank or ~MTCT_Mounted_on_main_tank
+nc_566:~P1250 or ~Conservator_Tank or ~MTCT_Mounted_on_main_tank
+nc_567:~PG1600_2000 or ~Conservator_Tank or ~MTCT_Mounted_on_main_tank
+nc_568:~PG2500_3000 or ~Conservator_Tank or ~MTCT_Mounted_on_main_tank
+nc_569:~PG3750 or ~Conservator_Tank or ~MTCT_Mounted_on_main_tank
+nc_570:~PG4000_10000 or ~Conservator_Tank or ~MTCT_Mounted_on_main_tank
+nc_571:~Siemens_Std_Convencional or ISO_12944_2_Caso_C2_y_C3
+nc_572:~Standardtransformer or ~PG15_45 or ~Air_Rubber_Cell
+nc_573:~Standardtransformer or ~PG75_112_5 or ~Air_Rubber_Cell
+nc_574:~Standardtransformer or ~PG150 or ~Air_Rubber_Cell
+nc_575:~Standardtransformer or ~PG225 or ~Air_Rubber_Cell
+nc_576:~Standardtransformer or ~PG300_1250 or ~Air_Rubber_Cell
+nc_577:~Standardtransformer or ~PG1600_2000 or ~Air_Rubber_Cell
+nc_578:~Standardtransformer or ~PG2500_3000 or ~Air_Rubber_Cell
+nc_579:~Standardtransformer or ~PG3750 or ~Air_Rubber_Cell
+nc_580:~Standardtransformer or ~PG4000_10000 or ~Air_Rubber_Cell
+nc_581:~Standardtransformer or ~HVG15 or ~Air_Rubber_Cell
+nc_582:~Standardtransformer or ~HVG34_5 or ~Air_Rubber_Cell
+nc_583:~Convencional or ~Standardtransformer or ~PG15_45 or Light_Grey_RAL7035
+nc_584:~Convencional or ~Standardtransformer or ~PG75_112_5 or Light_Grey_RAL7035
+nc_585:~Convencional or ~Standardtransformer or ~PG150 or Light_Grey_RAL7035
+nc_586:~Convencional or ~Standardtransformer or ~PG225 or Light_Grey_RAL7035
+nc_587:~Convencional or ~Standardtransformer or ~PG300_1250 or Light_Grey_RAL7035
+nc_588:~Convencional or ~Standardtransformer or ~PG1600_2000 or Light_Grey_RAL7035
+nc_589:~Convencional or ~Standardtransformer or ~PG2500_3000 or Light_Grey_ANSI70
+nc_590:~Convencional or ~Standardtransformer or ~PG3750 or Light_Grey_ANSI70
+nc_591:~Convencional or ~Standardtransformer or ~PG4000_10000 or Light_Grey_ANSI70
+</constraints>
+</feature_model>

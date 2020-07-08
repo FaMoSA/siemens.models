@@ -1,0 +1,133 @@
+<feature_model name="test.model.category">
+<meta>
+<data name="uuid">111</data>
+<data name="description">test.model.category</data>
+<data name="creator">Carlos Rangel</data>
+<data name="address"></data>
+<data name="email">carlos.rangel@siemens.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Siemens</data>
+<data name="department"></data>
+<data name="date">2015-10-22</data>
+<data name="reference">Rev. DE C.Rozo el 20151021</data>
+</meta>
+<feature_tree>
+:r sat(sat)
+	:m Installation(Installation)
+		:m Temperature(Temperature)
+			:m MaxTemp(MaxTemp);4
+			:m AvgTemp(AvgTemp);4
+			:m MinTemp(MinTemp);4
+	:m Electrical_Thermal_Acoustic(Electrical_Thermal_Acoustic)
+		:m Electrical(Electrical)
+			:m Power(Power)
+				:o Power_group(Power_group);3
+					:g Electrical_Thermal_Acoustic_81_82_71_72(Electrical_Thermal_Acoustic_81_82_71_72) [1,1]
+						: PG_0_14(PG_0_14)
+						: PG_15_45(PG_15_45)
+						: PG_46_74(PG_46_74)
+						: PG_75_149(PG_75_149)
+						: PG_150(PG_150)
+						: PG_151_600(PG_151_600)
+						: PG_601_800(PG_601_800)
+						: PG_801_1000(PG_801_1000)
+						: PG_1001_2000(PG_1001_2000)
+						: PG_2001_4999(PG_2001_4999)
+						: PG_5000(PG_5000)
+						: PG_5001_7499(PG_5001_7499)
+						: PG_7500_10000(PG_7500_10000)
+						: PG_10001_15000(PG_10001_15000)
+						: PG_15001_50000(PG_15001_50000)
+						: PG_50001_80000(PG_50001_80000)
+			:m High_voltage(High_voltage)
+				:o High_Voltage_Group(High_Voltage_Group);3
+					:g High_Voltage_Group_66(High_Voltage_Group_66) [1,1]
+						: HVG_0_119(HVG_0_119)
+						: HVG_120_230(HVG_120_230)
+						: HVG_231_439(HVG_231_439)
+						: HVG_440_499(HVG_440_499)
+						: HVG_500_700(HVG_500_700)
+						: HVG_701_2299(HVG_701_2299)
+						: HVG_2300_4159(HVG_2300_4159)
+						: HVG_4160_5000(HVG_4160_5000)
+						: HVG_5001_7099(HVG_5001_7099)
+						: HVG_7100_9999(HVG_7100_9999)
+						: HVG_10000_13199(HVG_10000_13199)
+						: HVG_13200_16749(HVG_13200_16749)
+						: HVG_16750_25000(HVG_16750_25000)
+						: HVG_25001_37999(HVG_25001_37999)
+						: HVG_37800_57999(HVG_37800_57999)
+						: HVG_58000_84999(HVG_58000_84999)
+						: HVG_85000_138000(HVG_85000_138000)
+						: HVG_138001_219999(HVG_138001_219999)
+						: HVG_220000_230000(HVG_220000_230000)
+			:m Low_Voltage(Low_Voltage)
+				:o Low_Voltage_Group(Low_Voltage_Group);3
+					:g Low_Voltage_Group_86(Low_Voltage_Group_86) [1,1]
+						: LVG_0_119(LVG_0_119)
+						: LVG_120_230(LVG_120_230)
+						: LVG_231_439(LVG_231_439)
+						: LVG_440_499(LVG_440_499)
+						: LVG_500_700(LVG_500_700)
+						: LVG_701_2299(LVG_701_2299)
+						: LVG_2300_4159(LVG_2300_4159)
+						: LVG_4160_5000(LVG_4160_5000)
+						: LVG_5001_7099(LVG_5001_7099)
+						: LVG_7100_9999(LVG_7100_9999)
+						: LVG_10000_13199(LVG_10000_13199)
+						: LVG_13200_16749(LVG_13200_16749)
+						: LVG_16750_25000(LVG_16750_25000)
+						: LVG_25001_37999(LVG_25001_37999)
+						: LVG_37800_57999(LVG_37800_57999)
+						: LVG_58000_84999(LVG_58000_84999)
+						: LVG_85000_138000(LVG_85000_138000)
+						: LVG_138001_219999(LVG_138001_219999)
+						: LVG_220000_230000(LVG_220000_230000)
+		:m Thermal(Thermal)
+			:m Cooling(Cooling)
+				:g Electrical_Thermal_Acoustic_117_118_121(Electrical_Thermal_Acoustic_117_118_121) [1,*]
+					: ONAN(ONAN)
+					: ONAF(ONAF)
+	:m Mechanical(Mechanical)
+		:m Surface_Protection(Surface_Protection)
+			:m Surface_Protection_External_Color(Surface_Protection_External_Color);2
+				:g _id_6(_id_6) [1,1]
+					: Light_Grey_RAL7035(Light_Grey_RAL7035)
+					: Grey_ANSI61(Grey_ANSI61)
+					: Light_Grey_ANSI70(Light_Grey_ANSI70)
+					: SPEC_Other(SPEC_Other);5
+	:m Accessories(Accessories)
+		:m Tap_Changer(Tap_Changer)
+			:m Tap_Changer_Type(Tap_Changer_Type);2
+				:g Tap_Changer_103_104(Tap_Changer_103_104) [1,1]
+					: NLTC(NLTC)
+					: OLTC(OLTC)
+		:m Protective_Control_Acc(Protective_Control_Acc)
+			:m Oil_Level_Indicator(Oil_Level_Indicator)
+				:o OLI_Contacts(OLI_Contacts)
+					:g OLI_Contacts_94(OLI_Contacts_94) [1,1]
+						: OLI_Contacts_QTY1(OLI_Contacts_QTY1)
+						: OLI_Contacts_QTY2(OLI_Contacts_QTY2)
+				:o OLI_Contacts_Scheme(OLI_Contacts_Scheme)
+					:g Oil_Level_Indicator_90_91(Oil_Level_Indicator_90_91) [1,1]
+						: Low_Very_Low(Low_Very_Low)
+						: Low_High(Low_High)
+			:o Oil_Temperature_Indicator(Oil_Temperature_Indicator)
+				:o OTI_Contacts(OTI_Contacts)
+					:g OTI_Contacts_97(OTI_Contacts_97) [1,1]
+						: OTI_Contacts_QTY2(OTI_Contacts_QTY2)
+		:m Cooling_System(Cooling_System)
+			:o Radiators(Radiators)
+				:m Mechanical_Coupling(Mechanical_Coupling);2
+					:g Radiators_124_125(Radiators_124_125) [1,1]
+						: Welded_to_tank(Welded_to_tank)
+						: Detachable(Detachable)
+			:o Fans(Fans)
+</feature_tree>
+<constraints>
+constraint_1:~PG_0_14 or Detachable
+constraint_2:~PG_46_74 or OLI_Contacts_QTY2
+constraint_3:~PG_75_149 or ONAF
+</constraints>
+</feature_model>

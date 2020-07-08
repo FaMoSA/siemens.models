@@ -1,0 +1,106 @@
+<feature_model name="PMR_Derivation_Model">
+<meta>
+<data name="uuid">103</data>
+<data name="description">PMR_Derivation_Model</data>
+<data name="creator">Carlos Rangel</data>
+<data name="address"></data>
+<data name="email">carlos.rangel@siemens.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Siemens</data>
+<data name="department"></data>
+<data name="date">20150825</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r PMR_Derivator(PMR_Derivator)
+	:m Heading(Heading)
+		:g _r_1_13(_r_1_13) [1,1] 
+			: Transformador_Trifásico_Distribución(Transformador_Trifasico_Distribucion)
+	:m DataSheet(DataSheet)
+		:m DS_Title(DS_Title)
+			:g _r_2_3_15(_r_2_3_15) [1,1] 
+				: Transformador_Trifásico_Pedestal_Radial(Transformador_Trifasico_Pedestal_Radial)
+		:m DS_Picture(DS_Picture)
+			:g _r_2_4_17(_r_2_4_17) [1,1] 
+				: Picture_PMR(Picture_PMR)
+		:m StandardFeatures(StandardFeatures)
+			:m DS_Tr_Type(DS_Tr_Type)
+				:g _r_2_5_19_20(_r_2_5_19_20) [1,1] 
+					: Inmerso_en_líquido_refrigerante(Inmerso_en_liquido_refrigerante)
+			:m DS_Insulation_Class(DS_Insulation_Class)
+				:g _r_2_5_22_23(_r_2_5_22_23) [1,1] 
+					: A(A)
+			:m DS_TemperatureRises(DS_TemperatureRises)
+				:m DS_TR_Oil(DS_TR_Oil)
+					:g _r_2_5_25_26_27(_r_2_5_25_26_27) [1,1] 
+						: T60(T60)
+				:m DS_TR_windings(DS_TR_windings)
+					:g _r_2_5_25_29_32(_r_2_5_25_29_32) [1,1] 
+						: T65(T65)
+				:m DS_TR_Standard(DS_TR_Standard)
+					:g _r_2_5_25_34_35(_r_2_5_25_34_35) [1,1] 
+						: NTC3997(NTC3997)
+						: NTC819_4arev(NTC819_4arev)
+			:m DS_GuaranteedValues(DS_GuaranteedValues)
+				:g _r_2_5_37_63(_r_2_5_37_63) [1,*] 
+					: Io(Io)
+					: Po(Po)
+					: Pr(Pr)
+					: Uz(Uz)
+			:m DS_Test_Values(DS_Test_Values)
+				:g _r_2_5_41_73(_r_2_5_41_73) [1,*] 
+					: BIL(BIL)
+					: AC(AC)
+			:m DS_GV_Std(DS_GV_Std)
+				:g _r_2_5_57_58(_r_2_5_57_58) [1,1] 
+					: NTC819(NTC819)
+						:g _r_2_5_57_58_59_60(_r_2_5_57_58_59_60) [1,1] 
+							: NTC819_1(NTC819_1)
+							: NTC819_2(NTC819_2)
+			:m DS_TV_Std(DS_TV_Std)
+				:g _r_2_5_68_71(_r_2_5_68_71) [1,*] 
+					: NTC836(NTC836)
+			:m DS_TR_RefTemp(DS_TR_RefTemp)
+				:g _r_2_5_66_68(_r_2_5_66_68) [1,1] 
+					: T85(T85)
+		:m ConstructiveFeatures(ConstructiveFeatures)
+		:m DS_Accesories(DS_Accesories)
+			:m DS_StdAcc(DS_StdAcc)
+			:o DS_SpeAcc(DS_SpeAcc)
+		:m DS_ExternalCoating(DS_ExternalCoating)
+			:m DS_EC_TankRadiators(DS_EC_TankRadiators)
+				:g _r_2_10_48_49(_r_2_10_48_49) [1,1] 
+					: ISO_12944_2_Caso_C2_y_C3(ISO_12944_2_Caso_C2_y_C3)
+			:m DS_EC_CoatingColor(DS_EC_CoatingColor)
+				:g _r_2_10_53_54(_r_2_10_53_54) [1,1] 
+					: Light_Grey_RAL7035(Gris_Claro_RAL_7035)
+		:m DS_ElectricalTests(DS_ElectricalTests)
+			:m Routine(Routine)
+				:m - Medición_de_resistencia_de_los_devanados(Medicion_de_resistencia_de_los_devanados)
+				:m - Medición_de_la_relacion_de_transformación(Medicion_de_la_relacion_de_transformacion)
+				:m - Medición_de_las_perdidas_con_carga_e_impedancia(Medicion_de_las_perdidas_con_carga_e_impedancia)
+				:m - Medición_de_las_perdidas_sin_carga_y_corriente_de_excitación(Medicion_de_las_perdidas_sin_carga_y_corriente_de_excitacion)
+				:m - Prueba_de_tensión_inducida(Prueba_de_tension_inducida)
+				:m - Prueba_de_tensión_aplicada(Prueba_de_tension_aplicada)
+				:m - Medición_de_resistencia_de_aislamiento_de_los_devanados(Medicion_de_resistencia_de_aislamiento_de_los_devanados)
+			:o Type(Type)
+				:g _r_2_11_48_67(_r_2_11_48_67) [1,*] 
+					: - Calentamiento(Calentamiento)
+					: - Impulso(Impulso)
+		:m DS_Dispatch(DS_Dispatch)
+			:m Main_tank_dispatch_condition(Main_tank_dispatch_condition)
+				:m MTDC_Liquid_filled(MTDC_Liquid_filled)
+			:m Instructions_Manual(Instructions_Manual)
+				:g _r_2_12_54_55(_r_2_12_54_55) [1,1] 
+					: Number_of_printed_copies(Number_of_printed_copies)
+						:g _r_2_12_54_55_56_57(_r_2_12_54_55_56_57) [1,1] 
+							: C1(C1)
+</feature_tree>
+<constraints>
+constraint_8:~NTC3997 or NTC819
+constraint_9:~NTC819_4arev or NTC836
+constraint_6:~NTC819_4arev or NTC819
+constraint_4:~NTC3997 or NTC836
+</constraints>
+</feature_model>

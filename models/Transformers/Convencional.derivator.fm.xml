@@ -1,0 +1,219 @@
+<feature_model name="Convencional.derivator.fm">
+<meta>
+<data name="uuid">110</data>
+<data name="description">Convencional.derivator.fm</data>
+<data name="creator">Carlos Rangel</data>
+<data name="address"></data>
+<data name="email">carlos.rangel@siemens.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Siemens</data>
+<data name="department"></data>
+<data name="date">2015-02-10</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Convencional_Derivator(Convencional_Derivator)
+	:m Heading(Heading)
+		:g _r_1_13(_r_1_13) [1,1] 
+			: Transformador_Trifasico_de_Potencia(Transformador_Trifasico_de_Potencia)
+	:m DataSheet(DataSheet)
+		:m DS_Title(DS_Title)
+			:g _r_2_3_15(_r_2_3_15) [1,1] 
+				: Transformador_Trifasico_Convencional_para_SE_Intemperie(Transformador_Trifasico_Convencional_para_SE_Intemperie)
+		:m DS_Picture(DS_Picture)
+			:g _r_2_4_17(_r_2_4_17) [1,1] 
+				: C01(C01)
+				: C02(C02)
+				: C03(C03)
+				: C04(C04)
+				: C05(C05)
+				: C06(C06)
+				: C07(C07)
+				: C08(C08)
+				: C09(C09)
+				: C10(C10)
+				: C11(C11)
+				: C12(C12)
+		:m StandardFeatures(StandardFeatures)
+			:m DS_Tr_Type(DS_Tr_Type)
+				:g _r_2_5_19_20(_r_2_5_19_20) [1,1] 
+					: Inmerso_en_liquido_refrigerante(Inmerso_en_liquido_refrigerante)
+			:m DS_Insulation_Class(DS_Insulation_Class)
+				:g _r_2_5_22_23(_r_2_5_22_23) [1,1] 
+					: A(A)
+			:m DS_TemperatureRises(DS_TemperatureRises)
+				:m DS_TR_Oil(DS_TR_Oil)
+					:g _r_2_5_25_26_27(_r_2_5_25_26_27) [1,1]
+						: TO60(TO60)
+						: TO65(TO65)
+				:m DS_TR_windings(DS_TR_windings)
+					:g _r_2_5_25_29_32(_r_2_5_25_29_32) [1,1] 
+						: T65(T65)
+				:m DS_TR_Standard(DS_TR_Standard)
+					:g _r_2_5_25_34_35(_r_2_5_25_34_35) [1,1] 
+						: NTC3997(NTC3997)
+						: NTC819_4arev(NTC819_4arev)
+						: C57_12(C57_12)
+				:m DS_Txt_Standard(DS_Txt_Standard)
+					:g _r_2_5_25_34_36(_r_2_5_25_34_36) [1,1] 
+						: ICONTEC(ICONTEC)
+						: ANSI(ANSI)
+			:m DS_GuaranteedValues(DS_GuaranteedValues)
+				:g _r_2_5_37_63(_r_2_5_37_63) [1,*] 
+					: Io(Io)
+					: Po(Po)
+					: Pr(Pr)
+					: Uz(Uz)
+					: NLTC(NLTC)
+					: OLTC(OLTC)
+			:m DS_Test_Values(DS_Test_Values)
+				:g _r_2_5_41_73(_r_2_5_41_73) [1,*] 
+					: BIL(BIL)
+					: AC(AC)
+			:m DS_GV_Std(DS_GV_Std)
+				:g _r_2_5_57_58(_r_2_5_57_58) [1,1] 
+					: NTC819(NTC819)
+						:g _r_2_5_57_58_59_60(_r_2_5_57_58_59_60) [1,1] 
+							: NTC819_1(NTC819_1)
+							: NTC819_2(NTC819_2)
+					: C571210(C571210)
+						:g _r_2_5_57_58_59_60(_r_2_5_57_58_59_60) [1,1] 
+							: ANSIC571210_1(ANSIC571210_1)
+			:m DS_TV_Std(DS_TV_Std)
+				:g _r_2_5_68_71(_r_2_5_68_71) [1,1] 
+					: NTC836(NTC836)
+						:g _r_2_5_68_71_72(_r_2_5_68_71_72) [1,1] 
+							: NTC836_1(NTC836_1)
+					: ANSIC571200(ANSIC571200)
+						:g _r_2_5_68_71_72(_r_2_5_68_71_72) [1,1] 
+							: ANSIC571200_1(ANSIC571200_1)
+							: ANSIC571200_2(ANSIC571200_2)
+							: ANSIC571200_3(ANSIC571200_3)
+			:m DS_TR_RefTemp(DS_TR_RefTemp)
+				:g _r_2_5_66_68(_r_2_5_66_68) [1,1] 
+					: T85(T85)
+			:m DS_TR_MaxEnvTemp(DS_TR_MaxEnvTemp)
+				:g StandardFeatures_72_73(StandardFeatures_72_73) [1,1] 
+					: DS_TR_MET40(DS_TR_MET40)
+			:m DS_TR_MinEnvTemp(DS_TR_MinEnvTemp)
+				:g StandardFeatures_72_74(StandardFeatures_72_74) [1,1] 
+					: DS_TR_MET20(DS_TR_MET20)
+			:m DS_TR_AvgEnvTemp(DS_TR_AvgEnvTemp)
+				:g StandardFeatures_78_93(StandardFeatures_78_93) [1,1] 
+					: DS_TR_AET30(DS_TR_AET30)
+			:m DS_TR_HotSpotTemp(DS_TR_HotSpotTemp)
+				:g StandardFeatures_79_95(StandardFeatures_79_95) [1,1] 
+					: DS_TR_HST80(DS_TR_HST80)
+			:m DS_Voltage_Tapped_Winding(DS_Voltage_Tapped_Winding)
+				:m DSVTW(DSVTW)
+					:g StandardFeatures_80_81_82(StandardFeatures_80_81_82) [1,1] 
+						: VTW_HV_variable_per_tap_20_taps(VTW_HV_variable_per_tap_20_taps)
+						: VTW_HV_2point5percent_per_tap_2_up_2_down_5_taps(VTW_HV_2point5percent_per_tap_2_up_2_down_5_taps)
+						: VTW_HV_2point5percent_per_tap_1_up_3_down_5_taps(VTW_HV_2point5percent_per_tap_1_up_3_down_5_taps)
+				:m DSVTW_Winding(DSVTW_Winding)
+					:g StandardFeatures_80_85_86(StandardFeatures_80_85_86) [1,1] 
+						: DSVTW_HV(DSVTW_HV)
+						: DSVTW_LV(DSVTW_LV)
+				:m DSVTW_Regulation(DSVTW_Regulation)
+					:g StandardFeatures_80_89_90(StandardFeatures_80_89_90) [1,1] 
+						: DSVTW_2point5percent(DSVTW_2point5percent)
+				:m DSVTW_TapsAbove(DSVTW_TapsAbove)
+					:g StandardFeatures_80_92_95(StandardFeatures_80_92_95) [1,1] 
+						: DSVTW_2_up(DSVTW_2_up)
+						: DSVTW_1_up(DSVTW_1_up)
+				:m DSVTW_TapsBelow(DSVTW_TapsBelow)
+					:g StandardFeatures_80_97_98(StandardFeatures_80_97_98) [1,1] 
+						: DSVTW_2_down(DSVTW_2_down)
+						: DSVTW_3_down(DSVTW_3_down)
+				:m DSVTW_Taps(DSVTW_Taps)
+					:g StandardFeatures_80_102_103(StandardFeatures_80_102_103) [1,1] 
+						: DSVTW_5_taps(DSVTW_5_taps)
+		:m ConstructiveFeatures(ConstructiveFeatures)
+			:m Oil_Type(Oil_Type)
+				:g ConstructiveFeatures_75_76(ConstructiveFeatures_75_76) [1,1] 
+					: OT_Mineral_ASTM(OT_Mineral_ASTM)
+		:m DS_Accesories(DS_Accesories)
+			:m DS_StdAcc(DS_StdAcc)
+			:o DS_SpeAcc(DS_SpeAcc)
+		:m DS_ExternalCoating(DS_ExternalCoating)
+			:m DS_EC_TankRadiators(DS_EC_TankRadiators)
+				:g _r_2_10_48_49(_r_2_10_48_49) [1,1] 
+					: ISO_12944_2_Caso_C2_y_C3(ISO_12944_2_Caso_C2_y_C3)
+			:m DS_EC_CoatingColor(DS_EC_CoatingColor)
+				:g _r_2_10_53_54(_r_2_10_53_54) [1,1] 
+					: Light_Grey_RAL7035(Light_Grey_RAL7035)
+					: Light_Grey_ANSI70(Light_Grey_ANSI70)
+		:m DS_ElectricalTests(DS_ElectricalTests)
+			:m Routine(Routine)
+				:m Medicion_de_resistencia_de_los_devanados(Medicion_de_resistencia_de_los_devanados)
+				:m Medicion_de_la_relacion_de_transformacion(Medicion_de_la_relacion_de_transformacion)
+				:m Medicion_de_las_perdidas_con_carga_e_impedancia(Medicion_de_las_perdidas_con_carga_e_impedancia)
+				:m Medicion_de_las_perdidas_sin_carga_y_corriente_de_excitacion(Medicion_de_las_perdidas_sin_carga_y_corriente_de_excitacion)
+				:m Prueba_de_tension_inducida(Prueba_de_tension_inducida)
+				:m Prueba_de_tension_aplicada(Prueba_de_tension_aplicada)
+				:m Medicion_de_resistencia_de_aislamiento_de_los_devanados(Medicion_de_resistencia_de_aislamiento_de_los_devanados)
+			:o Type(Type)
+				:g _r_2_11_48_67(_r_2_11_48_67) [1,*] 
+					: Calentamiento(Calentamiento)
+					: Impulso(Impulso)
+	:m Order(Order)
+		:m O_LossesAndUz(O_LossesAndUz)
+			:g O_LossesAndUz_1(O_LossesAndUz_1) [1,1]
+				: OL_NTC819_4arev(OL_NTC819_4arev)
+				: OL_Special(OL_Special)
+		:m O_Tolerances(O_Tolerances)
+			:g O_Tolerances_1(O_Tolerances_1) [1,1]
+				: OT_ICONTEC(OT_ICONTEC)
+				: OT_ANSI(OT_ANSI)
+		:m O_Overload(O_Overload)
+			:g O_Overload_1(O_Overload_1) [1,1]
+				: OO_ICONTEC(OO_ICONTEC)
+				: OO_ANSI(OO_ANSI)
+		:m O_Markings(O_Markings)
+			:g O_Markings_1(O_Markings_1) [1,1]
+				: OM_ICONTEC(OM_ICONTEC)
+				: OM_ANSI(OM_ANSI)
+		:m O_Nameplate(O_Nameplate)
+			:g O_Nameplate_1(O_Nameplate_1) [1,1]
+				: ON_ICONTEC(ON_ICONTEC)
+				: ON_ANSI(ON_ANSI)
+		:m O_NameplateLanguage(O_NameplateLanguage)
+			:g O_NameplateLanguage_1(O_NameplateLanguage_1) [1,1]
+				: ONL_Value(ONL_Value)
+</feature_tree>
+<constraints>
+constraint_1:~NTC819_4arev or ~NLTC
+constraint_2:~NTC819_4arev or ~OLTC
+constraint_3:~C57_12 or ~Io
+constraint_4:~C57_12 or ~Po
+constraint_5:~C57_12 or ~Pr
+constraint_6:~C57_12 or ~Uz
+constraint_7:~NTC819_4arev or NTC819
+constraint_8:~C57_12 or C571210
+constraint_9:~NTC819_4arev or NTC836
+constraint_10:~C57_12 or ANSIC571200
+constraint_11:~NTC819_4arev or Light_Grey_RAL7035
+constraint_12:~C57_12 or Light_Grey_ANSI70
+constraint_13:~NTC819_4arev or ~ANSI
+constraint_14:~C57_12 or ~ICONTEC
+constraint_15:~VTW_HV_2point5percent_per_tap_2_up_2_down_5_taps or DSVTW_2_down
+constraint_16:~VTW_HV_2point5percent_per_tap_2_up_2_down_5_taps or DSVTW_2_up
+constraint_17:~VTW_HV_2point5percent_per_tap_2_up_2_down_5_taps or DSVTW_HV
+constraint_18:~VTW_HV_2point5percent_per_tap_1_up_3_down_5_taps or DSVTW_3_down
+constraint_19:~VTW_HV_2point5percent_per_tap_1_up_3_down_5_taps or DSVTW_1_up
+constraint_20:~VTW_HV_2point5percent_per_tap_1_up_3_down_5_taps or DSVTW_HV
+constraint_21:~NTC819_4arev or TO60
+constraint_22:~C57_12 or TO65
+constraint_23:~NTC819_4arev or OL_NTC819_4arev
+constraint_24:~C57_12 or OL_Special
+constraint_25:~NTC819_4arev or OT_ICONTEC
+constraint_26:~C57_12 or OT_ANSI
+constraint_27:~NTC819_4arev or OO_ICONTEC
+constraint_28:~C57_12 or OO_ANSI
+constraint_29:~NTC819_4arev or OM_ICONTEC
+constraint_30:~C57_12 or OM_ANSI
+constraint_31:~NTC819_4arev or ON_ICONTEC
+constraint_32:~C57_12 or ON_ANSI
+</constraints>
+</feature_model>
